@@ -7,10 +7,11 @@
 # libraries
 library(tidyverse)
 library(lubridate)
+library(psych)
 
 # get data
-RawSurveys <- read.csv("data/surveys.csv", stringsAsFactors = FALSE)
-RawClimberLoggerData <- read.csv("data/climb_logger_data.csv", stringsAsFactors = FALSE)
+RawSurveys <- read.csv("raw_data/surveys.csv", stringsAsFactors = FALSE)
+RawClimberLoggerData <- read.csv("raw_data/climb_logger_data.csv", stringsAsFactors = FALSE)
 
 # clean survey data
 CleanSurveys <- RawSurveys %>% 
@@ -63,7 +64,7 @@ for (i in 1:length(CleanSurveys$DateStartTime)){
 }
 
 # write csv
-write.csv(TaggedClimberLoggerData, "TaggedClimberLoggerData.csv")
+write.csv(TaggedClimberLoggerData, "clean_data/clean_logger_data.csv")
 
 
 
