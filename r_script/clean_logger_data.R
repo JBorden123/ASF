@@ -66,7 +66,7 @@ for (i in 1:length(CleanSurveys$DateStartTime)){
 # write csv
 write.csv(TaggedClimberLoggerData, "clean_data/clean_logger_data.csv")
 
+logger_data <- read.csv("clean_data/clean_logger_data.csv")
 
-
-
-
+head(logger_data)
+summary(logger_data$TreeID)
