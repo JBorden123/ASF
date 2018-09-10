@@ -16,9 +16,9 @@ RawClimberLoggerData <- read.csv("raw_data/climb_logger_data.csv", stringsAsFact
 # clean survey data
 CleanSurveys <- RawSurveys %>% 
   # only keeping the data we need
-  select(Date = date,
-         StartTime = start_time,
-         LoggerNumber = logger_num,
+  select(Date = date, #rename columns within select
+         StartTime = start_time, #snake case is with underscores between words
+         LoggerNumber = logger_num, #camel case is LikeThis... used for variables
          TreeID = Tree_ID) %>% 
   filter(!(is.na(StartTime))) %>% 
   filter(!(is.na(LoggerNumber))) %>% 
@@ -38,14 +38,14 @@ CleanClimberLoggerData <- RawClimberLoggerData %>%
 
 # loop to do what jesse needs
 
-TaggedClimberLoggerData <- tibble()
+TaggedClimberLoggerData <- tibble() #neater form of a dataframe...blank
 
 # for each date-time in surveys
 for (i in 1:length(CleanSurveys$DateStartTime)){
   
   # first find time bounds -15 mins to + 1 hours
-  before_datetime = CleanSurveys$DateStartTime[i] - 15*60
-  after_datetime = CleanSurveys$DateStartTime[i] + 60*60
+  before_datetime = CleanSurveys$DateStartTime[i] - 15*60 #times 60 to make minutes from seconds
+  after_datetime = CleanSurveys$DateStartTime[i] + 60*60 #same as above
   
   # find macthed in logger data
   ReqdLoggerData <- CleanClimberLoggerData %>% 
@@ -54,7 +54,7 @@ for (i in 1:length(CleanSurveys$DateStartTime)){
     # the logger number is the same
     filter(LoggerNumber == CleanSurveys$LoggerNumber[i]) %>% 
     # add relevant tree ID
-    mutate(TreeID = CleanSurveys$TreeID[i]) %>%
+    mutate(TreeID = CleanSurveys$TreeID[i]) %>% #mutate adds new columns
     # add strata timings
     mutate(Strata = if_else((DateTime >= before_datetime) & (DateTime <= before_datetime + 15*60), 
                             "Understory", 

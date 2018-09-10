@@ -23,7 +23,7 @@ spec_names <- names(metadata[,3:25]) #check this to be sure this
 spec_counts <- metadata[,spec_names]
 
 #species acummulation curve
-spec_accum <- specaccum(spec_counts, method = "random")
+spec_accum <- specaccum(spec_counts)
 plot(spec_accum, main = "All", ylim = c(0,25))
 
 #CHAO 1 Estimate for each site 
@@ -43,7 +43,7 @@ rarefy(spec_counts, sample = min.N, se = TRUE)
 BR_spec_counts <- BR_metadata[,spec_names]
 
 #species acummulation curve
-BR_spec_accum <- specaccum(spec_counts, method = "random")
+BR_spec_accum <- specaccum(BR_spec_counts)
 plot(BR_spec_accum, main = "Brachystegia", ylim = c(0,25))
 
 #CHAO 1 Estimate for each site 
@@ -56,7 +56,7 @@ estimateR(BR_spec_counts)
 M_spec_counts <- M_metadata[,spec_names]
 
 #species acummulation curve
-M_spec_accum <- specaccum(M_spec_counts, method = "random")
+M_spec_accum <- specaccum(M_spec_counts)
 plot(M_spec_accum, main = "Mixed", ylim = c(0,25))
 
 #CHAO 1 Estimate for each site 
@@ -69,7 +69,7 @@ estimateR(M_spec_counts)
 CY_spec_counts <- CY_metadata[,spec_names]
 
 #species acummulation curve
-CY_spec_accum <- specaccum(CY_spec_counts, method = "random")
+CY_spec_accum <- specaccum(CY_spec_counts)
 plot(CY_spec_accum, main = "Cynometera", ylim = c(0,25))
 
 #CHAO 1 Estimate for each site 
