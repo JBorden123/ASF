@@ -19,7 +19,7 @@ CleanSurveys <- RawSurveys %>%
   select(Date = date, #rename columns within select
          StartTime = start_time, #snake case is with underscores between words
          LoggerNumber = logger_num, #camel case is LikeThis... used for variables
-         TreeID = Tree_ID,
+         Tree_ID,
          MidTime = mid_time,
          CanopyTime = canopy_time,
          EndTime = end_time) %>% 
@@ -64,7 +64,7 @@ for (i in 1:length(CleanSurveys$DateStartTime)){
     # the logger number is the same
     filter(LoggerNumber == CleanSurveys$LoggerNumber[i]) %>% 
     # add relevant tree ID
-    mutate(TreeID = CleanSurveys$TreeID[i]) %>% #mutate adds new columns
+    mutate(Tree_ID = CleanSurveys$Tree_ID[i]) %>% #mutate adds new columns
     # add strata timings
     mutate(Strata = if_else((DateTime >= before_datetime) & (DateTime <= before_datetime + 35*60), 
                             "Understory", 
