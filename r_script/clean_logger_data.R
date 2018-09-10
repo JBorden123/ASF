@@ -54,7 +54,13 @@ for (i in 1:length(CleanSurveys$DateStartTime)){
     # the logger number is the same
     filter(LoggerNumber == CleanSurveys$LoggerNumber[i]) %>% 
     # add relevant tree ID
-    mutate(TreeID = CleanSurveys$TreeID[i])
+    mutate(TreeID = CleanSurveys$TreeID[i]) %>%
+    # add strata timings
+    mutate(Strata = if_else((DateTime >= before_datetime) & (DateTime <= before_datetime + 15*60), 
+                            "Understory", 
+                            if_else((DateTime > before_datetime + 15*60) & (DateTime <= before_datetime + 25*60), 
+                                    "Mid",
+                                    "Canopy"), "Unclassified"))
   
   # save it in the tagged climber logger data
   TaggedClimberLoggerData <- bind_rows(TaggedClimberLoggerData,
@@ -65,8 +71,8 @@ for (i in 1:length(CleanSurveys$DateStartTime)){
 
 # write csv
 write.csv(TaggedClimberLoggerData, "clean_data/clean_logger_data.csv")
-
-logger_data <- read.csv("clean_data/clean_logger_data.csv")
-
-head(logger_data)
-summary(logger_data$TreeID)
+# 
+# logger_data <- read.csv("clean_data/clean_logger_data.csv")
+# 
+# head(logger_data)
+# summary(logger_data$TreeID)
