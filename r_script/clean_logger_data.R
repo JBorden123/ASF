@@ -19,11 +19,17 @@ CleanSurveys <- RawSurveys %>%
   select(Date = date, #rename columns within select
          StartTime = start_time, #snake case is with underscores between words
          LoggerNumber = logger_num, #camel case is LikeThis... used for variables
-         TreeID = Tree_ID) %>% 
+         TreeID = Tree_ID,
+         MidTime = mid_time,
+         CanopyTime = canopy_time,
+         EndTime = end_time) %>% 
   filter(!(is.na(StartTime))) %>% 
   filter(!(is.na(LoggerNumber))) %>% 
   # standardize dates
-  mutate(DateStartTime = as.POSIXct(paste(Date, StartTime), format="%d/%m/%Y %H:%M"))
+  mutate(DateStartTime = as.POSIXct(paste(Date, StartTime), format="%d/%m/%Y %H:%M")) %>%
+  mutate(MidStartTime = as.POSIXct(paste(Date, MidTime), format="%d/%m/%Y %H:%M")) %>%
+  mutate(CanopyStartTime = as.POSIXct(paste(Date, CanopyTime), format="%d/%m/%Y %H:%M")) %>%
+  mutate(EndStartTime = as.POSIXct(paste(Date, EndTime), format="%d/%m/%Y %H:%M"))
 
 # clean logger data
 CleanClimberLoggerData <- RawClimberLoggerData %>% 
