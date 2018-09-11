@@ -22,7 +22,8 @@ CleanSurveys <- RawSurveys %>%
          Tree_ID,
          MidTime = mid_time,
          CanopyTime = canopy_time,
-         EndTime = end_time) %>% 
+         EndTime = end_time,
+         DayNight = day_night) %>% 
   filter(!(is.na(StartTime))) %>% 
   filter(!(is.na(MidTime))) %>%
   filter(!(is.na(CanopyTime))) %>%
@@ -72,6 +73,7 @@ for (i in 1:length(CleanSurveys$DateStartTime)){
     filter(LoggerNumber == CleanSurveys$LoggerNumber[i]) %>% 
     # add relevant tree ID
     mutate(Tree_ID = CleanSurveys$Tree_ID[i]) %>% #mutate adds new columns
+    mutate(DayNight = CleanSurveys$DayNight[i]) %>%
     # add strata timings
     mutate(Strata = if_else((DateTime >= before_datetime) & (DateTime <= before_datetime + 35*60), 
                             "Understory", 
@@ -89,8 +91,8 @@ for (i in 1:length(CleanSurveys$DateStartTime)){
 
 # write csv
 write.csv(TaggedClimberLoggerData, "clean_data/clean_logger_data.csv")
-# 
-# logger_data <- read.csv("clean_data/clean_logger_data.csv")
-# 
-# head(logger_data)
-# summary(logger_data$TreeID)
+
+#create summary table with mean temp, RH, DewPt for each tree/strata day and Night
+climb_logger_data <- TaggedClimberLoggerData %>%
+  group_by(Tree_ID,DayNight,Strata) %>%
+  summarize(mean_temp = mean(TempC), mean_RH = mean(RH), mean_DewPtC = mean(DewPTC))
