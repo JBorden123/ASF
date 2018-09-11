@@ -24,6 +24,9 @@ CleanSurveys <- RawSurveys %>%
          CanopyTime = canopy_time,
          EndTime = end_time) %>% 
   filter(!(is.na(StartTime))) %>% 
+  filter(!(is.na(MidTime))) %>%
+  filter(!(is.na(CanopyTime))) %>%
+  filter(!(is.na(EndTime))) %>%
   filter(!(is.na(LoggerNumber))) %>% 
   # standardize dates
   mutate(DateStartTime = as.POSIXct(paste(Date, StartTime), format="%d/%m/%Y %H:%M")) %>%
@@ -32,6 +35,11 @@ CleanSurveys <- RawSurveys %>%
   mutate(EndStartTime = as.POSIXct(paste(Date, EndTime), format="%d/%m/%Y %H:%M"))
 
 # clean logger data
+
+# correct column name
+
+colnames(RawClimberLoggerData)[1] <- "logger_num"
+
 CleanClimberLoggerData <- RawClimberLoggerData %>% 
   select(LoggerNumber = logger_num,
          DateTime = date_time,
@@ -48,14 +56,13 @@ TaggedClimberLoggerData <- tibble() #neater form of a dataframe...blank
 
 # for each date-time in surveys
 for (i in 1:length(CleanSurveys$DateStartTime)){
-  
   # first find time bounds -15 mins to + 1 hours
   before_datetime = CleanSurveys$DateStartTime[i] - 15*60 #times 60 to make minutes from seconds
   after_datetime = CleanSurveys$DateStartTime[i] + 60*60 #same as above
   mid_start = CleanSurveys$MidStartTime[i]
   mid_end = CleanSurveys$MidStartTime[i] + 10*60
   canopy_start = CleanSurveys$CanopyStartTime[i]
-  canopy_end = CleanSurveys$CanopyStartTime + 10*60
+  canopy_end = CleanSurveys$CanopyStartTime[i] + 10*60
   
   # find macthed in logger data
   ReqdLoggerData <- CleanClimberLoggerData %>% 
@@ -68,7 +75,7 @@ for (i in 1:length(CleanSurveys$DateStartTime)){
     # add strata timings
     mutate(Strata = if_else((DateTime >= before_datetime) & (DateTime <= before_datetime + 35*60), 
                             "Understory", 
-                            if_else((DateTime >= mid_start) & (DateTime <= mid_end), 
+                              if_else((DateTime >= mid_start) & (DateTime <= mid_end), 
                                     "Mid",
                                     if_else((DateTime >= canopy_start) & (DateTime <= canopy_end),
                                     "Canopy", "Unclassified"))))
