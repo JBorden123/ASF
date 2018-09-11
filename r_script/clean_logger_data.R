@@ -89,10 +89,15 @@ for (i in 1:length(CleanSurveys$DateStartTime)){
   
 }
 
-# write csv
-write.csv(TaggedClimberLoggerData, "clean_data/clean_logger_data.csv")
+
 
 #create summary table with mean temp, RH, DewPt for each tree/strata day and Night
 climb_logger_data <- TaggedClimberLoggerData %>%
   group_by(Tree_ID,DayNight,Strata) %>%
   summarize(mean_temp = mean(TempC), mean_RH = mean(RH), mean_DewPtC = mean(DewPTC))
+
+# write csv
+write.csv(climb_logger_data, "clean_data/climb_logger_data.csv")
+
+#quick check summary
+describe(climb_logger_data)
