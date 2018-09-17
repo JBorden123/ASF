@@ -9,3 +9,5 @@ HabSummary <- habitat %>%
          Can0 = can_0, CanPlus5 = can_plus_5, CanPlus10 = can_plus_10,
          AvgHerpCover = avg_herb_cover..., AvgLeafLayer = avg_leaf_layer,
          StemLess8cm = stem_less_8cm, StemMore8cm = stem_more_8cm)
+
+write_csv(HabSummary, "clean_data/HabSummary.csv")
