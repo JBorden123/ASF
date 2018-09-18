@@ -1,311 +1,311 @@
-﻿ind_numb,Tree_ID,species_ID,day_night,survey_type,observer,survey_strata,amph_rept,genus,species,binomial,common_name,species_code,plant_type,height_found_m,dist_frm_center_m,substrate,SVL_cm,tail_cm,mass_g,sex,photo,notes,height_found_m_rec,dist_frm_center_m_rec
-1,M1,M1.1,D,G,GP,NA,R,Mochlus,afer,Mochlus_afer,peter's writhing skink,MOAF,debris,0,NA,log,NA,NA,NA,NA,N,yellow sides noted by GP,0,NA
-2,M1,M1.2,D,C,JBB,U,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,large_tree,1,5.9,trunk,3.6,1,1,M,Y,NA,1,5.9
-3,M1,M1.3,D,C,JBB,U,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,large_tree,1,5.9,trunk,3.5,NA,NA,F,N,"pair were seen mating, one escaped, SVL estimated",1,5.9
-4,M2,M2.1,D,G,GP,NA,R,Hemidactylus,mrimaensis,Hemidactylus_mrimaensis,kaya gecko,HEMI,debris,0,NA,und_debris,4.8,5.9,3.8,F,Y,"under log, enlarged tubercles on upper legs-particularly visible on hind legs",0,NA
-5,M2,M2.2,D,C,GB,M,R,Chamaeleo,dilepis,Chamaeleo_dilepis,flap-necked chameleon,CHDI,under_tree,5.4,2,branch5+,10.8,10.6,38,M,Y,NA,5.4,2
-6,M2,M2.3,D,C,GB,R,R,Chamaeleo,dilepis,Chamaeleo_dilepis,flap-necked chameleon,CHDI,under_tree,4.1,1.5,branch5+,7.5,8.3,8.5,NA,Y,NA,4.1,1.5
-7,M3,M3.1,D,G,GP,NA,R,Lygodactylus,sp.,Lygodactylus_sp.,dwarf gecko,NA,large_tree,5,NA,trunk,NA,NA,NA,NA,N,NA,5,NA
-8,M3,M3.2,D,G,GP,NA,R,Lygodactylus,sp.,Lygodactylus_sp.,dwarf gecko,NA,large_tree,3,NA,trunk,NA,NA,NA,NA,N,NA,3,NA
-9,M4,M4.1,D,C,GB,M,R,Lygodactylus,sp.,Lygodactylus_sp.,dwarf gecko,NA,large_tree,7.2,0,trunk,NA,NA,NA,NA,N,NA,7.2,0
-10,M4,M4.2,N,G,GP,NA,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,large_tree,3,NA,trunk,7,8.2,9.8,F,Y,NA,3,NA
-11,M4,M4.3,N,G,GP,NA,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,bush,0.5,NA,trunk,6.3,8,6,M,Y,NA,0.5,NA
-12,M3,M3.3,N,C,JBB,U,R,Chamaeleo,dilepis,Chamaeleo_dilepis,flap-necked chameleon,CHDI,under_tree,4.3,1.9,branch5+,5.8,5.3,4.8,NA,Y,NA,4.3,1.9
-13,M3,M3.4,N,C,JBB,M,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,large_tree,10,6,trunk,5.7,6.8,4.5,M,Y,vocal when handled and 46-48 prefemoral-anl pores,10,6
-14,M3,M3.5,N,C,JBB,C,R,Hemidactylus,mabouia,Hemidactylus_mabouia,tropical house gecko,HEMA,large_tree,14.3,2,branch2,6.2,6.7,4.5,M,Y,no tubercles on upper legs,14.3,2
-15,M3,M3.6,N,C,JBB,C,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,15,1,branch3,6.2,6.7,5.7,M,Y,NA,15,1
-16,M3,M3.7,N,G,GP,NA,R,Hemidactylus,mrimaensis,Hemidactylus_mrimaensis,kaya gecko,HEMI,tree,3,NA,trunk,4.6,4,3,M,Y,NA,3,NA
-17,BR2,BR2.1,D,C,JBB,R,R,Chamaeleo,dilepis,Chamaeleo_dilepis,flap-necked chameleon,CHDI,tree,8.5,6,branch4,9,NA,NA,NA,N,SVL estimated,8.5,6
-18,BR3,BR3.1,D,G,GB,NA,R,Lizard,sp.,NA,NA,NA,grass,0,15,litter,15,NA,NA,NA,N,"SVL estimated, dist to center estimated",0,15
-19,BR3,BR3.2,D,G,GB,NA,R,Lizard,sp.,NA,NA,NA,grass,0,13,litter,12,NA,NA,NA,N,"SVL estimated, dist to center estimated",0,13
-20,BR3,NA,D,NA,JBB,outside,R,Varanus,albigularis,Varanus_albigularis,white-throated savana monitor,VAAL,grass,0,NA,litter,70,NA,NA,NA,Y,"found while moving from BR2 to BR3, about 140m from BR3",0,NA
-21,M6,M6.1,D,G,JBB,NA,R,Hemidactylus,mabouia,Hemidactylus_mabouia,tropical house gecko,HEMA,tree,1,NA,trunk,6,NA,NA,NA,N,SVL estimated,1,NA
-22,M6,M6.2,D,G,JBB,NA,R,Hemidactylus,mabouia,Hemidactylus_mabouia,tropical house gecko,HEMA,tree,1,NA,trunk,4.5,5.8,2.5,F,Y,NA,1,NA
-23,M6,M6.3,D,G,JBB,NA,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,3,NA,trunk,8,NA,NA,NA,N,SVL estimated,3,NA
-24,M6,M6.4,D,G,JBB,NA,R,Hemidactylus,sp.,NA,NA,NA,tree,2,NA,trunk,5,NA,NA,NA,N,SVL estimated,2,NA
-25,M6,M6.5,D,G,JBB,NA,R,Trachylepis,maculilabris,Trachylepi_ maculilabris,speckle-lipped skink,TRMA,tree,1.5,NA,trunk,8,NA,NA,NA,N,SVL estimated,1.5,NA
-26,M5,M5.1,D,C,GB,M,R,Lygodactylus,sp.,NA,dwarf gecko,NA,tree,6.1,3,branch3,5,NA,NA,NA,N,"SVL estimated, spotted before on the trunk while setting rope by JBB: initially at 10m",6.1,3
-27,MAT_M5,MATM5.1,D,G,JBB,NA,R,Latastia,longicaudata,Latastia_longicaudata,Southern long-tailed lizard,LALO,ground,0,NA,sand,7,NA,NA,NA,Y,SVL estimated,0,NA
-28,MAT_M5,MATM5.2,D,G,JBB,NA,R,Latastia,longicaudata,Latastia_longicaudata,Southern long-tailed lizard,LALO,ground,0,NA,sand,3,NA,NA,NA,N,SVL estimated,0,NA
-29,MAT_M5,MATM5.3,D,G,JBB,NA,R,Latastia,longicaudata,Latastia_longicaudata,Southern long-tailed lizard,LALO,ground,0,NA,sand,3,NA,NA,NA,N,SVL estimated,0,NA
-30,BR10,BR10.1,D,C,JBB,G,R,Hemidactylus,barbouri,Hemidactylus_ barbouri,barber's_gecko,HEBA,ground,0,3,litter,4,2.8,1.4,F,Y,NA,0,3
-31,BR10,BR10.2,N,G,GP,NA,R,Hemidactylus,barbouri,Hemidactylus_ barbouri,barber's_gecko,HEBA,ground,0,NA,litter,4,NA,NA,NA,N,SVL estimated,0,NA
-32,BR8,BR8.5,N,C,JBB,G,R,Hemidactylus,mabouia,Hemidactylus_mabouia,tropical house gecko,HEMA,bush,0.3,1,leaf,3,3.3,0.7,NA,Y,NA,0.3,1
-33,BR9,NA,D,G,GP,outside,R,Trachylepis,planifrons,Trachylepis_planifrons,tree skink,TRPL,tree,3,20,trunk,NA,NA,NA,NA,N,SVL estimated,3,20
-34,BR8,NA,D,NA,NA,between surveys,R,Trachylepis,planifrons,Trachylepis_planifrons,tree skink,TRPL,tree,2,15,trunk,NA,NA,NA,NA,N,SVL estimated,2,15
-35,BR8,BR8.1,D,G,JBB,G,R,Trachylepis,maculilabris,Trachylepi_ maculilabris,speckle-lipped skink,TRMA,ground,0,3,litter,NA,NA,NA,NA,N,NA,0,3
-36,BR8,BR8.2,D,U,JBB,U,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,small_tree,3,4,trunk,NA,NA,NA,NA,N,NA,3,4
-37,BR8,BR8.3,D,M,JBB,M,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,big_tree,7,2,trunk,NA,NA,NA,NA,N,NA,7,2
-38,BR8,BR8.4,D,M,JBB,M,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,big_tree,7,2,trunk,NA,NA,NA,NA,N,NA,7,2
-39,BR7,BR7.1,D,G,GP,NA,R,Lizard,sp.,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,N,spotted a lizard which disappeared in the bushes / 1 centipide in tree 10 m high branch 4 15 cm long 7 m from trunk / spotted a skeleton of a turtoise (back-hinged),NA,NA
-40,MAT_BR8,MATBR8.9,N,G,JBB,NA,R,Hemidactylus,mabouia,Hemidactylus_mabouia,tropical house gecko,HEMA,sand,0,NA,sand,5.5,5.3,4.4,F,Y,female with eggs,0,NA
-41,MAT_BR8,MATBR8.10,N,G,JBB,NA,R,Trachylepis,planifrons,Trachylepis_planifrons,tree skink,TRPL,bush,1.75,NA,branch6,9.4,17.7,21,F,Y,NA,1.75,NA
-42,M7,M7.1,D,G,JBB,NA,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,tree,1,NA,trunk,3.5,3.9,1.29,M,N,NA,1,NA
-43,M7,M7.2,D,G,JBB,NA,R,Kinixys,sp.,NA,NA,NA,ground,0,NA,soil,17.5,NA,NA,M,Y,"10,5 cm across mid-section / 17,5 cm total shell length, SVL estimated",0,NA
-44,M7,M7.3,D,G,JBB,NA,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,tree,1,NA,trunk,3.4,3.5,1.9,M,N,NA,1,NA
-45,M8,M8.1,D,C,JBB,U,R,Hemidactylus,mabouia,Hemidactylus_mabouia,tropical house gecko,HEMA,tree,1,0.5,trunk,3.9,3.5,1.29,M,N,NA,1,0.5
-46,MAT_BR8,MATBR8.1,D,G,GB,NA,R,Latastia,longicaudata,Latastia_longicaudata,Southern long-tailed lizard,LALO,NA,0,NA,sand,15,NA,NA,NA,Y,"distance from fence†: 15m, SVL estimated",0,NA
-47,MAT_BR8,MATBR8.2,D,G,GB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,NA,0,NA,sand,5,NA,NA,NA,Y,"distance from fence†: 2m, SVL estimated",0,NA
-48,MAT_BR8,MATBR8.3,D,G,GB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,NA,0,NA,sand,7,NA,NA,NA,Y,"distance from fence†: 1m, SVL estimated",0,NA
-49,MAT_BR8,MATBR8.4,D,G,GB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,NA,0,NA,sand,NA,NA,NA,NA,N,"distance from fence†: 6m, SVL estimated",0,NA
-50,MAT_BR8,MATBR8.5,D,G,GB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,NA,0,NA,sand,NA,NA,NA,NA,N,"distance from fence†: 6m, SVL estimated",0,NA
-51,MAT_BR8,MATBR8.6,D,G,GB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,NA,0,NA,sand,NA,NA,NA,NA,N,"distance from fence†: 6m, SVL estimated",0,NA
-52,MAT_BR8,MATBR8.7,D,G,GB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,NA,0,NA,sand,NA,NA,NA,NA,N,"distance from fence†: 6m, SVL estimated",0,NA
-53,MAT_BR8,MATBR8.8,D,G,GB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,NA,0,NA,sand,NA,NA,NA,NA,N,"distance from fence†: 6m, SVL estimated",0,NA
-54,MAT_BR9,MATBR9.1,D,G,JBB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,NA,0,NA,Sand / soil,NA,NA,NA,NA,Y,NA,0,NA
-55,MAT_BR9,MATBR9.2,D,G,JBB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,NA,0,NA,Sand / soil,NA,NA,NA,NA,Y,NA,0,NA
-56,MAT_BR9,MATBR9.3,D,G,JBB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,NA,0,NA,Sand / soil,NA,NA,NA,NA,N,NA,0,NA
-57,MAT_BR9,MATBR9.4,D,G,JBB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,NA,0,NA,Sand / soil,NA,NA,NA,NA,N,NA,0,NA
-58,MAT_BR9,MATBR9.5,D,G,JBB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,NA,0,NA,Sand / soil,NA,NA,NA,NA,N,NA,0,NA
-59,MAT_BR9,MATBR9.6,D,G,JBB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,NA,0,NA,Sand / soil,NA,NA,NA,NA,N,NA,0,NA
-60,MAT_BR9,MATBR9.7,D,G,JBB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,NA,0,NA,Sand / soil,NA,NA,NA,NA,N,NA,0,NA
-61,MAT_BR9,MATBR9.8,D,G,JBB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,NA,0,NA,Sand / soil,NA,NA,NA,NA,N,NA,0,NA
-62,MAT_BR9,MATBR9.9,D,G,JBB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,NA,0,NA,Sand / soil,NA,NA,NA,NA,N,NA,0,NA
-63,MAT_BR9,MATBR9.10,D,G,JBB,NA,R,Trachylepis,planifrons,Trachylepis_planifrons,tree skink,TRPL,bush,0.5,NA,small branch,NA,NA,NA,NA,Y,"T. planiforms seen on very edge of forest bushes / N. boulangeri seen from about 0-15m from forest on open sand, close to bushes or piles of sticks",0.5,NA
-64,BR7,BR7.2,N,G,GP,NA,R,Hemidactylus,mabouia,Hemidactylus_mabouia,tropical house gecko,HEMA,tree,4,10,trunk,NA,NA,NA,NA,N,NA,4,10
-65,BR7,BR7.3,N,G,GP,NA,R,Hemidactylus,mabouia,Hemidactylus_mabouia,tropical house gecko,HEMA,tree,2,5,branch,NA,NA,NA,NA,N,NA,2,5
-66,BR6,BR6.3,N,C,GB,C,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,bush,8.3,2.5,branch1,3.8,3.9,1.5,M,Y,NA,8.3,2.5
-67,BR5,BR5.2,N,G,GP,NA,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,bush,0,NA,litter,3.7,3.8,1.4,F,Y,NA,0,NA
-68,BR5,BR5.3,N,C,JBB,R,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,tree,11.5,NA,branch,3.6,3.5,1.1,M,Y,NA,11.5,NA
-69,BR5,BR5.1,D,C,JBB,M,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,tree,11.2,1,trunk,3.5,3.5,1.5,M,Y,NA,11.2,1
-70,BR6,BR6.1,D,C,GB,R,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,tree,3,0,trunk,3.5,NA,NA,NA,N,SVL estimated,3,0
-71,BR6,BR6.2,D,C,GB,R,R,Gecko,sp.,NA,NA,NA,tree,5,2,trunk,NA,NA,NA,NA,N,NA,5,2
-72,M6,M6.6,N,G,GP,NA,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,3,10,trunk,6.6,5.7,7,F,Y,NA,3,10
-73,M6,M6.7,N,C,GB,C,R,Hemidactylus,sp.,NA,NA,NA,bush,1.5,5,branch2,6,NA,NA,NA,N,SVL estimated,1.5,5
-74,M6,M6.8,N,G,GP,NA,R,Hemidactylus,mabouia,Hemidactylus_mabouia,tropical house gecko,HEMA,tree,4,5,trunk,7,6.5,NA,NA,N,NA,4,5
-75,M22,M22.1,D,C,JBB,R,R,Trachylepis,maculilabris,Trachylepi_ maculilabris,speckle-lipped skink,TRMA,tree,1.5,NA,Hole / trunk,NA,NA,NA,NA,N,NA,1.5,NA
-76,M22,M22.2,D,C,JBB,U,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,4.2,0.5,trunk,7.1,8.4,NA,F,N,NA,4.2,0.5
-77,M22,M22.3,D,C,JBB,R,R,Hemidactylus,sp.,NA,NA,NA,tree,5,0.5,Hole / trunk,NA,NA,8,NA,N,NA,5,0.5
-78,M22,M22.4,D,G,JH,NA,R,Hemidactylus,sp.,NA,NA,NA,tree,4,NA,trunk,NA,NA,NA,NA,N,NA,4,NA
-79,M22,M22.5,D,G,JH,NA,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,4,NA,trunk,7.6,7.1,7.1,M,N,NA,4,NA
-80,M20,M20.1,D,C,JBB,R,R,Hemidactylus,sp.,NA,NA,NA,tree,3,NA,trunk,4,NA,NA,NA,N,Hemidactyuls most likely platycephalus,3,NA
-81,M20,M20.2,D,G,AB,NA,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,2,NA,trunk,6.7,7.5,6,F,Y,Hemidactyuls most likely platycephalus,2,NA
-82,M20,M20.3,D,G,AB,NA,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,tree,2,NA,trunk,NA,NA,NA,NA,N,NA,2,NA
-83,M20,M20.4,D,G,AB,NA,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,tree,1.5,NA,trunk,NA,NA,NA,NA,N,NA,1.5,NA
-84,M18,M18.1,D,C,JBB,R,R,Lygodactylus,sp.,NA,dwarf gecko,NA,tree,NA,NA,branch,NA,NA,NA,NA,N,lygodactylus seen at top while setting rope,NA,NA
-85,M18,M18.2,D,C,JBB,R,R,Hemidactylus,sp.,NA,NA,NA,tree,9,4,branch4,7.7,6.1,8.9,F,NA,"hemidactylus†: red spots around pads of feet, most concentrated between toes",9,4
-86,M9,M9.1,D,C,JBB,M,R,Dispholidus,typus,Dispholidus_ typus,Boomslang,DITY,tree,6.5,0.5,trunk,100,NA,NA,NA,N,NA,6.5,0.5
-87,M9,M9.2,D,C,JBB,M,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,tree,8.5,0.5,trunk,3.5,NA,NA,NA,N,SVL estimated,8.5,0.5
-88,M9,NA,D,NA,NA,between surveys,R,Latastia,longicaudata,Latastia_longicaudata,Southern long-tailed lizard,LALO,sand,0,NA,road,NA,NA,NA,NA,N,NA,0,NA
-89,M9,NA,D,NA,NA,between surveys,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,sand,0,NA,road,NA,NA,NA,NA,N,NA,0,NA
-90,M9,NA,D,NA,NA,between surveys,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,sand,0,NA,road,NA,NA,NA,NA,N,NA,0,NA
-91,M9,NA,D,NA,NA,between surveys,R,Psammophis,sp.,NA,NA,NA,sand,0,NA,road,NA,NA,NA,NA,N,NA,0,NA
-92,M9,NA,D,NA,NA,between surveys,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,sand,0,NA,road,NA,NA,NA,NA,N,NA,0,NA
-93,BR11,BR11.1,D,G,GP,NA,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,litter,0,2,litter,3.6,4,1.7,M,N,NA,0,2
-94,BR11,BR11.2,D,C,GB,C,R,Lygodactylus,sp.,NA,dwarf gecko,NA,tree,8,3.5,branch3,3.5,NA,NA,NA,N,SVL estimated,8,3.5
-95,BR11,NA,D,NA,GH,outside,R,Trachylepis,varia,Trachylepis_varia,Variable skink,TRVA,NA,NA,NA,NA,NA,NA,NA,NA,N,spotted a variable skink in the edge,NA,NA
-96,M12,M12.1,D,C,GB,G,R,Lygodactylus,sp.,NA,dwarf gecko,NA,tree,1,5,trunk,3.9,3.9,1.2,M,Y,NA,1,5
-97,M12,M12.2,D,C,GB,M,R,Lygodactylus,sp.,NA,dwarf gecko,NA,tree,8,7,branch2,4,NA,NA,NA,N,SVL estimated,8,7
-98,M12,M12.3,D,C,GB,C,R,Lygodactylus,sp.,NA,dwarf gecko,NA,tree,6,2,trunk,4,NA,NA,NA,N,SVL estimated,6,2
-99,M10,M10.1,D,G,GH,NA,R,Trachylepis,planifrons,Trachylepis_planifrons,tree skink,TRPL,litter,0,10,litter,NA,NA,NA,NA,N,NA,0,10
-100,M10,M10.2,D,C,GB,NA,R,Lygodactylus,sp.,NA,dwarf gecko,NA,tree,7,5,branch3,4,NA,NA,NA,N,Found in tree adjacent to climbed tree / SVL estimated,7,5
-101,M10,M10.3,D,C,GB,NA,R,Lygodactylus,sp.,NA,dwarf gecko,NA,tree,1,5,trunk,4,NA,NA,NA,N,Found in tree adjacent to climbed tree / SVL estimated,1,5
-102,M11,M11.1,D,G,JBB,NA,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,big_tree,3,NA,trunk,7,NA,NA,NA,N,NA,3,NA
-103,M11,M11.2,D,G,JBB,NA,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,3,NA,trunk,6,NA,NA,NA,Y,NA,3,NA
-104,M14,M14.1,D,C,JBB,C,R,Lygodactylus,sp.,NA,dwarf gecko,NA,tree,NA,NA,branch1,2,1.9,0.29,M,Y,NA,NA,NA
-105,MAT_M14,MAT_14.1,D,NA,AB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,ground,0,NA,sand,NA,NA,NA,NA,Y,NA,0,NA
-106,MAT_M14,MAT_14.2,D,NA,AB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,ground,0,NA,sand,NA,NA,NA,NA,Y,NA,0,NA
-107,MAT_M14,MAT_14.3,D,NA,AB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,ground,0,NA,sand,NA,NA,NA,NA,N,NA,0,NA
-108,MAT_M14,MAT_14.4,D,NA,AB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,ground,0,NA,sand,NA,NA,NA,NA,N,NA,0,NA
-109,MAT_M14,MAT_14.5,D,NA,AB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,ground,0,NA,sand,NA,NA,NA,NA,N,NA,0,NA
-110,MAT_M14,MAT_14.6,D,NA,AB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,ground,0,NA,sand,NA,NA,NA,NA,N,NA,0,NA
-111,MAT_M14,MAT_14.7,D,NA,AB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,ground,0,NA,sand,NA,NA,NA,NA,N,NA,0,NA
-112,MAT_M14,MAT_14.8,D,NA,AB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,ground,0,NA,sand,NA,NA,NA,NA,N,NA,0,NA
-113,MAT_M14,MAT_14.9,D,NA,AB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,ground,0,NA,sand,NA,NA,NA,NA,N,NA,0,NA
-114,MAT_M14,MAT_14.10,D,NA,AB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,ground,0,NA,sand,NA,NA,NA,NA,N,NA,0,NA
-115,MAT_M14,MAT_14.11,D,NA,AB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,ground,0,NA,sand,NA,NA,NA,NA,N,NA,0,NA
-116,MAT_M14,MAT_14.12,D,NA,AB,NA,R,Psammophis,punctulatus,Psammophi_ punctulatus,Speckled sand snake,PSPU,ground,0,NA,sand,NA,NA,NA,NA,N,NA,0,NA
-117,M15,M15.1,D,C,JBB,R,R,Hemidactylus,sp.,NA,NA,NA,tree,6.5,4.5,trunk,NA,NA,NA,NA,N,NA,6.5,4.5
-118,M15.100,M15+100.1,D,NA,AB,NA,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,4,NA,trunk,NA,NA,NA,NA,Y,NA,4,NA
-119,MAT_M13,MAT_M13.1,D,NA,AB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,ground,0,NA,sand,NA,NA,NA,NA,N,NA,0,NA
-120,MAT_M13,MAT_M13.2,D,NA,AB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,ground,0,NA,sand,NA,NA,NA,NA,N,NA,0,NA
-121,MAT_M13,MAT_M13.3,D,NA,AB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,ground,0,NA,sand,NA,NA,NA,NA,N,NA,0,NA
-122,M16,M16.1,D,C,GB,R,R,Hemidactylus,mabouia,Hemidactylus_mabouia,tropical house gecko,HEMA,tree,5,1,trunk,5.3,5.5,3.2,M,N,NA,5,1
-123,M16,M16.2,D,C,GB,R,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,7,1,trunk,7.5,8,10,F,N,NA,7,1
-124,M16,M16.3,D,C,GB,C,R,Lygodactylus,sp.,NA,dwarf gecko,NA,tree,11,5,branch3,3,NA,NA,NA,N,NA,11,5
-125,M13,M13.1,D,C,GB,M,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,7,2.5,branch1,6,NA,NA,NA,N,NA,7,2.5
-126,M13,M13.2,D,C,GB,M,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,6,1.5,Branch1 / under bark,7,5,7.3,F,N,NA,6,1.5
-127,M13,M13.3,D,C,GP,R,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,6,1.5,Branch1 / under bark,7,NA,NA,NA,N,NA,6,1.5
-128,M13,M13.4,D,C,GP,R,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,6,1,trunk,7,NA,NA,NA,N,NA,6,1
-129,M13,M13.5,D,C,GP,R,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,6,1,trunk,7,NA,NA,NA,N,NA,6,1
-130,M13,M13.6,D,C,GP,R,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,bush,0,0,branch,5.3,6.8,6.8,3.4,N,NA,0,0
-131,M17,M17.1,D,G,AB,NA,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,small_tree,4,NA,trunk,4,NA,NA,NA,Y,NA,4,NA
-132,M17,M17.2,D,G,AB,NA,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,small_tree,2,NA,trunk,2.5,NA,NA,NA,Y,NA,2,NA
-133,BR12,BR12.1,D,C,JBB,R,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,2.2,0,Trunk / under bark,4.4,4,1.8,F,N,NA,2.2,0
-134,BR12,BR12.2,D,C,JBB,R,R,Trachylepis,planifrons,Trachylepis_planifrons,tree skink,TRPL,tree,7,0,Trunk / tree hole,7,NA,NA,NA,N,"gray brown, speckled body, dark stripe on side of head",7,0
-135,BR12,BR12.3,D,G,JH,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,ground,0,NA,sand,NA,NA,NA,NA,N,NA,0,NA
-136,BR12,BR12.4,D,C,JBB,R,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,8,1,Trunk / under bark,4.4,4.5,1.5,F,N,NA,8,1
-137,BR12.100,BR12.100,D,NA,AB,NA,R,Hemirhagerrhis,sp.,NA,bark snake,NA,vine,0.25,NA,vine,30,NA,NA,NA,N,NA,0.25,NA
-138,MAT_M14,MAT_M14.1,D,NA,GP,NA,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,tree,4,NA,trunk,2.5,2.2,0.5,F,Y,species hybridized†? Variation†?,4,NA
-139,MAT_M14,MAT_M14.2,D,NA,GP,NA,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,tree,4,NA,trunk,3.1,3.1,1,M,Y,species hybridized†? Variation†?,4,NA
-140,MAT_M14,MAT_M14.3,D,NA,GP,NA,R,Varanus,albigularis,Varanus_albigularis,white-throated savana monitor,VAAL,grass,3,NA,grass,15,16,57,F,Y,NA,3,NA
-141,M13,M13.7,N,G,GP,NA,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,2,NA,branch,6.5,6.4,7.2,M,N,NA,2,NA
-142,M13,M13.8,N,G,GP,NA,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,3,NA,trunk,7.3,6.3,10,F,N,female with eggs,3,NA
-143,M13,M13.9,N,C,GB,U,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,6,3,trunk,6,NA,NA,NA,N,Found in tree adjacent to climbed tree / SVL estimated,6,3
-144,BR18,BR18.1,D,G,JH,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,ground,0,NA,Sand / bush,NA,NA,NA,NA,N,NA,0,NA
-145,BR18,BR18.2,D,G,JH,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,ground,0,NA,Sand / bush,NA,NA,NA,NA,N,NA,0,NA
-146,BR16,BR16.1,D,G,JH,NA,R,Lygodactylus,sp.,NA,dwarf gecko,NA,tree,0.5,NA,trunk,NA,NA,NA,NA,N,NA,0.5,NA
-147,BR16,BR16.2,D,G,JH,NA,R,NA,NA,NA,NA,NA,tree,0.5,NA,trunk,NA,NA,NA,NA,N,"colorful orange, light blue skink†?",0.5,NA
-148,BR16,BR16.3,D,G,JH,NA,R,Lygodactylus,sp.,NA,dwarf gecko,NA,tree,2.6,NA,trunk,NA,NA,NA,NA,Y,NA,2.6,NA
-149,M12,M12.4,N,C,GB,C,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,big_tree,9.5,3.5,branch1,7.4,NA,8.5,F,N,female with eggs,9.5,3.5
-150,M11,M11.3,N,G,JH,NA,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,big_tree,4,NA,trunk,NA,NA,NA,NA,N,NA,4,NA
-151,M11.100,M11.100.1,N,NA,AB,NA,R,Hemidactylus,sp.,NA,NA,NA,big_tree,5,NA,trunk,NA,NA,NA,NA,N,NA,5,NA
-152,M11,NA,N,NA,JBB,between surveys,R,Hemidactylus,barbouri,Hemidactylus_ barbouri,barber's_gecko,HEBA,ground,0,NA,log,4.8,4,2.4,F,Y,NA,0,NA
-153,M7,M7.4,N,C,GB,C,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,NA,NA,trunk,7.3,8.4,10.8,F,N,NA,NA,NA
-154,M8,NA,N,NA,JBB,between surveys,R,Hemidactylus,sp.,NA,NA,NA,ground,0,NA,sand,NA,NA,NA,NA,Y,NA,0,NA
-155,M8,NA,N,NA,JBB,between surveys,R,Hemidactylus,barbouri,Hemidactylus_ barbouri,barber's_gecko,HEBA,ground,0,NA,sand,NA,NA,NA,NA,N,NA,0,NA
-156,M15,M15.2,N,C,JBB,R,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,big_tree,5,1,trunk,5.8,NA,3.7,M,N,NA,5,1
-157,M15,M15.3,N,C,JBB,C,R,Hemirhagerrhis,sp.,NA,bark snake,NA,big_tree,15.2,0.5,branch4,40.1,12.4,25,M,N,NA,15.2,0.5
-158,BR17,BR17.1,N,C,GB,C,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,bush,2,1,branch1,7,NA,NA,NA,N,SVL estimated,2,1
-159,BR19,BR19.1,N,C,GB,C,R,Hemidactylus,sp.,NA,NA,NA,tree,12,3,branch2,4,5,NA,NA,N,SVL and tail estimated,12,3
-160,BR13,BR13.1,N,C,JBB,U,R,Hemidactylus,mabouia,Hemidactylus_mabouia,tropical house gecko,HEMA,tree,2,NA,trunk,3.8,NA,1.4,F,N,NA,2,NA
-161,BR13.100,BR13.100.1,N,G,AB,NA,R,Chamaeleo,dilepis,Chamaeleo_dilepis,flap-necked chameleon,CHDI,tree,5,NA,branch,5.4,5.4,3.5,NA,Y,NA,5,NA
-162,MAT_BR11,MAT_BR11.1,N,NA,AB,NA,R,Trachylepis,varia,Trachylepis_varia,Variable skink,TRVA,pole,1.2,NA,pole,9.2,15.5,23,NA,Y,NA,1.2,NA
-163,MAT_BR11,MAT_BR11.2,N,NA,AB,NA,R,Hemidactylus,mrimaensis,Hemidactylus_mrimaensis,kaya gecko,HEMI,pole,1,NA,pole,5.6,5.8,4.8,M,Y,NA,1,NA
-164,MAT_BR11,MAT_BR11.3,N,NA,AB,NA,R,Hemidactylus,sp.,NA,NA,NA,tree,0.5,NA,trunk,NA,NA,NA,NA,N,NA,0.5,NA
-165,BR11,BR11.3,N,C,GB,R,R,Gastropholis,prasina,Gastropholis_prasina,Green keel-bellied lizard,GAPR,tree,7.1,2,Branch1 / hole with water,10.6,29.9,26.5,NA,Y,NA,7.1,2
-166,BR12,BR12.5,N,C,JBB,R,R,Hemidactylus,mrimaensis,Hemidactylus_mrimaensis,kaya gecko,HEMI,tree,8,NA,trunk,5.5,5.8,4.2,F,Y,"tubercles on back legs, front legs, enlarged, tubercles on back half, very intense tail spikes, back tubercles keeled (gravid)",8,NA
-167,BR12,BR12.6,N,C,JBB,R,R,Hemidactylus,mabouia,Hemidactylus_mabouia,tropical house gecko,HEMA,tree,12.6,NA,branch1,3.5,4.4,0.9,F,Y,NA,12.6,NA
-168,BR18,BR18.3,N,G,JH,NA,R,Hemidactylus,sp.,NA,NA,NA,tree,0.5,NA,trunk,4.3,3.1,1.9,F,Y,"enlarged tubercles on back, weakly keeled, 16 tubercles, dark band through snout then eye, passing shoulder then braking / enlarged tubercles on upper legs, not lower / white cream below / long neck",0.5,NA
-169,M18,M18.3,N,C,JBB,R,R,Lygodactylus,sp.,NA,dwarf gecko,NA,tree,12.75,2,branch5,2.5,2.25,0.4,NA,Y,new species for the forest†?,12.75,2
-170,M18,M18.4,N,G,JH,NA,R,Cordylus,tropidosternum,Cordylus_tropidosternum,Tropical girdled lizard,COTR,tree,1,NA,Hole / trunk,NA,NA,NA,NA,Y,NA,1,NA
-171,M18,NA,N,NA,JBB,between surveys,R,Hemidactylus,mabouia,Hemidactylus_mabouia,tropical house gecko,HEMA,bush,0.5,NA,branch,5,NA,NA,NA,N,NA,0.5,NA
-172,M20,M20.5,N,G,JH,NA,R,Hemidactylus,mrimaensis,Hemidactylus_mrimaensis,kaya gecko,HEMI,tree,0.5,NA,trunk,4.8,5.2,2.7,F,Y,"tubercles enlarged on upper legs, spikes on tail",0.5,NA
-173,BR16,BR16.4,N,C,JBB,R,R,Chamaeleo,dilepis,Chamaeleo_dilepis,flap-necked chameleon,CHDI,tree,3.4,NA,branch,13.8,13.8,58,NA,Y,NA,3.4,NA
-174,BR16.100,BR16.100.1,N,NA,AB,NA,R,skink,sp.,NA,NA,NA,tree,1,NA,trunk,NA,NA,NA,NA,N,NA,1,NA
-175,M14,M14.2,N,C,JBB,G,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,vine,1,NA,vine,5.6,7.5,4.1,M,N,NA,1,NA
-176,M14,M14.3,N,G,JH,NA,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,1.5,NA,trunk,6.8,8.9,6.5,M,N,NA,1.5,NA
-177,M14,M14.4,N,G,JH,NA,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,0.5,NA,trunk,7.1,7,9,M,N,NA,0.5,NA
-178,M16,M16.4,N,G,GP,NA,R,Hemidactylus,mabouia,Hemidactylus_mabouia,tropical house gecko,HEMA,tree,5,10,branch,7.1,4.5,7.5,M,Y,NA,5,10
-179,M16,M16.5,N,C,GB,M,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,8,1,trunk,6.7,NA,7,M,N,"no tail, 40 pores",8,1
-180,M16,M16.6,N,G,GP,NA,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,2,3,trunk,6.5,8.8,6,M,N,NA,2,3
-181,M16,M16.7,N,G,GP,NA,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,bush,3,3,branch,4.7,5.5,2.2,M,Y,NA,3,3
-182,M16,M16.8,N,C,GB,R,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,8,1,Branch1 / dead,7.4,9.3,10,M,N,NA,8,1
-183,MAT_M22,MAT_M22.1,N,NA,JH,NA,R,Hemidactylus,mrimaensis,Hemidactylus_mrimaensis,kaya gecko,HEMI,cement pole,0.5,NA,pole,6.2,7.2,5.8,F,Y,NA,0.5,NA
-184,M22,M22.6,N,C,JBB,R,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,5.6,1,trunk,6,NA,NA,NA,N,NA,5.6,1
-185,MAT_M22,MAT_M22.2,N,NA,JH,NA,R,Hemidactylus,mrimaensis,Hemidactylus_mrimaensis,kaya gecko,HEMI,wood pole,0.5,NA,pole,5.9,5.7,5.6,F,Y,NA,0.5,NA
-186,MAT_M21,MAT_M21.1,N,NA,AB,NA,R,Hemidactylus,mrimaensis,Hemidactylus_mrimaensis,kaya gecko,HEMI,wood pole,1.5,NA,pole,5.3,6.2,3.2,M,Y,NA,1.5,NA
-187,MAT_M21,MAT_M21.2,N,NA,AB,NA,R,Hemidactylus,mabouia,Hemidactylus_mabouia,tropical house gecko,HEMA,wood pole,1.5,NA,pole,3.4,1.8,0.9,F,N,NA,1.5,NA
-188,CY2,CY2.1,D,G,AB,NA,R,Hemidactylus,sp.,NA,NA,NA,tree,0.1,NA,trunk,4.5,5.2,2,M,NA,will be frozen,0.1,NA
-189,CY12,CY12.1,D,G,GP,NA,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,tree,1,1,trunk,3.5,NA,NA,NA,N,SVL estimated,1,1
-190,CY12,NA,D,NA,GP,between surveys,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,bush,1.5,NA,branch1,3.6,1.1,1.1,M,N,tail regenerated / lots of orange parasites,1.5,NA
-191,CY12,NA,D,NA,JBB,between surveys,R,Naja,melanoleuca,Naja_melanoleuca,Forest cobra,NAME,ground,0,NA,dirt,200,NA,NA,NA,N,SVL estimated,0,NA
-192,M5,M5.2,N,C,JBB,ground,A,Arthroleptis,stenodactylus,Arthroleptis_stenodactylus,common squeaker,ARST,litter,0,2,litter,2,NA,0.6,NA,Y,NA,0,2
-193,BR4,BR4.1,D,C,GB,G,R,Lygodactylus,sp.,NA,NA,NA,tree,2,8,trunk,5,NA,NA,NA,N,SVL estimated,2,8
-194,BR4,NA,D,NA,GP,between surveys,R,skink sp.,NA,NA,NA,NA,log,0.25,NA,log,4,NA,NA,NA,N,SVL estimated,0.25,NA
-195,CY10,CY10.1,D,G,JH,NA,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,tree,2.5,NA,trunk,NA,NA,NA,NA,N,NA,2.5,NA
-196,MAT_CY10,MAT_CY10.1,D,NA,AB,NA,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,pole,5,NA,pole,3,NA,NA,NA,Y,SVL estimated,5,NA
-197,MAT_CY10,MAT_CY10.2,D,NA,AB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,ground,0,NA,sand,3,NA,NA,NA,N,SVL estimated,0,NA
-198,MAT_CY10,MAT_CY10.3,D,NA,AB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,ground,0,NA,sand,2.5,NA,NA,NA,N,SVL estimated,0,NA
-199,MAT_CY10,MAT_CY10.4,D,NA,AB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,ground,0,NA,sand,5,NA,NA,NA,N,SVL estimated,0,NA
-200,MAT_CY10,MAT_CY10.5,D,NA,AB,NA,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,tree,3,NA,trunk,3,NA,NA,NA,Y,SVL estimated,3,NA
-201,CY9,NA,D,NA,NA,between surveys,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,ground,0,NA,sand,NA,NA,NA,NA,N,NA,0,NA
-202,CY9,CY9.1,D,C,JBB,R,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,tree,12,NA,branch5,3.5,NA,NA,NA,N,NA,12,NA
-203,CY9,CY9.2,D,C,JBB,R,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,tree,3,NA,trunk,NA,NA,NA,NA,N,NA,3,NA
-204,CY9,NA,D,NA,NA,between surveys,R,Hemidactylus,sp.,NA,NA,NA,pole,2,NA,pole,5.5,6.6,4.2,M,Y,"most likely platycephalus or mabouia, found between surveys in matrix",2,NA
-205,MAT_CY9,MAT_CY9.1,D,NA,NA,NA,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,tree,2,NA,trunk,3.5,NA,NA,NA,Y,NA,2,NA
-206,CY8,CY8.1,D,C,JBB,R,R,Hemidactylus,sp.,NA,NA,NA,tree,3.5,NA,trunk,3,NA,NA,NA,N,SVL estimated,3.5,NA
-207,CY8,CY8.2,D,C,JBB,R,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,tree,11,NA,branch3,3.8,4,1.1,M,N,NA,11,NA
-208,MAT_CY8,MAT_CY8.1,D,NA,AB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,road,0,NA,road,2.3,4.7,0.5,NA,Y,NA,0,NA
-209,MAT_CY8,MAT_CY8.2,D,NA,AB,NA,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,pole,0.5,NA,pole,3.5,NA,NA,NA,Y,SVL estimated,0.5,NA
-210,MAT_CY8,MAT_CY8.3,D,NA,AB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,ground,0,NA,sand,4,NA,NA,NA,Y,SVL estimated,0,NA
-211,CY4,CY4.1,D,G,GP,NA,R,Hemidactylus,mabouia,Hemidactylus_mabouia,tropical house gecko,HEMA,tree,2,NA,trunk,NA,NA,NA,NA,N,NA,2,NA
-212,CY4,CY4.2,D,C,JBB,R,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,tree,4,1,trunk,3,2.9,0.9,F,Y,SVL estimated,4,1
-213,CY7,CY7.1,D,C,GB,U,R,Hemidactylus,sp.,NA,NA,NA,tree,1.5,0,trunk,5,7,NA,NA,N,SVL estimated,1.5,0
-214,MAT_CY7,MAT_CY7.1,D,NA,AB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,ground,0,NA,sand,2,NA,NA,NA,N,SVL estimated,0,NA
-215,MAT_CY7,MAT_CY7.2,D,NA,AB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,ground,0,NA,sand,4,NA,NA,NA,Y,SVL estimated,0,NA
-216,MAT_CY7,MAT_CY7.3,D,NA,AB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,ground,0,NA,sand,3,NA,NA,NA,N,SVL estimated,0,NA
-217,MAT_CY7,MAT_CY7.4,D,NA,AB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,ground,0,NA,sand,5,NA,NA,NA,Y,SVL estimated,0,NA
-218,MAT_CY6,MAT_CY6.1,D,NA,AB,NA,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,telephone pole,5,NA,pole,NA,NA,NA,NA,Y,NA,5,NA
-219,MAT_CY6,MAT_CY6.2,D,NA,AB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,road,0,NA,sand,NA,NA,NA,NA,N,NA,0,NA
-220,MAT_CY6,MAT_CY6.3,D,NA,AB,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,road,0,NA,sand,NA,NA,NA,NA,N,NA,0,NA
-221,MAT_CY6,MAT_CY6.4,D,NA,AB,NA,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,tree,3,NA,trunk,NA,NA,NA,NA,Y,NA,3,NA
-222,M21,M21.1,D,C,GB,R,R,Lygodactylus,sp.,Lygodactylus_sp.,dwarf gecko,NA,vine,4,5,vine,3,NA,NA,NA,N,SVL estimated,4,5
-223,M21,M21.2,D,C,GB,R,R,Lygodactylus,sp.,Lygodactylus_sp.,dwarf gecko,NA,tree,3,1,trunk,3,NA,NA,NA,N,SVL estimated,3,1
-224,M21,M21.3,D,G,GP,NA,R,Lygodactylus,sp.,Lygodactylus_sp.,dwarf gecko,NA,tree,5,1,trunk,3,NA,NA,NA,N,SVL estimated,5,1
-225,M19,M19.1,D,C,GB,C,R,Lygodactylus,sp.,Lygodactylus_sp.,dwarf gecko,NA,tree,11,1,branch1,2.5,3,NA,NA,N,SVL estimated,11,1
-226,MAT_CY9,MAT_CY9.2,N,NA,AB,NA,R,Hemidactylus,mabouia,Hemidactylus_mabouia,tropical house gecko,HEMA,power pole,0.5,NA,pole,6.1,NA,4.4,M,N,no tail,0.5,NA
-227,CY13,CY13.1,D,C,JBB,R,R,skink,NA,NA,NA,NA,tree,3,NA,trunk,NA,NA,NA,NA,Y,"dark side, bronze head, cream throat",3,NA
-228,CY13,CY13.2,D,C,JBB,R,R,Gecko,NA,NA,NA,NA,tree,2.5,NA,trunk,2.5,NA,NA,NA,Y,uniformed dark brown,2.5,NA
-229,CY13.100,CY13.100.1,D,NA,AB,NA,R,Hemidactylus,mrimaensis,Hemidactylus_mrimaensis,kaya gecko,HEMI,tree,0.5,NA,trunk,4.2,5.5,1.5,M,N,"tubercles along back, narrow head, orange undertail, tubercles upper hind legs",0.5,NA
-230,CY13,CY13.3,N,G,JBB & AB,NA,R,Hemidactylus,mabouia,Hemidactylus_mabouia,tropical house gecko,HEMA,tree,2,NA,trunk,2.6,1.7,0.45,NA,Y,"11-12 tubercles across back, no tubercles on upper legs, tubercles on back very subtle, tail regenerated little smooth blunt end, faint cross markings on back",2,NA
-231,CY13,CY13.4,N,G,JBB & AB,NA,R,Hemidactylus,mrimaensis,Hemidactylus_mrimaensis,kaya gecko,HEMI,tree,0.1,NA,trunk,4.8,5.9,2.5,F,Y,"gravied, tubercles on back are oblong/pointed (barnicle), few enlarged tubercles on hind legs, head narrow and flat, undertail orange, generally uniformed in color, faint banding on tail, slender gecko",0.1,NA
-232,M19,M19.2,N,G,GP,NA,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,3,5,branch,5.9,NA,3.8,F,N,NA,3,5
-233,M19,M19.3,N,G,GP,NA,R,Hemidactylus,mabouia,Hemidactylus_mabouia,tropical house gecko,HEMA,litter,0,4,litter,4,2.7,1.4,M,Y,NA,0,4
-234,M19,M19.4,N,G,GP,NA,R,Hemidactylus,mabouia,Hemidactylus_mabouia,tropical house gecko,HEMA,litter,0,4,litter,3.4,4.2,1.3,F,Y,NA,0,4
-235,M25,M25.1,D,C,JBB,U,R,Hemidactylus,sp.,NA,NA,NA,tree,3,1,trunk,5,NA,NA,NA,N,NA,3,1
-236,M25,M25.2,D,C,JBB,C,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,tree,12,1,branch1,3.5,3.5,1.1,NA,Y,NA,12,1
-237,M25,M25.3,D,G,GP,NA,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,tree,2,NA,trunk,3,NA,NA,NA,N,NA,2,NA
-238,M25,M25.4,D,G,GP,NA,R,Trachylepis,maculilabris,Trachylepi_ maculilabris,speckle-lipped skink,TRMA,log,0.5,NA,log,9,NA,NA,NA,N,NA,0.5,NA
-239,M25,M25.5,D,NA,NA,between mat,R,Psammophis,orientalis,Psammophi_ orientalis,Eastern stripe-bellied sand snake,PSOR,road,0,NA,sand,125,NA,NA,NA,N,NA,0,NA
-240,M31,NA,D,NA,NA,between surveys,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,1.5,NA,trunk,7.3,NA,7.5,M,N,NA,1.5,NA
-241,MAT_M31,MAT_M31.1,D,NA,NA,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,ground,0,NA,sand,4,NA,NA,NA,N,NA,0,NA
-242,MAT_M31,MAT_M31.2,D,NA,NA,NA,R,Nucras,boulengeri,Nucras_boulengeri,Boulanger's scrub lizard,NUBO,ground,0,NA,sand,4,NA,NA,NA,N,NA,0,NA
-243,M29,M29.1,D,C,GB,M,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,tree,6,6,branch3,3,NA,NA,NA,N,Found in Hamenia (adjacent tree) / SVL estimated,6,6
-244,M27,M27.1,D,C,GB,R,R,Hemidactylus,sp.,NA,NA,NA,small_tree,1.5,3,Hole / trunk,NA,NA,NA,NA,N,NA,1.5,3
-245,M27,M27.2,D,C,GB,R,R,Hemidactylus,sp.,NA,NA,NA,small_tree,1.5,3,Hole / trunk,NA,NA,NA,NA,N,NA,1.5,3
-246,M27,M27.3,D,G,GP,NA,R,Mochlus,sundevalli,Mochlus_sundevalli,Sundevall's writhing skink,MOSU,log,0,NA,log,6.7,3.2,4.5,NA,Y,NA,0,NA
-247,M28,M28.1,D,C,JBB,U,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,4.27,1.5,branch1,5.5,NA,NA,NA,N,SVL estimated,4.27,1.5
-248,M24,M24.1,D,G,GP,NA,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,tree,1.5,5,trunk,NA,NA,NA,NA,N,NA,1.5,5
-249,M24,M24.2,D,C,GB,U,R,Hemidactylus,sp.,NA,NA,NA,dead tree,3,1,Hole / trunk,6,NA,NA,NA,N,NA,3,1
-250,M24,M24.3,D,C,GB,U,R,Hemidactylus,sp.,NA,NA,NA,dead tree,3,1,trunk,5,NA,NA,NA,N,NA,3,1
-251,M24,M24.4,D,C,GB,R,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,tree,2,0.5,trunk,3,NA,NA,NA,N,NA,2,0.5
-252,M23,M23.1,D,C,GB,G,R,Hemidactylus,sp.,NA,NA,NA,tree,1,4,trunk,6,NA,NA,NA,N,"On adjacent tree, most likely platycephalus",1,4
-253,M23,M23.2,D,C,GB,G,R,Hemidactylus,sp.,NA,NA,NA,tree,2,4,trunk,NA,NA,NA,NA,N,"On adjacent tree, most likely platycephalus",2,4
-254,M23,M23.3,D,C,GB,G,R,Hemidactylus,sp.,NA,NA,NA,tree,1.5,4,trunk,NA,NA,NA,NA,N,"On adjacent tree, most likely platycephalus",1.5,4
-255,M23,NA,D,NA,GP,between surveys,R,Chamaeleo,dilepis,Chamaeleo_dilepis,flap-necked chameleon,CHDI,bush,2,NA,branch,14.8,14.7,79.5,NA,Y,10 meters from the edge,2,NA
-256,M28,M28.2,N,G,JBB,C,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,1.25,2,trunk,6.9,8.1,6.4,M,N,NA,1.25,2
-257,M28,M28.3,N,G,JBB,C,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,NA,2,trunk,7.3,6.9,8,F,N,NA,NA,2
-258,M28,M28.4,N,C,JBB,C,R,Chamaeleo,dilepis,Chamaeleo_dilepis,flap-necked chameleon,CHDI,tree,16.5,3.5,branch10+,8.3,9.1,15,NA,Y,NA,16.5,3.5
-259,M26,NA,N,NA,GP,between surveys,R,Chamaeleo,dilepis,Chamaeleo_dilepis,flap-necked chameleon,CHDI,vine,2,NA,vine,11.3,10.6,48,NA,N,"0 m from edge, very first vine along the road, near car for M23",2,NA
-260,MAT_M25,MAT_M25.1,N,NA,GB,NA,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,4,NA,trunk,NA,NA,NA,NA,N,on eucalyptus / 4 m from edge,4,NA
-261,MAT_M25,MAT_M25.2,N,NA,GB,NA,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,1.8,NA,trunk,5.6,4.8,4,M,N,on eucalyptus / 7 m from edge,1.8,NA
-262,M30,M30.1,N,C,JBB,M,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,9.6,4,branch3,6,NA,NA,NA,N,NA,9.6,4
-263,M30,M30.2,N,G,JT,NA,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,3,4,trunk,5,NA,NA,NA,N,NA,3,4
-264,M30,M30.3,N,G,JT,NA,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,1.5,5,trunk,6.1,8.1,4.5,F,Y,NA,1.5,5
-265,M30,NA,N,NA,NA,between surveys,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,1.5,NA,trunk,NA,NA,NA,NA,N,NA,1.5,NA
-266,M31,M31.1,N,C,JBB,M,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,8.3,0.5,branch,6.6,8.3,6.5,M,Y,NA,8.3,0.5
-267,M27,M27.4,N,G,GP,NA,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,5,0,trunk,NA,NA,NA,NA,N,NA,5,0
-268,M27,M27.5,N,G,GP,NA,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,8,10,trunk,NA,NA,NA,NA,N,NA,8,10
-269,M27,NA,N,NA,GP,between surveys,R,Hemidactylus,mabouia,Hemidactylus_mabouia,tropical house gecko,HEMA,bush,3,NA,NA,NA,NA,NA,NA,N,NA,3,NA
-270,M29,M29.2,N,G,GP,NA,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,1.5,5,trunk,6.8,7.8,8.5,F,N,eggs,1.5,5
-271,M29,M29.3,N,G,GP,NA,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,2,10,trunk,7.6,8.5,11,F,N,eggs,2,10
-272,M29,M29.4,N,G,GP,NA,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,1,15,trunk,7.2,8.9,7,F,N,NA,1,15
-273,M29,M29.5,N,G,GP,NA,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,1.5,3,trunk,7.3,8.6,6.8,F,N,NA,1.5,3
-274,M29,M29.6,N,G,GP,NA,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,5,NA,trunk,NA,NA,NA,NA,N,NA,5,NA
-275,M29,M29.7,N,G,GP,NA,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,5,NA,trunk,NA,NA,NA,NA,N,NA,5,NA
-276,M29,NA,N,NA,GP,between surveys,R,Hemidactylus,sp.,NA,NA,NA,tree,NA,NA,trunk,NA,NA,NA,NA,N,About 70 m from edge,NA,NA
-277,M23,M23.4,N,C,GB,U,R,Hemidactylus,sp.,NA,NA,NA,tree,5,0.5,trunk,NA,NA,NA,NA,N,where is data sheet†? On phone,5,0.5
-278,M23,M23.5,N,C,GB,U,R,Hemidactylus,sp.,NA,NA,NA,small_dead_tree,1.5,3,trunk,NA,NA,NA,NA,N,where is data sheet†? On phone,1.5,3
-279,BR27,BR27.1,D,C,GB,U,R,Hemidactylus,sp.,NA,NA,NA,tree,1.5,3,branch1,3.2,2.4,3,F,Y,"under bark / same as unrecognised hemidactylus sp from today survey, most likely mabouia or growing platycephalus",1.5,3
-280,BR29,BR29.1,D,C,JBB,U,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,tree,3,3,branch1,3.5,3.95,3.5,M,Y,NA,3,3
-281,BR29,BR29.2,D,C,JBB,M,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,tree,10,1,trunk,NA,NA,NA,NA,N,NA,10,1
-282,BR29,BR29.3,D,G,JT,NA,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,tree,2.5,NA,trunk,NA,NA,NA,NA,Y,NA,2.5,NA
-283,BR29,BR29.4,D,C,JBB,R,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,9.7,0.5,trunk,6,NA,NA,NA,N,NA,9.7,0.5
-284,BR30,BR30.1,D,C,JBB,M,R,Hemidactylus,sp.,NA,NA,NA,big_tree,6.6,1,trunk,3.3,2.3,2.5,F,Y,"same small gecko, with dark line through eye and striped lower lip, same as2 specimens placed in formalin / missing tip of tail",6.6,1
-285,BR21,BR21.1,D,G,GP,NA,R,Trachylepis,planifrons,Trachylepis_planifrons,tree skink,TRPL,bush,3,10,branch,NA,NA,NA,NA,N,NA,3,10
-286,BR26,BR26.1,D,G,JBB,NA,R,Lygodactylus,mombasicus,Lygodactylus_mombasicus,white-headed dwarf gecko,LYMO,small_tree,2,NA,branch2,3,NA,NA,NA,N,SVL estimated,2,NA
-287,BR25,BR25.1,D,C,JBB,U,R,Hemirhagerrhis,sp.,NA,bark snake,NA,tree,3.3,0.25,trunk,31.7,12.5,5.5,M,Y,NA,3.3,0.25
-288,BR25,BR25.2,D,C,JBB,R,R,Trachylepis,planifrons,Trachylepis_planifrons,tree skink,TRPL,tree,3.5,0.5,trunk,11,NA,NA,NA,Y,SVL estimated,3.5,0.5
-289,BR23,BR23.1,D,G,GP,NA,R,Trachylepis,sp.,NA,NA,NA,bush,1,5,branch1,NA,NA,NA,NA,N,NA,1,5
-290,BR24,BR24.1,D,G,GP,NA,R,Chamaeleo,dilepis,Chamaeleo_dilepis,flap-necked chameleon,CHDI,bush,2,10,branch,12.5,9.6,46.5,NA,Y,NA,2,10
-291,BR22,BR22.1,D,G,JBB,NA,R,Hemidactylus,sp.,NA,NA,NA,tree,3,NA,trunk,4,NA,NA,NA,N,SVL estimated,3,NA
-292,BR22,BR22.2,N,C,JBB,U,R,Hemidactylus,platycephalus,Hemidactylus_platycephalus,tree gecko,HEPL,tree,4.9,2,trunk,7,8.5,8.75,M,Y,NA,4.9,2
-293,BR22,BR22.3,N,C,JBB,R,R,Hemidactylus,sp.,NA,NA,NA,tree,3.6,1,trunk,2.3,NA,0.05,M,Y,missing tail and back right foot / round and subtle tubercles in 13 rows on back,3.6,1
-294,BR22,BR22.4,N,C,JBB,R,R,Hemidactylus,sp.,NA,NA,NA,tree,6,0.5,branch1,3.7,3.4,1.1,M,Y,26 pores / round subtle tubercles on back in 12 rows / weakly keeled,6,0.5
-295,BR22,BR22.5,N,C,JBB,R,R,Chamaeleo,dilepis,Chamaeleo_dilepis,flap-necked chameleon,CHDI,tree,12.5,3.5,branch8,5.3,5.5,5.2,NA,Y,NA,12.5,3.5
-296,BR20,BR20.1,N,G,GP,NA,R,Gastropholis,prasina,Gastropholis_prasina,Green keel-bellied lizard,GAPR,bush,2,8,branch,12,24.3,28.5,NA,Y,ate its tailÖ burk,2,8
-297,BR20,BR20.2,N,G,GP,NA,R,Trachylepis,sp.,NA,NA,NA,bush,3,10,branch,NA,NA,NA,NA,N,NA,3,10
-298,BR26,BR26.2,N,C,JBB,M,R,Hemidactylus,sp.,NA,NA,NA,big_tree,7.5,3,branch1,4.3,3.6,1.5,F,Y,"same as two placed in formalin, dark line from snout to eye, regenerated tail blunt, stripes on lower lip, tubercles on back subtle and round weakly keel, tubercles on tail are small and pointed, some tubercles on upper†? of hing leg",7.5,3
-299,BR26,BR26.3,N,C,JBB,R,R,Chamaeleo,dilepis,Chamaeleo_dilepis,flap-necked chameleon,CHDI,big_tree,7,5.6,branch10,6.5,6.2,5.5,F,Y,NA,7,5.6
-300,MAT_BR26,MAT_BR26.1,N,NA,JT,NA,R,Hemidactylus,angulatus,Hemidactylus_angulatus,east african house gecko,HEAN,stump_dried,0,NA,stump,5.5,NA,NA,NA,N,NA,0,NA
-301,MAT_BR26,MAT_BR26.2,N,NA,JT,NA,R,Rhamphiophis,rostratus,Rhamphiophis_rostratus,rufous beaked snake,RHRO,stump_dried,0,NA,stump,70.5,31,235,M,Y,NA,0,NA
-302,MAT_BR26,MAT_BR26.3,N,NA,JT,NA,R,Hemidactylus,angulatus,Hemidactylus_angulatus,east african house gecko,HEAN,stump_dried,0,NA,stump,4.6,5,2.75,F,Y,NA,0,NA
-303,BR25,BR25.3,N,C,JBB,M,R,Chamaeleo,dilepis,Chamaeleo_dilepis,flap-necked chameleon,CHDI,tree,9,10,branch8,6,NA,NA,NA,N,NA,9,10
-304,BR25,NA,N,NA,JBB,between surveys,R,Chamaeleo,dilepis,Chamaeleo_dilepis,flap-necked chameleon,CHDI,bush,1.5,NA,branch4,12.5,11.5,34.5,F,Y,possible recapture from one in the morning,1.5,NA
-305,BR23,BR23.2,N,C,GB,U,R,Trachylepis,planifrons,Trachylepis_planifrons,tree skink,TRPL,tree,1,0,trunk,NA,NA,NA,NA,N,NA,1,0
-306,MAT_BR30,MAT_BR30.1,N,NA,JBB,NA,R,Hemidactylus,mabouia,Hemidactylus_mabouia,tropical house gecko,HEMA,NA,NA,NA,NA,5.7,4.9,4.5,M,N,NA,NA,NA
-307,MAT_BR30,MAT_BR30.2,N,NA,JBB,NA,R,Hemidactylus,mabouia,Hemidactylus_mabouia,tropical house gecko,HEMA,NA,NA,NA,NA,6,6.2,4.3,F,N,NA,NA,NA
-308,BR30,BR30.2,N,G,JT,NA,R,Trachylepis,sp.,NA,NA,NA,tree,1.5,15,trunk,NA,NA,NA,NA,N,NA,1.5,15
-309,BR29,BR29.5,N,C,JBB,U,R,Chamaeleo,dilepis,Chamaeleo_dilepis,flap-necked chameleon,CHDI,tree,2,2,branch7,3.8,4,1.25,NA,Y,NA,2,2
-310,BR29,BR29.6,N,G,JT,NA,R,Hemidactylus,sp.,NA,NA,NA,tree,3,NA,trunk,NA,NA,NA,NA,N,NA,3,NA
+"","ind_numb","Tree_ID","species_ID","day_night","survey_type","observer","survey_strata","amph_rept","genus","species","binomial","common_name","species_code","plant_type","height_found_m","dist_frm_center_m","substrate","SVL_cm","tail_cm","mass_g","sex","photo","notes","height_found_m_rec","dist_frm_center_m_rec"
+"1",1,"M1","M1.1","D","G","GP","NA","R","Mochlus","afer","Mochlus_afer","peter's writhing skink","MOAF","debris","0","NA","log","NA","NA","NA","NA","N","yellow sides noted by GP","0","NA"
+"2",2,"M1","M1.2","D","C","JBB","U","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","large_tree","1","5.9","trunk","3.6","1","1","M","Y","NA","1","5.9"
+"3",3,"M1","M1.3","D","C","JBB","U","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","large_tree","1","5.9","trunk","3.5","NA","NA","F","N","pair were seen mating, one escaped, SVL estimated","1","5.9"
+"4",4,"M2","M2.1","D","G","GP","NA","R","Hemidactylus","mrimaensis","Hemidactylus_mrimaensis","kaya gecko","HEMI","debris","0","NA","und_debris","4.8","5.9","3.8","F","Y","under log, enlarged tubercles on upper legs-particularly visible on hind legs","0","NA"
+"5",5,"M2","M2.2","D","C","GB","M","R","Chamaeleo","dilepis","Chamaeleo_dilepis","flap-necked chameleon","CHDI","under_tree","5.4","2","branch5+","10.8","10.6","38","M","Y","NA","5.4","2"
+"6",6,"M2","M2.3","D","C","GB","R","R","Chamaeleo","dilepis","Chamaeleo_dilepis","flap-necked chameleon","CHDI","under_tree","4.0999999999999996","1.5","branch5+","7.5","8.3000000000000007","8.5","NA","Y","NA","4.0999999999999996","1.5"
+"7",7,"M3","M3.1","D","G","GP","NA","R","Lygodactylus","sp.","Lygodactylus_sp.","dwarf gecko","NA","large_tree","5","NA","trunk","NA","NA","NA","NA","N","NA","5","NA"
+"8",8,"M3","M3.2","D","G","GP","NA","R","Lygodactylus","sp.","Lygodactylus_sp.","dwarf gecko","NA","large_tree","3","NA","trunk","NA","NA","NA","NA","N","NA","3","NA"
+"9",9,"M4","M4.1","D","C","GB","M","R","Lygodactylus","sp.","Lygodactylus_sp.","dwarf gecko","NA","large_tree","7.2","0","trunk","NA","NA","NA","NA","N","NA","7.2","0"
+"10",10,"M4","M4.2","N","G","GP","NA","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","large_tree","3","NA","trunk","7","8.1999999999999993","9.8000000000000007","F","Y","NA","3","NA"
+"11",11,"M4","M4.3","N","G","GP","NA","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","bush","0.5","NA","trunk","6.3","8","6","M","Y","NA","0.5","NA"
+"12",12,"M3","M3.3","N","C","JBB","U","R","Chamaeleo","dilepis","Chamaeleo_dilepis","flap-necked chameleon","CHDI","under_tree","4.3","1.9","branch5+","5.8","5.3","4.8","NA","Y","NA","4.3","1.9"
+"13",13,"M3","M3.4","N","C","JBB","M","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","large_tree","10","6","trunk","5.7","6.8","4.5","M","Y","vocal when handled and 46-48 prefemoral-anl pores","10","6"
+"14",14,"M3","M3.5","N","C","JBB","C","R","Hemidactylus","mabouia","Hemidactylus_mabouia","tropical house gecko","HEMA","large_tree","14.3","2","branch2","6.2","6.7","4.5","M","Y","no tubercles on upper legs","14.3","2"
+"15",15,"M3","M3.6","N","C","JBB","C","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","15","1","branch3","6.2","6.7","5.7","M","Y","NA","15","1"
+"16",16,"M3","M3.7","N","G","GP","NA","R","Hemidactylus","mrimaensis","Hemidactylus_mrimaensis","kaya gecko","HEMI","tree","3","NA","trunk","4.5999999999999996","4","3","M","Y","NA","3","NA"
+"17",17,"BR2","BR2.1","D","C","JBB","R","R","Chamaeleo","dilepis","Chamaeleo_dilepis","flap-necked chameleon","CHDI","tree","8.5","6","branch4","9","NA","NA","NA","N","SVL estimated","8.5","6"
+"18",18,"BR3","BR3.1","D","G","GB","NA","R","Lizard","sp.","NA","NA","NA","grass","0","15","litter","15","NA","NA","NA","N","SVL estimated, dist to center estimated","0","15"
+"19",19,"BR3","BR3.2","D","G","GB","NA","R","Lizard","sp.","NA","NA","NA","grass","0","13","litter","12","NA","NA","NA","N","SVL estimated, dist to center estimated","0","13"
+"20",20,"BR3","NA","D","NA","JBB","outside","R","Varanus","albigularis","Varanus_albigularis","white-throated savana monitor","VAAL","grass","0","NA","litter","70","NA","NA","NA","Y","found while moving from BR2 to BR3, about 140m from BR3","0","NA"
+"21",21,"M6","M6.1","D","G","JBB","NA","R","Hemidactylus","mabouia","Hemidactylus_mabouia","tropical house gecko","HEMA","tree","1","NA","trunk","6","NA","NA","NA","N","SVL estimated","1","NA"
+"22",22,"M6","M6.2","D","G","JBB","NA","R","Hemidactylus","mabouia","Hemidactylus_mabouia","tropical house gecko","HEMA","tree","1","NA","trunk","4.5","5.8","2.5","F","Y","NA","1","NA"
+"23",23,"M6","M6.3","D","G","JBB","NA","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","3","NA","trunk","8","NA","NA","NA","N","SVL estimated","3","NA"
+"24",24,"M6","M6.4","D","G","JBB","NA","R","Hemidactylus","sp.","NA","NA","NA","tree","2","NA","trunk","5","NA","NA","NA","N","SVL estimated","2","NA"
+"25",25,"M6","M6.5","D","G","JBB","NA","R","Trachylepis","maculilabris","Trachylepi_ maculilabris","speckle-lipped skink","TRMA","tree","1.5","NA","trunk","8","NA","NA","NA","N","SVL estimated","1.5","NA"
+"26",26,"M5","M5.1","D","C","GB","M","R","Lygodactylus","sp.","NA","dwarf gecko","NA","tree","6.1","3","branch3","5","NA","NA","NA","N","SVL estimated, spotted before on the trunk while setting rope by JBB: initially at 10m","6.1","3"
+"27",27,"MAT_M5","MATM5.1","D","G","JBB","NA","R","Latastia","longicaudata","Latastia_longicaudata","Southern long-tailed lizard","LALO","ground","0","NA","sand","7","NA","NA","NA","Y","SVL estimated","0","NA"
+"28",28,"MAT_M5","MATM5.2","D","G","JBB","NA","R","Latastia","longicaudata","Latastia_longicaudata","Southern long-tailed lizard","LALO","ground","0","NA","sand","3","NA","NA","NA","N","SVL estimated","0","NA"
+"29",29,"MAT_M5","MATM5.3","D","G","JBB","NA","R","Latastia","longicaudata","Latastia_longicaudata","Southern long-tailed lizard","LALO","ground","0","NA","sand","3","NA","NA","NA","N","SVL estimated","0","NA"
+"30",30,"BR10","BR10.1","D","C","JBB","G","R","Hemidactylus","barbouri","Hemidactylus_ barbouri","barber's_gecko","HEBA","ground","0","3","litter","4","2.8","1.4","F","Y","NA","0","3"
+"31",31,"BR10","BR10.2","N","G","GP","NA","R","Hemidactylus","barbouri","Hemidactylus_ barbouri","barber's_gecko","HEBA","ground","0","NA","litter","4","NA","NA","NA","N","SVL estimated","0","NA"
+"32",32,"BR8","BR8.5","N","C","JBB","G","R","Hemidactylus","mabouia","Hemidactylus_mabouia","tropical house gecko","HEMA","bush","0.3","1","leaf","3","3.3","0.7","NA","Y","NA","0.3","1"
+"33",33,"BR9","NA","D","G","GP","outside","R","Trachylepis","planifrons","Trachylepis_planifrons","tree skink","TRPL","tree","3","20","trunk","NA","NA","NA","NA","N","SVL estimated","3","20"
+"34",34,"BR8","NA","D","NA","NA","between surveys","R","Trachylepis","planifrons","Trachylepis_planifrons","tree skink","TRPL","tree","2","15","trunk","NA","NA","NA","NA","N","SVL estimated","2","15"
+"35",35,"BR8","BR8.1","D","G","JBB","G","R","Trachylepis","maculilabris","Trachylepi_ maculilabris","speckle-lipped skink","TRMA","ground","0","3","litter","NA","NA","NA","NA","N","NA","0","3"
+"36",36,"BR8","BR8.2","D","U","JBB","U","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","small_tree","3","4","trunk","NA","NA","NA","NA","N","NA","3","4"
+"37",37,"BR8","BR8.3","D","M","JBB","M","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","big_tree","7","2","trunk","NA","NA","NA","NA","N","NA","7","2"
+"38",38,"BR8","BR8.4","D","M","JBB","M","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","big_tree","7","2","trunk","NA","NA","NA","NA","N","NA","7","2"
+"39",39,"BR7","BR7.1","D","G","GP","NA","R","Lizard","sp.","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","N","spotted a lizard which disappeared in the bushes / 1 centipide in tree 10 m high branch 4 15 cm long 7 m from trunk / spotted a skeleton of a turtoise (back-hinged)","NA","NA"
+"40",40,"MAT_BR8","MATBR8.9","N","G","JBB","NA","R","Hemidactylus","mabouia","Hemidactylus_mabouia","tropical house gecko","HEMA","sand","0","NA","sand","5.5","5.3","4.4000000000000004","F","Y","female with eggs","0","NA"
+"41",41,"MAT_BR8","MATBR8.10","N","G","JBB","NA","R","Trachylepis","planifrons","Trachylepis_planifrons","tree skink","TRPL","bush","1.75","NA","branch6","9.4","17.7","21","F","Y","NA","1.75","NA"
+"42",42,"M7","M7.1","D","G","JBB","NA","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","tree","1","NA","trunk","3.5","3.9","1.29","M","N","NA","1","NA"
+"43",43,"M7","M7.2","D","G","JBB","NA","R","Kinixys","sp.","NA","NA","NA","ground","0","NA","soil","17.5","NA","NA","M","Y","10,5 cm across mid-section / 17,5 cm total shell length, SVL estimated","0","NA"
+"44",44,"M7","M7.3","D","G","JBB","NA","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","tree","1","NA","trunk","3.4","3.5","1.9","M","N","NA","1","NA"
+"45",45,"M8","M8.1","D","C","JBB","U","R","Hemidactylus","mabouia","Hemidactylus_mabouia","tropical house gecko","HEMA","tree","1","0.5","trunk","3.9","3.5","1.29","M","N","NA","1","0.5"
+"46",46,"MAT_BR8","MATBR8.1","D","G","GB","NA","R","Latastia","longicaudata","Latastia_longicaudata","Southern long-tailed lizard","LALO","NA","0","NA","sand","15","NA","NA","NA","Y","distance from fence†: 15m, SVL estimated","0","NA"
+"47",47,"MAT_BR8","MATBR8.2","D","G","GB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","NA","0","NA","sand","5","NA","NA","NA","Y","distance from fence†: 2m, SVL estimated","0","NA"
+"48",48,"MAT_BR8","MATBR8.3","D","G","GB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","NA","0","NA","sand","7","NA","NA","NA","Y","distance from fence†: 1m, SVL estimated","0","NA"
+"49",49,"MAT_BR8","MATBR8.4","D","G","GB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","NA","0","NA","sand","NA","NA","NA","NA","N","distance from fence†: 6m, SVL estimated","0","NA"
+"50",50,"MAT_BR8","MATBR8.5","D","G","GB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","NA","0","NA","sand","NA","NA","NA","NA","N","distance from fence†: 6m, SVL estimated","0","NA"
+"51",51,"MAT_BR8","MATBR8.6","D","G","GB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","NA","0","NA","sand","NA","NA","NA","NA","N","distance from fence†: 6m, SVL estimated","0","NA"
+"52",52,"MAT_BR8","MATBR8.7","D","G","GB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","NA","0","NA","sand","NA","NA","NA","NA","N","distance from fence†: 6m, SVL estimated","0","NA"
+"53",53,"MAT_BR8","MATBR8.8","D","G","GB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","NA","0","NA","sand","NA","NA","NA","NA","N","distance from fence†: 6m, SVL estimated","0","NA"
+"54",54,"MAT_BR9","MATBR9.1","D","G","JBB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","NA","0","NA","Sand / soil","NA","NA","NA","NA","Y","NA","0","NA"
+"55",55,"MAT_BR9","MATBR9.2","D","G","JBB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","NA","0","NA","Sand / soil","NA","NA","NA","NA","Y","NA","0","NA"
+"56",56,"MAT_BR9","MATBR9.3","D","G","JBB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","NA","0","NA","Sand / soil","NA","NA","NA","NA","N","NA","0","NA"
+"57",57,"MAT_BR9","MATBR9.4","D","G","JBB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","NA","0","NA","Sand / soil","NA","NA","NA","NA","N","NA","0","NA"
+"58",58,"MAT_BR9","MATBR9.5","D","G","JBB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","NA","0","NA","Sand / soil","NA","NA","NA","NA","N","NA","0","NA"
+"59",59,"MAT_BR9","MATBR9.6","D","G","JBB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","NA","0","NA","Sand / soil","NA","NA","NA","NA","N","NA","0","NA"
+"60",60,"MAT_BR9","MATBR9.7","D","G","JBB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","NA","0","NA","Sand / soil","NA","NA","NA","NA","N","NA","0","NA"
+"61",61,"MAT_BR9","MATBR9.8","D","G","JBB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","NA","0","NA","Sand / soil","NA","NA","NA","NA","N","NA","0","NA"
+"62",62,"MAT_BR9","MATBR9.9","D","G","JBB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","NA","0","NA","Sand / soil","NA","NA","NA","NA","N","NA","0","NA"
+"63",63,"MAT_BR9","MATBR9.10","D","G","JBB","NA","R","Trachylepis","planifrons","Trachylepis_planifrons","tree skink","TRPL","bush","0.5","NA","small branch","NA","NA","NA","NA","Y","T. planiforms seen on very edge of forest bushes / N. boulangeri seen from about 0-15m from forest on open sand, close to bushes or piles of sticks","0.5","NA"
+"64",64,"BR7","BR7.2","N","G","GP","NA","R","Hemidactylus","mabouia","Hemidactylus_mabouia","tropical house gecko","HEMA","tree","4","10","trunk","NA","NA","NA","NA","N","NA","4","10"
+"65",65,"BR7","BR7.3","N","G","GP","NA","R","Hemidactylus","mabouia","Hemidactylus_mabouia","tropical house gecko","HEMA","tree","2","5","branch","NA","NA","NA","NA","N","NA","2","5"
+"66",66,"BR6","BR6.3","N","C","GB","C","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","bush","8.3000000000000007","2.5","branch1","3.8","3.9","1.5","M","Y","NA","8.3000000000000007","2.5"
+"67",67,"BR5","BR5.2","N","G","GP","NA","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","bush","0","NA","litter","3.7","3.8","1.4","F","Y","NA","0","NA"
+"68",68,"BR5","BR5.3","N","C","JBB","R","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","tree","11.5","NA","branch","3.6","3.5","1.1000000000000001","M","Y","NA","11.5","NA"
+"69",69,"BR5","BR5.1","D","C","JBB","M","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","tree","11.2","1","trunk","3.5","3.5","1.5","M","Y","NA","11.2","1"
+"70",70,"BR6","BR6.1","D","C","GB","R","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","tree","3","0","trunk","3.5","NA","NA","NA","N","SVL estimated","3","0"
+"71",71,"BR6","BR6.2","D","C","GB","R","R","Gecko","sp.","NA","NA","NA","tree","5","2","trunk","NA","NA","NA","NA","N","NA","5","2"
+"72",72,"M6","M6.6","N","G","GP","NA","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","3","10","trunk","6.6","5.7","7","F","Y","NA","3","10"
+"73",73,"M6","M6.7","N","C","GB","C","R","Hemidactylus","sp.","NA","NA","NA","bush","1.5","5","branch2","6","NA","NA","NA","N","SVL estimated","1.5","5"
+"74",74,"M6","M6.8","N","G","GP","NA","R","Hemidactylus","mabouia","Hemidactylus_mabouia","tropical house gecko","HEMA","tree","4","5","trunk","7","6.5","NA","NA","N","NA","4","5"
+"75",75,"M22","M22.1","D","C","JBB","R","R","Trachylepis","maculilabris","Trachylepi_ maculilabris","speckle-lipped skink","TRMA","tree","1.5","NA","Hole / trunk","NA","NA","NA","NA","N","NA","1.5","NA"
+"76",76,"M22","M22.2","D","C","JBB","U","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","4.2","0.5","trunk","7.1","8.4","NA","F","N","NA","4.2","0.5"
+"77",77,"M22","M22.3","D","C","JBB","R","R","Hemidactylus","sp.","NA","NA","NA","tree","5","0.5","Hole / trunk","NA","NA","8","NA","N","NA","5","0.5"
+"78",78,"M22","M22.4","D","G","JH","NA","R","Hemidactylus","sp.","NA","NA","NA","tree","4","NA","trunk","NA","NA","NA","NA","N","NA","4","NA"
+"79",79,"M22","M22.5","D","G","JH","NA","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","4","NA","trunk","7.6","7.1","7.1","M","N","NA","4","NA"
+"80",80,"M20","M20.1","D","C","JBB","R","R","Hemidactylus","sp.","NA","NA","NA","tree","3","NA","trunk","4","NA","NA","NA","N","Hemidactyuls most likely platycephalus","3","NA"
+"81",81,"M20","M20.2","D","G","AB","NA","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","2","NA","trunk","6.7","7.5","6","F","Y","Hemidactyuls most likely platycephalus","2","NA"
+"82",82,"M20","M20.3","D","G","AB","NA","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","tree","2","NA","trunk","NA","NA","NA","NA","N","NA","2","NA"
+"83",83,"M20","M20.4","D","G","AB","NA","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","tree","1.5","NA","trunk","NA","NA","NA","NA","N","NA","1.5","NA"
+"84",84,"M18","M18.1","D","C","JBB","R","R","Lygodactylus","sp.","NA","dwarf gecko","NA","tree","NA","NA","branch","NA","NA","NA","NA","N","lygodactylus seen at top while setting rope","NA","NA"
+"85",85,"M18","M18.2","D","C","JBB","R","R","Hemidactylus","sp.","NA","NA","NA","tree","9","4","branch4","7.7","6.1","8.9","F","NA","hemidactylus†: red spots around pads of feet, most concentrated between toes","9","4"
+"86",86,"M9","M9.1","D","C","JBB","M","R","Dispholidus","typus","Dispholidus_ typus","Boomslang","DITY","tree","6.5","0.5","trunk","100","NA","NA","NA","N","NA","6.5","0.5"
+"87",87,"M9","M9.2","D","C","JBB","M","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","tree","8.5","0.5","trunk","3.5","NA","NA","NA","N","SVL estimated","8.5","0.5"
+"88",88,"M9","NA","D","NA","NA","between surveys","R","Latastia","longicaudata","Latastia_longicaudata","Southern long-tailed lizard","LALO","sand","0","NA","road","NA","NA","NA","NA","N","NA","0","NA"
+"89",89,"M9","NA","D","NA","NA","between surveys","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","sand","0","NA","road","NA","NA","NA","NA","N","NA","0","NA"
+"90",90,"M9","NA","D","NA","NA","between surveys","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","sand","0","NA","road","NA","NA","NA","NA","N","NA","0","NA"
+"91",91,"M9","NA","D","NA","NA","between surveys","R","Psammophis","sp.","NA","NA","NA","sand","0","NA","road","NA","NA","NA","NA","N","NA","0","NA"
+"92",92,"M9","NA","D","NA","NA","between surveys","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","sand","0","NA","road","NA","NA","NA","NA","N","NA","0","NA"
+"93",93,"BR11","BR11.1","D","G","GP","NA","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","litter","0","2","litter","3.6","4","1.7","M","N","NA","0","2"
+"94",94,"BR11","BR11.2","D","C","GB","C","R","Lygodactylus","sp.","NA","dwarf gecko","NA","tree","8","3.5","branch3","3.5","NA","NA","NA","N","SVL estimated","8","3.5"
+"95",95,"BR11","NA","D","NA","GH","outside","R","Trachylepis","varia","Trachylepis_varia","Variable skink","TRVA","NA","NA","NA","NA","NA","NA","NA","NA","N","spotted a variable skink in the edge","NA","NA"
+"96",96,"M12","M12.1","D","C","GB","G","R","Lygodactylus","sp.","NA","dwarf gecko","NA","tree","1","5","trunk","3.9","3.9","1.2","M","Y","NA","1","5"
+"97",97,"M12","M12.2","D","C","GB","M","R","Lygodactylus","sp.","NA","dwarf gecko","NA","tree","8","7","branch2","4","NA","NA","NA","N","SVL estimated","8","7"
+"98",98,"M12","M12.3","D","C","GB","C","R","Lygodactylus","sp.","NA","dwarf gecko","NA","tree","6","2","trunk","4","NA","NA","NA","N","SVL estimated","6","2"
+"99",99,"M10","M10.1","D","G","GH","NA","R","Trachylepis","planifrons","Trachylepis_planifrons","tree skink","TRPL","litter","0","10","litter","NA","NA","NA","NA","N","NA","0","10"
+"100",100,"M10","M10.2","D","C","GB","NA","R","Lygodactylus","sp.","NA","dwarf gecko","NA","tree","7","5","branch3","4","NA","NA","NA","N","Found in tree adjacent to climbed tree / SVL estimated","7","5"
+"101",101,"M10","M10.3","D","C","GB","NA","R","Lygodactylus","sp.","NA","dwarf gecko","NA","tree","1","5","trunk","4","NA","NA","NA","N","Found in tree adjacent to climbed tree / SVL estimated","1","5"
+"102",102,"M11","M11.1","D","G","JBB","NA","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","big_tree","3","NA","trunk","7","NA","NA","NA","N","NA","3","NA"
+"103",103,"M11","M11.2","D","G","JBB","NA","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","3","NA","trunk","6","NA","NA","NA","Y","NA","3","NA"
+"104",104,"M14","M14.1","D","C","JBB","C","R","Lygodactylus","sp.","NA","dwarf gecko","NA","tree","NA","NA","branch1","2","1.9","0.28999999999999998","M","Y","NA","NA","NA"
+"105",105,"MAT_M14","MAT_14.1","D","NA","AB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","ground","0","NA","sand","NA","NA","NA","NA","Y","NA","0","NA"
+"106",106,"MAT_M14","MAT_14.2","D","NA","AB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","ground","0","NA","sand","NA","NA","NA","NA","Y","NA","0","NA"
+"107",107,"MAT_M14","MAT_14.3","D","NA","AB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","ground","0","NA","sand","NA","NA","NA","NA","N","NA","0","NA"
+"108",108,"MAT_M14","MAT_14.4","D","NA","AB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","ground","0","NA","sand","NA","NA","NA","NA","N","NA","0","NA"
+"109",109,"MAT_M14","MAT_14.5","D","NA","AB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","ground","0","NA","sand","NA","NA","NA","NA","N","NA","0","NA"
+"110",110,"MAT_M14","MAT_14.6","D","NA","AB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","ground","0","NA","sand","NA","NA","NA","NA","N","NA","0","NA"
+"111",111,"MAT_M14","MAT_14.7","D","NA","AB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","ground","0","NA","sand","NA","NA","NA","NA","N","NA","0","NA"
+"112",112,"MAT_M14","MAT_14.8","D","NA","AB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","ground","0","NA","sand","NA","NA","NA","NA","N","NA","0","NA"
+"113",113,"MAT_M14","MAT_14.9","D","NA","AB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","ground","0","NA","sand","NA","NA","NA","NA","N","NA","0","NA"
+"114",114,"MAT_M14","MAT_14.10","D","NA","AB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","ground","0","NA","sand","NA","NA","NA","NA","N","NA","0","NA"
+"115",115,"MAT_M14","MAT_14.11","D","NA","AB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","ground","0","NA","sand","NA","NA","NA","NA","N","NA","0","NA"
+"116",116,"MAT_M14","MAT_14.12","D","NA","AB","NA","R","Psammophis","punctulatus","Psammophi_ punctulatus","Speckled sand snake","PSPU","ground","0","NA","sand","NA","NA","NA","NA","N","NA","0","NA"
+"117",117,"M15","M15.1","D","C","JBB","R","R","Hemidactylus","sp.","NA","NA","NA","tree","6.5","4.5","trunk","NA","NA","NA","NA","N","NA","6.5","4.5"
+"118",118,"M15.100","M15+100.1","D","NA","AB","NA","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","4","NA","trunk","NA","NA","NA","NA","Y","NA","4","NA"
+"119",119,"MAT_M13","MAT_M13.1","D","NA","AB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","ground","0","NA","sand","NA","NA","NA","NA","N","NA","0","NA"
+"120",120,"MAT_M13","MAT_M13.2","D","NA","AB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","ground","0","NA","sand","NA","NA","NA","NA","N","NA","0","NA"
+"121",121,"MAT_M13","MAT_M13.3","D","NA","AB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","ground","0","NA","sand","NA","NA","NA","NA","N","NA","0","NA"
+"122",122,"M16","M16.1","D","C","GB","R","R","Hemidactylus","mabouia","Hemidactylus_mabouia","tropical house gecko","HEMA","tree","5","1","trunk","5.3","5.5","3.2","M","N","NA","5","1"
+"123",123,"M16","M16.2","D","C","GB","R","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","7","1","trunk","7.5","8","10","F","N","NA","7","1"
+"124",124,"M16","M16.3","D","C","GB","C","R","Lygodactylus","sp.","NA","dwarf gecko","NA","tree","11","5","branch3","3","NA","NA","NA","N","NA","11","5"
+"125",125,"M13","M13.1","D","C","GB","M","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","7","2.5","branch1","6","NA","NA","NA","N","NA","7","2.5"
+"126",126,"M13","M13.2","D","C","GB","M","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","6","1.5","Branch1 / under bark","7","5","7.3","F","N","NA","6","1.5"
+"127",127,"M13","M13.3","D","C","GP","R","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","6","1.5","Branch1 / under bark","7","NA","NA","NA","N","NA","6","1.5"
+"128",128,"M13","M13.4","D","C","GP","R","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","6","1","trunk","7","NA","NA","NA","N","NA","6","1"
+"129",129,"M13","M13.5","D","C","GP","R","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","6","1","trunk","7","NA","NA","NA","N","NA","6","1"
+"130",130,"M13","M13.6","D","C","GP","R","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","bush","0","0","branch","5.3","6.8","6.8","3.4","N","NA","0","0"
+"131",131,"M17","M17.1","D","G","AB","NA","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","small_tree","4","NA","trunk","4","NA","NA","NA","Y","NA","4","NA"
+"132",132,"M17","M17.2","D","G","AB","NA","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","small_tree","2","NA","trunk","2.5","NA","NA","NA","Y","NA","2","NA"
+"133",133,"BR12","BR12.1","D","C","JBB","R","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","2.2000000000000002","0","Trunk / under bark","4.4000000000000004","4","1.8","F","N","NA","2.2000000000000002","0"
+"134",134,"BR12","BR12.2","D","C","JBB","R","R","Trachylepis","planifrons","Trachylepis_planifrons","tree skink","TRPL","tree","7","0","Trunk / tree hole","7","NA","NA","NA","N","gray brown, speckled body, dark stripe on side of head","7","0"
+"135",135,"BR12","BR12.3","D","G","JH","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","ground","0","NA","sand","NA","NA","NA","NA","N","NA","0","NA"
+"136",136,"BR12","BR12.4","D","C","JBB","R","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","8","1","Trunk / under bark","4.4000000000000004","4.5","1.5","F","N","NA","8","1"
+"137",137,"BR12.100","BR12.100","D","NA","AB","NA","R","Hemirhagerrhis","sp.","NA","bark snake","NA","vine","0.25","NA","vine","30","NA","NA","NA","N","NA","0.25","NA"
+"138",138,"MAT_M14","MAT_M14.1","D","NA","GP","NA","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","tree","4","NA","trunk","2.5","2.2000000000000002","0.5","F","Y","species hybridized†? Variation†?","4","NA"
+"139",139,"MAT_M14","MAT_M14.2","D","NA","GP","NA","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","tree","4","NA","trunk","3.1","3.1","1","M","Y","species hybridized†? Variation†?","4","NA"
+"140",140,"MAT_M14","MAT_M14.3","D","NA","GP","NA","R","Varanus","albigularis","Varanus_albigularis","white-throated savana monitor","VAAL","grass","3","NA","grass","15","16","57","F","Y","NA","3","NA"
+"141",141,"M13","M13.7","N","G","GP","NA","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","2","NA","branch","6.5","6.4","7.2","M","N","NA","2","NA"
+"142",142,"M13","M13.8","N","G","GP","NA","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","3","NA","trunk","7.3","6.3","10","F","N","female with eggs","3","NA"
+"143",143,"M13","M13.9","N","C","GB","U","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","6","3","trunk","6","NA","NA","NA","N","Found in tree adjacent to climbed tree / SVL estimated","6","3"
+"144",144,"BR18","BR18.1","D","G","JH","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","ground","0","NA","Sand / bush","NA","NA","NA","NA","N","NA","0","NA"
+"145",145,"BR18","BR18.2","D","G","JH","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","ground","0","NA","Sand / bush","NA","NA","NA","NA","N","NA","0","NA"
+"146",146,"BR16","BR16.1","D","G","JH","NA","R","Lygodactylus","sp.","NA","dwarf gecko","NA","tree","0.5","NA","trunk","NA","NA","NA","NA","N","NA","0.5","NA"
+"147",147,"BR16","BR16.2","D","G","JH","NA","R","NA","NA","NA","NA","NA","tree","0.5","NA","trunk","NA","NA","NA","NA","N","colorful orange, light blue skink†?","0.5","NA"
+"148",148,"BR16","BR16.3","D","G","JH","NA","R","Lygodactylus","sp.","NA","dwarf gecko","NA","tree","2.6","NA","trunk","NA","NA","NA","NA","Y","NA","2.6","NA"
+"149",149,"M12","M12.4","N","C","GB","C","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","big_tree","9.5","3.5","branch1","7.4","NA","8.5","F","N","female with eggs","9.5","3.5"
+"150",150,"M11","M11.3","N","G","JH","NA","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","big_tree","4","NA","trunk","NA","NA","NA","NA","N","NA","4","NA"
+"151",151,"M11.100","M11.100.1","N","NA","AB","NA","R","Hemidactylus","sp.","NA","NA","NA","big_tree","5","NA","trunk","NA","NA","NA","NA","N","NA","5","NA"
+"152",152,"M11","NA","N","NA","JBB","between surveys","R","Hemidactylus","barbouri","Hemidactylus_ barbouri","barber's_gecko","HEBA","ground","0","NA","log","4.8","4","2.4","F","Y","NA","0","NA"
+"153",153,"M7","M7.4","N","C","GB","C","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","NA","NA","trunk","7.3","8.4","10.8","F","N","NA","NA","NA"
+"154",154,"M8","NA","N","NA","JBB","between surveys","R","Hemidactylus","sp.","NA","NA","NA","ground","0","NA","sand","NA","NA","NA","NA","Y","NA","0","NA"
+"155",155,"M8","NA","N","NA","JBB","between surveys","R","Hemidactylus","barbouri","Hemidactylus_ barbouri","barber's_gecko","HEBA","ground","0","NA","sand","NA","NA","NA","NA","N","NA","0","NA"
+"156",156,"M15","M15.2","N","C","JBB","R","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","big_tree","5","1","trunk","5.8","NA","3.7","M","N","NA","5","1"
+"157",157,"M15","M15.3","N","C","JBB","C","R","Hemirhagerrhis","sp.","NA","bark snake","NA","big_tree","15.2","0.5","branch4","40.1","12.4","25","M","N","NA","15.2","0.5"
+"158",158,"BR17","BR17.1","N","C","GB","C","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","bush","2","1","branch1","7","NA","NA","NA","N","SVL estimated","2","1"
+"159",159,"BR19","BR19.1","N","C","GB","C","R","Hemidactylus","sp.","NA","NA","NA","tree","12","3","branch2","4","5","NA","NA","N","SVL and tail estimated","12","3"
+"160",160,"BR13","BR13.1","N","C","JBB","U","R","Hemidactylus","mabouia","Hemidactylus_mabouia","tropical house gecko","HEMA","tree","2","NA","trunk","3.8","NA","1.4","F","N","NA","2","NA"
+"161",161,"BR13.100","BR13.100.1","N","G","AB","NA","R","Chamaeleo","dilepis","Chamaeleo_dilepis","flap-necked chameleon","CHDI","tree","5","NA","branch","5.4","5.4","3.5","NA","Y","NA","5","NA"
+"162",162,"MAT_BR11","MAT_BR11.1","N","NA","AB","NA","R","Trachylepis","varia","Trachylepis_varia","Variable skink","TRVA","pole","1.2","NA","pole","9.1999999999999993","15.5","23","NA","Y","NA","1.2","NA"
+"163",163,"MAT_BR11","MAT_BR11.2","N","NA","AB","NA","R","Hemidactylus","mrimaensis","Hemidactylus_mrimaensis","kaya gecko","HEMI","pole","1","NA","pole","5.6","5.8","4.8","M","Y","NA","1","NA"
+"164",164,"MAT_BR11","MAT_BR11.3","N","NA","AB","NA","R","Hemidactylus","sp.","NA","NA","NA","tree","0.5","NA","trunk","NA","NA","NA","NA","N","NA","0.5","NA"
+"165",165,"BR11","BR11.3","N","C","GB","R","R","Gastropholis","prasina","Gastropholis_prasina","Green keel-bellied lizard","GAPR","tree","7.1","2","Branch1 / hole with water","10.6","29.9","26.5","NA","Y","NA","7.1","2"
+"166",166,"BR12","BR12.5","N","C","JBB","R","R","Hemidactylus","mrimaensis","Hemidactylus_mrimaensis","kaya gecko","HEMI","tree","8","NA","trunk","5.5","5.8","4.2","F","Y","tubercles on back legs, front legs, enlarged, tubercles on back half, very intense tail spikes, back tubercles keeled (gravid)","8","NA"
+"167",167,"BR12","BR12.6","N","C","JBB","R","R","Hemidactylus","mabouia","Hemidactylus_mabouia","tropical house gecko","HEMA","tree","12.6","NA","branch1","3.5","4.4000000000000004","0.9","F","Y","NA","12.6","NA"
+"168",168,"BR18","BR18.3","N","G","JH","NA","R","Hemidactylus","sp.","NA","NA","NA","tree","0.5","NA","trunk","4.3","3.1","1.9","F","Y","enlarged tubercles on back, weakly keeled, 16 tubercles, dark band through snout then eye, passing shoulder then braking / enlarged tubercles on upper legs, not lower / white cream below / long neck","0.5","NA"
+"169",169,"M18","M18.3","N","C","JBB","R","R","Lygodactylus","sp.","NA","dwarf gecko","NA","tree","12.75","2","branch5","2.5","2.25","0.4","NA","Y","new species for the forest†?","12.75","2"
+"170",170,"M18","M18.4","N","G","JH","NA","R","Cordylus","tropidosternum","Cordylus_tropidosternum","Tropical girdled lizard","COTR","tree","1","NA","Hole / trunk","NA","NA","NA","NA","Y","NA","1","NA"
+"171",171,"M18","NA","N","NA","JBB","between surveys","R","Hemidactylus","mabouia","Hemidactylus_mabouia","tropical house gecko","HEMA","bush","0.5","NA","branch","5","NA","NA","NA","N","NA","0.5","NA"
+"172",172,"M20","M20.5","N","G","JH","NA","R","Hemidactylus","mrimaensis","Hemidactylus_mrimaensis","kaya gecko","HEMI","tree","0.5","NA","trunk","4.8","5.2","2.7","F","Y","tubercles enlarged on upper legs, spikes on tail","0.5","NA"
+"173",173,"BR16","BR16.4","N","C","JBB","R","R","Chamaeleo","dilepis","Chamaeleo_dilepis","flap-necked chameleon","CHDI","tree","3.4","NA","branch","13.8","13.8","58","NA","Y","NA","3.4","NA"
+"174",174,"BR16.100","BR16.100.1","N","NA","AB","NA","R","skink","sp.","NA","NA","NA","tree","1","NA","trunk","NA","NA","NA","NA","N","NA","1","NA"
+"175",175,"M14","M14.2","N","C","JBB","G","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","vine","1","NA","vine","5.6","7.5","4.0999999999999996","M","N","NA","1","NA"
+"176",176,"M14","M14.3","N","G","JH","NA","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","1.5","NA","trunk","6.8","8.9","6.5","M","N","NA","1.5","NA"
+"177",177,"M14","M14.4","N","G","JH","NA","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","0.5","NA","trunk","7.1","7","9","M","N","NA","0.5","NA"
+"178",178,"M16","M16.4","N","G","GP","NA","R","Hemidactylus","mabouia","Hemidactylus_mabouia","tropical house gecko","HEMA","tree","5","10","branch","7.1","4.5","7.5","M","Y","NA","5","10"
+"179",179,"M16","M16.5","N","C","GB","M","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","8","1","trunk","6.7","NA","7","M","N","no tail, 40 pores","8","1"
+"180",180,"M16","M16.6","N","G","GP","NA","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","2","3","trunk","6.5","8.8000000000000007","6","M","N","NA","2","3"
+"181",181,"M16","M16.7","N","G","GP","NA","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","bush","3","3","branch","4.7","5.5","2.2000000000000002","M","Y","NA","3","3"
+"182",182,"M16","M16.8","N","C","GB","R","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","8","1","Branch1 / dead","7.4","9.3000000000000007","10","M","N","NA","8","1"
+"183",183,"MAT_M22","MAT_M22.1","N","NA","JH","NA","R","Hemidactylus","mrimaensis","Hemidactylus_mrimaensis","kaya gecko","HEMI","cement pole","0.5","NA","pole","6.2","7.2","5.8","F","Y","NA","0.5","NA"
+"184",184,"M22","M22.6","N","C","JBB","R","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","5.6","1","trunk","6","NA","NA","NA","N","NA","5.6","1"
+"185",185,"MAT_M22","MAT_M22.2","N","NA","JH","NA","R","Hemidactylus","mrimaensis","Hemidactylus_mrimaensis","kaya gecko","HEMI","wood pole","0.5","NA","pole","5.9","5.7","5.6","F","Y","NA","0.5","NA"
+"186",186,"MAT_M21","MAT_M21.1","N","NA","AB","NA","R","Hemidactylus","mrimaensis","Hemidactylus_mrimaensis","kaya gecko","HEMI","wood pole","1.5","NA","pole","5.3","6.2","3.2","M","Y","NA","1.5","NA"
+"187",187,"MAT_M21","MAT_M21.2","N","NA","AB","NA","R","Hemidactylus","mabouia","Hemidactylus_mabouia","tropical house gecko","HEMA","wood pole","1.5","NA","pole","3.4","1.8","0.9","F","N","NA","1.5","NA"
+"188",188,"CY2","CY2.1","D","G","AB","NA","R","Hemidactylus","sp.","NA","NA","NA","tree","0.1","NA","trunk","4.5","5.2","2","M","NA","will be frozen","0.1","NA"
+"189",189,"CY12","CY12.1","D","G","GP","NA","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","tree","1","1","trunk","3.5","NA","NA","NA","N","SVL estimated","1","1"
+"190",190,"CY12","NA","D","NA","GP","between surveys","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","bush","1.5","NA","branch1","3.6","1.1000000000000001","1.1000000000000001","M","N","tail regenerated / lots of orange parasites","1.5","NA"
+"191",191,"CY12","NA","D","NA","JBB","between surveys","R","Naja","melanoleuca","Naja_melanoleuca","Forest cobra","NAME","ground","0","NA","dirt","200","NA","NA","NA","N","SVL estimated","0","NA"
+"192",192,"M5","M5.2","N","C","JBB","ground","A","Arthroleptis","stenodactylus","Arthroleptis_stenodactylus","common squeaker","ARST","litter","0","2","litter","2","NA","0.6","NA","Y","NA","0","2"
+"193",193,"BR4","BR4.1","D","C","GB","G","R","Lygodactylus","sp.","NA","NA","NA","tree","2","8","trunk","5","NA","NA","NA","N","SVL estimated","2","8"
+"194",194,"BR4","NA","D","NA","GP","between surveys","R","skink sp.","NA","NA","NA","NA","log","0.25","NA","log","4","NA","NA","NA","N","SVL estimated","0.25","NA"
+"195",195,"CY10","CY10.1","D","G","JH","NA","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","tree","2.5","NA","trunk","NA","NA","NA","NA","N","NA","2.5","NA"
+"196",196,"MAT_CY10","MAT_CY10.1","D","NA","AB","NA","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","pole","5","NA","pole","3","NA","NA","NA","Y","SVL estimated","5","NA"
+"197",197,"MAT_CY10","MAT_CY10.2","D","NA","AB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","ground","0","NA","sand","3","NA","NA","NA","N","SVL estimated","0","NA"
+"198",198,"MAT_CY10","MAT_CY10.3","D","NA","AB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","ground","0","NA","sand","2.5","NA","NA","NA","N","SVL estimated","0","NA"
+"199",199,"MAT_CY10","MAT_CY10.4","D","NA","AB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","ground","0","NA","sand","5","NA","NA","NA","N","SVL estimated","0","NA"
+"200",200,"MAT_CY10","MAT_CY10.5","D","NA","AB","NA","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","tree","3","NA","trunk","3","NA","NA","NA","Y","SVL estimated","3","NA"
+"201",201,"CY9","NA","D","NA","NA","between surveys","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","ground","0","NA","sand","NA","NA","NA","NA","N","NA","0","NA"
+"202",202,"CY9","CY9.1","D","C","JBB","R","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","tree","12","NA","branch5","3.5","NA","NA","NA","N","NA","12","NA"
+"203",203,"CY9","CY9.2","D","C","JBB","R","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","tree","3","NA","trunk","NA","NA","NA","NA","N","NA","3","NA"
+"204",204,"CY9","NA","D","NA","NA","between surveys","R","Hemidactylus","sp.","NA","NA","NA","pole","2","NA","pole","5.5","6.6","4.2","M","Y","most likely platycephalus or mabouia, found between surveys in matrix","2","NA"
+"205",205,"MAT_CY9","MAT_CY9.1","D","NA","NA","NA","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","tree","2","NA","trunk","3.5","NA","NA","NA","Y","NA","2","NA"
+"206",206,"CY8","CY8.1","D","C","JBB","R","R","Hemidactylus","sp.","NA","NA","NA","tree","3.5","NA","trunk","3","NA","NA","NA","N","SVL estimated","3.5","NA"
+"207",207,"CY8","CY8.2","D","C","JBB","R","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","tree","11","NA","branch3","3.8","4","1.1000000000000001","M","N","NA","11","NA"
+"208",208,"MAT_CY8","MAT_CY8.1","D","NA","AB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","road","0","NA","road","2.2999999999999998","4.7","0.5","NA","Y","NA","0","NA"
+"209",209,"MAT_CY8","MAT_CY8.2","D","NA","AB","NA","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","pole","0.5","NA","pole","3.5","NA","NA","NA","Y","SVL estimated","0.5","NA"
+"210",210,"MAT_CY8","MAT_CY8.3","D","NA","AB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","ground","0","NA","sand","4","NA","NA","NA","Y","SVL estimated","0","NA"
+"211",211,"CY4","CY4.1","D","G","GP","NA","R","Hemidactylus","mabouia","Hemidactylus_mabouia","tropical house gecko","HEMA","tree","2","NA","trunk","NA","NA","NA","NA","N","NA","2","NA"
+"212",212,"CY4","CY4.2","D","C","JBB","R","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","tree","4","1","trunk","3","2.9","0.9","F","Y","SVL estimated","4","1"
+"213",213,"CY7","CY7.1","D","C","GB","U","R","Hemidactylus","sp.","NA","NA","NA","tree","1.5","0","trunk","5","7","NA","NA","N","SVL estimated","1.5","0"
+"214",214,"MAT_CY7","MAT_CY7.1","D","NA","AB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","ground","0","NA","sand","2","NA","NA","NA","N","SVL estimated","0","NA"
+"215",215,"MAT_CY7","MAT_CY7.2","D","NA","AB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","ground","0","NA","sand","4","NA","NA","NA","Y","SVL estimated","0","NA"
+"216",216,"MAT_CY7","MAT_CY7.3","D","NA","AB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","ground","0","NA","sand","3","NA","NA","NA","N","SVL estimated","0","NA"
+"217",217,"MAT_CY7","MAT_CY7.4","D","NA","AB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","ground","0","NA","sand","5","NA","NA","NA","Y","SVL estimated","0","NA"
+"218",218,"MAT_CY6","MAT_CY6.1","D","NA","AB","NA","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","telephone pole","5","NA","pole","NA","NA","NA","NA","Y","NA","5","NA"
+"219",219,"MAT_CY6","MAT_CY6.2","D","NA","AB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","road","0","NA","sand","NA","NA","NA","NA","N","NA","0","NA"
+"220",220,"MAT_CY6","MAT_CY6.3","D","NA","AB","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","road","0","NA","sand","NA","NA","NA","NA","N","NA","0","NA"
+"221",221,"MAT_CY6","MAT_CY6.4","D","NA","AB","NA","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","tree","3","NA","trunk","NA","NA","NA","NA","Y","NA","3","NA"
+"222",222,"M21","M21.1","D","C","GB","R","R","Lygodactylus","sp.","Lygodactylus_sp.","dwarf gecko","NA","vine","4","5","vine","3","NA","NA","NA","N","SVL estimated","4","5"
+"223",223,"M21","M21.2","D","C","GB","R","R","Lygodactylus","sp.","Lygodactylus_sp.","dwarf gecko","NA","tree","3","1","trunk","3","NA","NA","NA","N","SVL estimated","3","1"
+"224",224,"M21","M21.3","D","G","GP","NA","R","Lygodactylus","sp.","Lygodactylus_sp.","dwarf gecko","NA","tree","5","1","trunk","3","NA","NA","NA","N","SVL estimated","5","1"
+"225",225,"M19","M19.1","D","C","GB","C","R","Lygodactylus","sp.","Lygodactylus_sp.","dwarf gecko","NA","tree","11","1","branch1","2.5","3","NA","NA","N","SVL estimated","11","1"
+"226",226,"MAT_CY9","MAT_CY9.2","N","NA","AB","NA","R","Hemidactylus","mabouia","Hemidactylus_mabouia","tropical house gecko","HEMA","power pole","0.5","NA","pole","6.1","NA","4.4000000000000004","M","N","no tail","0.5","NA"
+"227",227,"CY13","CY13.1","D","C","JBB","R","R","skink","NA","NA","NA","NA","tree","3","NA","trunk","NA","NA","NA","NA","Y","dark side, bronze head, cream throat","3","NA"
+"228",228,"CY13","CY13.2","D","C","JBB","R","R","Gecko","NA","NA","NA","NA","tree","2.5","NA","trunk","2.5","NA","NA","NA","Y","uniformed dark brown","2.5","NA"
+"229",229,"CY13.100","CY13.100.1","D","NA","AB","NA","R","Hemidactylus","mrimaensis","Hemidactylus_mrimaensis","kaya gecko","HEMI","tree","0.5","NA","trunk","4.2","5.5","1.5","M","N","tubercles along back, narrow head, orange undertail, tubercles upper hind legs","0.5","NA"
+"230",230,"CY13","CY13.3","N","G","JBB & AB","NA","R","Hemidactylus","mabouia","Hemidactylus_mabouia","tropical house gecko","HEMA","tree","2","NA","trunk","2.6","1.7","0.45","NA","Y","11-12 tubercles across back, no tubercles on upper legs, tubercles on back very subtle, tail regenerated little smooth blunt end, faint cross markings on back","2","NA"
+"231",231,"CY13","CY13.4","N","G","JBB & AB","NA","R","Hemidactylus","mrimaensis","Hemidactylus_mrimaensis","kaya gecko","HEMI","tree","0.1","NA","trunk","4.8","5.9","2.5","F","Y","gravied, tubercles on back are oblong/pointed (barnicle), few enlarged tubercles on hind legs, head narrow and flat, undertail orange, generally uniformed in color, faint banding on tail, slender gecko","0.1","NA"
+"232",232,"M19","M19.2","N","G","GP","NA","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","3","5","branch","5.9","NA","3.8","F","N","NA","3","5"
+"233",233,"M19","M19.3","N","G","GP","NA","R","Hemidactylus","mabouia","Hemidactylus_mabouia","tropical house gecko","HEMA","litter","0","4","litter","4","2.7","1.4","M","Y","NA","0","4"
+"234",234,"M19","M19.4","N","G","GP","NA","R","Hemidactylus","mabouia","Hemidactylus_mabouia","tropical house gecko","HEMA","litter","0","4","litter","3.4","4.2","1.3","F","Y","NA","0","4"
+"235",235,"M25","M25.1","D","C","JBB","U","R","Hemidactylus","sp.","NA","NA","NA","tree","3","1","trunk","5","NA","NA","NA","N","NA","3","1"
+"236",236,"M25","M25.2","D","C","JBB","C","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","tree","12","1","branch1","3.5","3.5","1.1000000000000001","NA","Y","NA","12","1"
+"237",237,"M25","M25.3","D","G","GP","NA","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","tree","2","NA","trunk","3","NA","NA","NA","N","NA","2","NA"
+"238",238,"M25","M25.4","D","G","GP","NA","R","Trachylepis","maculilabris","Trachylepi_ maculilabris","speckle-lipped skink","TRMA","log","0.5","NA","log","9","NA","NA","NA","N","NA","0.5","NA"
+"239",239,"M25","M25.5","D","NA","NA","between mat","R","Psammophis","orientalis","Psammophi_ orientalis","Eastern stripe-bellied sand snake","PSOR","road","0","NA","sand","125","NA","NA","NA","N","NA","0","NA"
+"240",240,"M31","NA","D","NA","NA","between surveys","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","1.5","NA","trunk","7.3","NA","7.5","M","N","NA","1.5","NA"
+"241",241,"MAT_M31","MAT_M31.1","D","NA","NA","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","ground","0","NA","sand","4","NA","NA","NA","N","NA","0","NA"
+"242",242,"MAT_M31","MAT_M31.2","D","NA","NA","NA","R","Nucras","boulengeri","Nucras_boulengeri","Boulanger's scrub lizard","NUBO","ground","0","NA","sand","4","NA","NA","NA","N","NA","0","NA"
+"243",243,"M29","M29.1","D","C","GB","M","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","tree","6","6","branch3","3","NA","NA","NA","N","Found in Hamenia (adjacent tree) / SVL estimated","6","6"
+"244",244,"M27","M27.1","D","C","GB","R","R","Hemidactylus","sp.","NA","NA","NA","small_tree","1.5","3","Hole / trunk","NA","NA","NA","NA","N","NA","1.5","3"
+"245",245,"M27","M27.2","D","C","GB","R","R","Hemidactylus","sp.","NA","NA","NA","small_tree","1.5","3","Hole / trunk","NA","NA","NA","NA","N","NA","1.5","3"
+"246",246,"M27","M27.3","D","G","GP","NA","R","Mochlus","sundevalli","Mochlus_sundevalli","Sundevall's writhing skink","MOSU","log","0","NA","log","6.7","3.2","4.5","NA","Y","NA","0","NA"
+"247",247,"M28","M28.1","D","C","JBB","U","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","4.2699999999999996","1.5","branch1","5.5","NA","NA","NA","N","SVL estimated","4.2699999999999996","1.5"
+"248",248,"M24","M24.1","D","G","GP","NA","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","tree","1.5","5","trunk","NA","NA","NA","NA","N","NA","1.5","5"
+"249",249,"M24","M24.2","D","C","GB","U","R","Hemidactylus","sp.","NA","NA","NA","dead tree","3","1","Hole / trunk","6","NA","NA","NA","N","NA","3","1"
+"250",250,"M24","M24.3","D","C","GB","U","R","Hemidactylus","sp.","NA","NA","NA","dead tree","3","1","trunk","5","NA","NA","NA","N","NA","3","1"
+"251",251,"M24","M24.4","D","C","GB","R","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","tree","2","0.5","trunk","3","NA","NA","NA","N","NA","2","0.5"
+"252",252,"M23","M23.1","D","C","GB","G","R","Hemidactylus","sp.","NA","NA","NA","tree","1","4","trunk","6","NA","NA","NA","N","On adjacent tree, most likely platycephalus","1","4"
+"253",253,"M23","M23.2","D","C","GB","G","R","Hemidactylus","sp.","NA","NA","NA","tree","2","4","trunk","NA","NA","NA","NA","N","On adjacent tree, most likely platycephalus","2","4"
+"254",254,"M23","M23.3","D","C","GB","G","R","Hemidactylus","sp.","NA","NA","NA","tree","1.5","4","trunk","NA","NA","NA","NA","N","On adjacent tree, most likely platycephalus","1.5","4"
+"255",255,"M23","NA","D","NA","GP","between surveys","R","Chamaeleo","dilepis","Chamaeleo_dilepis","flap-necked chameleon","CHDI","bush","2","NA","branch","14.8","14.7","79.5","NA","Y","10 meters from the edge","2","NA"
+"256",256,"M28","M28.2","N","G","JBB","C","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","1.25","2","trunk","6.9","8.1","6.4","M","N","NA","1.25","2"
+"257",257,"M28","M28.3","N","G","JBB","C","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","NA","2","trunk","7.3","6.9","8","F","N","NA","NA","2"
+"258",258,"M28","M28.4","N","C","JBB","C","R","Chamaeleo","dilepis","Chamaeleo_dilepis","flap-necked chameleon","CHDI","tree","16.5","3.5","branch10+","8.3000000000000007","9.1","15","NA","Y","NA","16.5","3.5"
+"259",259,"M26","NA","N","NA","GP","between surveys","R","Chamaeleo","dilepis","Chamaeleo_dilepis","flap-necked chameleon","CHDI","vine","2","NA","vine","11.3","10.6","48","NA","N","0 m from edge, very first vine along the road, near car for M23","2","NA"
+"260",260,"MAT_M25","MAT_M25.1","N","NA","GB","NA","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","4","NA","trunk","NA","NA","NA","NA","N","on eucalyptus / 4 m from edge","4","NA"
+"261",261,"MAT_M25","MAT_M25.2","N","NA","GB","NA","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","1.8","NA","trunk","5.6","4.8","4","M","N","on eucalyptus / 7 m from edge","1.8","NA"
+"262",262,"M30","M30.1","N","C","JBB","M","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","9.6","4","branch3","6","NA","NA","NA","N","NA","9.6","4"
+"263",263,"M30","M30.2","N","G","JT","NA","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","3","4","trunk","5","NA","NA","NA","N","NA","3","4"
+"264",264,"M30","M30.3","N","G","JT","NA","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","1.5","5","trunk","6.1","8.1","4.5","F","Y","NA","1.5","5"
+"265",265,"M30","NA","N","NA","NA","between surveys","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","1.5","NA","trunk","NA","NA","NA","NA","N","NA","1.5","NA"
+"266",266,"M31","M31.1","N","C","JBB","M","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","8.3000000000000007","0.5","branch","6.6","8.3000000000000007","6.5","M","Y","NA","8.3000000000000007","0.5"
+"267",267,"M27","M27.4","N","G","GP","NA","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","5","0","trunk","NA","NA","NA","NA","N","NA","5","0"
+"268",268,"M27","M27.5","N","G","GP","NA","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","8","10","trunk","NA","NA","NA","NA","N","NA","8","10"
+"269",269,"M27","NA","N","NA","GP","between surveys","R","Hemidactylus","mabouia","Hemidactylus_mabouia","tropical house gecko","HEMA","bush","3","NA","NA","NA","NA","NA","NA","N","NA","3","NA"
+"270",270,"M29","M29.2","N","G","GP","NA","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","1.5","5","trunk","6.8","7.8","8.5","F","N","eggs","1.5","5"
+"271",271,"M29","M29.3","N","G","GP","NA","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","2","10","trunk","7.6","8.5","11","F","N","eggs","2","10"
+"272",272,"M29","M29.4","N","G","GP","NA","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","1","15","trunk","7.2","8.9","7","F","N","NA","1","15"
+"273",273,"M29","M29.5","N","G","GP","NA","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","1.5","3","trunk","7.3","8.6","6.8","F","N","NA","1.5","3"
+"274",274,"M29","M29.6","N","G","GP","NA","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","5","NA","trunk","NA","NA","NA","NA","N","NA","5","NA"
+"275",275,"M29","M29.7","N","G","GP","NA","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","5","NA","trunk","NA","NA","NA","NA","N","NA","5","NA"
+"276",276,"M29","NA","N","NA","GP","between surveys","R","Hemidactylus","sp.","NA","NA","NA","tree","NA","NA","trunk","NA","NA","NA","NA","N","About 70 m from edge","NA","NA"
+"277",277,"M23","M23.4","N","C","GB","U","R","Hemidactylus","sp.","NA","NA","NA","tree","5","0.5","trunk","NA","NA","NA","NA","N","where is data sheet†? On phone","5","0.5"
+"278",278,"M23","M23.5","N","C","GB","U","R","Hemidactylus","sp.","NA","NA","NA","small_dead_tree","1.5","3","trunk","NA","NA","NA","NA","N","where is data sheet†? On phone","1.5","3"
+"279",279,"BR27","BR27.1","D","C","GB","U","R","Hemidactylus","sp.","NA","NA","NA","tree","1.5","3","branch1","3.2","2.4","3","F","Y","under bark / same as unrecognised hemidactylus sp from today survey, most likely mabouia or growing platycephalus","1.5","3"
+"280",280,"BR29","BR29.1","D","C","JBB","U","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","tree","3","3","branch1","3.5","3.95","3.5","M","Y","NA","3","3"
+"281",281,"BR29","BR29.2","D","C","JBB","M","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","tree","10","1","trunk","NA","NA","NA","NA","N","NA","10","1"
+"282",282,"BR29","BR29.3","D","G","JT","NA","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","tree","2.5","NA","trunk","NA","NA","NA","NA","Y","NA","2.5","NA"
+"283",283,"BR29","BR29.4","D","C","JBB","R","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","9.6999999999999993","0.5","trunk","6","NA","NA","NA","N","NA","9.6999999999999993","0.5"
+"284",284,"BR30","BR30.1","D","C","JBB","M","R","Hemidactylus","sp.","NA","NA","NA","big_tree","6.6","1","trunk","3.3","2.2999999999999998","2.5","F","Y","same small gecko, with dark line through eye and striped lower lip, same as2 specimens placed in formalin / missing tip of tail","6.6","1"
+"285",285,"BR21","BR21.1","D","G","GP","NA","R","Trachylepis","planifrons","Trachylepis_planifrons","tree skink","TRPL","bush","3","10","branch","NA","NA","NA","NA","N","NA","3","10"
+"286",286,"BR26","BR26.1","D","G","JBB","NA","R","Lygodactylus","mombasicus","Lygodactylus_mombasicus","white-headed dwarf gecko","LYMO","small_tree","2","NA","branch2","3","NA","NA","NA","N","SVL estimated","2","NA"
+"287",287,"BR25","BR25.1","D","C","JBB","U","R","Hemirhagerrhis","sp.","NA","bark snake","NA","tree","3.3","0.25","trunk","31.7","12.5","5.5","M","Y","NA","3.3","0.25"
+"288",288,"BR25","BR25.2","D","C","JBB","R","R","Trachylepis","planifrons","Trachylepis_planifrons","tree skink","TRPL","tree","3.5","0.5","trunk","11","NA","NA","NA","Y","SVL estimated","3.5","0.5"
+"289",289,"BR23","BR23.1","D","G","GP","NA","R","Trachylepis","sp.","NA","NA","NA","bush","1","5","branch1","NA","NA","NA","NA","N","NA","1","5"
+"290",290,"BR24","BR24.1","D","G","GP","NA","R","Chamaeleo","dilepis","Chamaeleo_dilepis","flap-necked chameleon","CHDI","bush","2","10","branch","12.5","9.6","46.5","NA","Y","NA","2","10"
+"291",291,"BR22","BR22.1","D","G","JBB","NA","R","Hemidactylus","sp.","NA","NA","NA","tree","3","NA","trunk","4","NA","NA","NA","N","SVL estimated","3","NA"
+"292",292,"BR22","BR22.2","N","C","JBB","U","R","Hemidactylus","platycephalus","Hemidactylus_platycephalus","tree gecko","HEPL","tree","4.9000000000000004","2","trunk","7","8.5","8.75","M","Y","NA","4.9000000000000004","2"
+"293",293,"BR22","BR22.3","N","C","JBB","R","R","Hemidactylus","sp.","NA","NA","NA","tree","3.6","1","trunk","2.2999999999999998","NA","0.05","M","Y","missing tail and back right foot / round and subtle tubercles in 13 rows on back","3.6","1"
+"294",294,"BR22","BR22.4","N","C","JBB","R","R","Hemidactylus","sp.","NA","NA","NA","tree","6","0.5","branch1","3.7","3.4","1.1000000000000001","M","Y","26 pores / round subtle tubercles on back in 12 rows / weakly keeled","6","0.5"
+"295",295,"BR22","BR22.5","N","C","JBB","R","R","Chamaeleo","dilepis","Chamaeleo_dilepis","flap-necked chameleon","CHDI","tree","12.5","3.5","branch8","5.3","5.5","5.2","NA","Y","NA","12.5","3.5"
+"296",296,"BR20","BR20.1","N","G","GP","NA","R","Gastropholis","prasina","Gastropholis_prasina","Green keel-bellied lizard","GAPR","bush","2","8","branch","12","24.3","28.5","NA","Y","ate its tailÖ burk","2","8"
+"297",297,"BR20","BR20.2","N","G","GP","NA","R","Trachylepis","sp.","NA","NA","NA","bush","3","10","branch","NA","NA","NA","NA","N","NA","3","10"
+"298",298,"BR26","BR26.2","N","C","JBB","M","R","Hemidactylus","sp.","NA","NA","NA","big_tree","7.5","3","branch1","4.3","3.6","1.5","F","Y","same as two placed in formalin, dark line from snout to eye, regenerated tail blunt, stripes on lower lip, tubercles on back subtle and round weakly keel, tubercles on tail are small and pointed, some tubercles on upper†? of hing leg","7.5","3"
+"299",299,"BR26","BR26.3","N","C","JBB","R","R","Chamaeleo","dilepis","Chamaeleo_dilepis","flap-necked chameleon","CHDI","big_tree","7","5.6","branch10","6.5","6.2","5.5","F","Y","NA","7","5.6"
+"300",300,"MAT_BR26","MAT_BR26.1","N","NA","JT","NA","R","Hemidactylus","angulatus","Hemidactylus_angulatus","east african house gecko","HEAN","stump_dried","0","NA","stump","5.5","NA","NA","NA","N","NA","0","NA"
+"301",301,"MAT_BR26","MAT_BR26.2","N","NA","JT","NA","R","Rhamphiophis","rostratus","Rhamphiophis_rostratus","rufous beaked snake","RHRO","stump_dried","0","NA","stump","70.5","31","235","M","Y","NA","0","NA"
+"302",302,"MAT_BR26","MAT_BR26.3","N","NA","JT","NA","R","Hemidactylus","angulatus","Hemidactylus_angulatus","east african house gecko","HEAN","stump_dried","0","NA","stump","4.5999999999999996","5","2.75","F","Y","NA","0","NA"
+"303",303,"BR25","BR25.3","N","C","JBB","M","R","Chamaeleo","dilepis","Chamaeleo_dilepis","flap-necked chameleon","CHDI","tree","9","10","branch8","6","NA","NA","NA","N","NA","9","10"
+"304",304,"BR25","NA","N","NA","JBB","between surveys","R","Chamaeleo","dilepis","Chamaeleo_dilepis","flap-necked chameleon","CHDI","bush","1.5","NA","branch4","12.5","11.5","34.5","F","Y","possible recapture from one in the morning","1.5","NA"
+"305",305,"BR23","BR23.2","N","C","GB","U","R","Trachylepis","planifrons","Trachylepis_planifrons","tree skink","TRPL","tree","1","0","trunk","NA","NA","NA","NA","N","NA","1","0"
+"306",306,"MAT_BR30","MAT_BR30.1","N","NA","JBB","NA","R","Hemidactylus","mabouia","Hemidactylus_mabouia","tropical house gecko","HEMA","NA","NA","NA","NA","5.7","4.9000000000000004","4.5","M","N","NA","NA","NA"
+"307",307,"MAT_BR30","MAT_BR30.2","N","NA","JBB","NA","R","Hemidactylus","mabouia","Hemidactylus_mabouia","tropical house gecko","HEMA","NA","NA","NA","NA","6","6.2","4.3","F","N","NA","NA","NA"
+"308",308,"BR30","BR30.2","N","G","JT","NA","R","Trachylepis","sp.","NA","NA","NA","tree","1.5","15","trunk","NA","NA","NA","NA","N","NA","1.5","15"
+"309",309,"BR29","BR29.5","N","C","JBB","U","R","Chamaeleo","dilepis","Chamaeleo_dilepis","flap-necked chameleon","CHDI","tree","2","2","branch7","3.8","4","1.25","NA","Y","NA","2","2"
+"310",310,"BR29","BR29.6","N","G","JT","NA","R","Hemidactylus","sp.","NA","NA","NA","tree","3","NA","trunk","NA","NA","NA","NA","N","NA","3","NA"

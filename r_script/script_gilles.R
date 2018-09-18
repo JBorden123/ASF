@@ -12,21 +12,6 @@ library(readxl)
 library(readr)
 
 
-###CREATE_CSV_FROM_EXCEL###
-
-animals <- read_excel("~/TRAVAIL/Kenya/DATA/arabuko_sokoke_10.xlsx", sheet = "Herps")
-write.csv(animals, "D:/Documents/TRAVAIL/Kenya/DATA/animals.csv") 
-
-
-surveys <- read_excel("~/TRAVAIL/Kenya/DATA/arabuko_sokoke_10.xlsx", sheet = "Surveys")
-write.csv(surveys, "D:/Documents/TRAVAIL/Kenya/DATA/surveys.csv") 
-
-loggers <- read_excel("~/TRAVAIL/Kenya/DATA/arabuko_sokoke_10.xlsx", sheet = "Loggers")
-write.csv(loggers, "D:/Documents/TRAVAIL/Kenya/DATA/loggers.csv") 
-
-key <- read_excel("~/TRAVAIL/Kenya/DATA/arabuko_sokoke_10.xlsx", sheet = "Key")
-write.csv(key, "D:/Documents/TRAVAIL/Kenya/DATA/key.csv")
-
 
 
 ###CHARGE_DATA###
