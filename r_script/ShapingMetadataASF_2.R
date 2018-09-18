@@ -9,9 +9,8 @@ library(psych)
 #data
 herpdata <- read.csv("raw_data/herpdata.csv", header = TRUE)
 sites <- read.csv("raw_data/sites.csv", header = TRUE)
-sites <- sites[,-14]
+sites <- sites[,-13]#remove notes column
 biodiv_data <- read.csv("clean_data/biodiv_data.csv", header = TRUE)
-biodiv_data <- biodiv_data[,-1]
 metadata <- merge(biodiv_data,sites, by = "Tree_ID", all = TRUE)
 HabSummary <- read.csv("clean_data/HabSummary.csv", header = TRUE)
   
