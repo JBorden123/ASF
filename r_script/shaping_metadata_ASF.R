@@ -13,7 +13,8 @@ sites <- sites[,-14]
 biodiv_data <- read.csv("clean_data/biodiv_data.csv", header = TRUE)
 biodiv_data <- biodiv_data[,-1]
 metadata <- merge(biodiv_data,sites, by = "Tree_ID", all = TRUE)
-
+HabSummary <- read.csv("clean_data/HabSummary.csv", header = TRUE)
+  
 #change NA to 0 in biodiv cols
 biodiv_cols <- names(metadata[,2:29]) #selecting Biodiv columns
 metadata[,biodiv_cols][is.na(metadata[,biodiv_cols])] <- 0 #change NA in Biodiv columns to 0
@@ -25,6 +26,10 @@ med_hght <- herpdata%>%
   group_by(Tree_ID)%>%
   summarize(med_hght = median(height_found_m))
 
+med_hght <- herpdata%>%
+  filter(survey_type != "G")%>%
+  group_by(Tree_ID)%>%
+  summarize(med_hght = median(height_found_m))
 
 
 #merge hght and metadata
@@ -36,6 +41,8 @@ forest_grouped <- metadata %>%
   filter(extra_ground != "Y")%>%
   group_by(forest_type, edge_category_m)%>%
   summarise(count = n())
+
+metadata <- merge(metadata, HabSummary, all = TRUE)
 
 #save it
 write.csv(metadata, file = "clean_data/metadata.csv")
@@ -59,6 +66,6 @@ CY_metadata <- metadata %>%
   filter(forest_type == "CY")
 write.csv(CY_metadata, file = "clean_data/CY_metadata.csv")
 
-describe(metadata)
+head(metadata)
 
 
