@@ -13,6 +13,8 @@ library(tidyr)
 #write CSV files from Excel Raw Data
 herpdata <- read_excel("raw_data/arabuko_sokoke_11.xlsx", sheet = "Herps")
 write.csv(herpdata, "raw_data/herpdata.csv") 
+data <- read.csv("raw_data/herpdata.csv")
+str(herpdata)
 
 surveys <- read_excel("raw_data/arabuko_sokoke_11.xlsx", sheet = "Surveys")
 write.csv(surveys, "raw_data/surveys.csv") 
@@ -34,7 +36,7 @@ write.csv(habitat, "raw_data/habitat.csv")
 #HABITAT DATA
 
 habitat <- read.csv("raw_data/habitat.csv", header = TRUE)
-
+habitat <- habitat[,-1]
 
 HabSummary <- habitat %>% #select summary columns
   select(Tree_ID, TotalAvgCan = total_avg_can_cov, CanMinus10 = can_minus_10, CanMinus5 = can_minus_5,
@@ -63,6 +65,7 @@ write_csv(HabSummary, "clean_data/HabSummary.csv") #write the new dataset as a c
 #code for generating diversity, richness, abundance, eveness and species accum curves
 #data
 herpdata <- read.csv("raw_data/herpdata.csv", header = T) #set this up
+herpdata <- herpdata [,-1]
 
 ####################
 #For Entire Forest
