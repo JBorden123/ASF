@@ -40,7 +40,7 @@ forest_grouped <- metadata %>%
 metadata <- merge(metadata, HabSummary, all = TRUE)
 
 #save it
-write.csv(metadata, file = "clean_data/metadata.csv")
+write.csv(metadata, file = "clean_data/metadata.csv", row.names = FALSE)
 
 
 ########################
@@ -49,17 +49,17 @@ write.csv(metadata, file = "clean_data/metadata.csv")
 #Brachystegia
 BR_metadata <- metadata %>%
   filter(forest_type == "BR")
-write.csv(BR_metadata, file = "clean_data/BR_metadata.csv")
+write.csv(BR_metadata, file = "clean_data/BR_metadata.csv", row.names = FALSE)
 
 #Mixed
 M_metadata <- metadata %>%
   filter(forest_type == "M")
-write.csv(M_metadata, file = "clean_data/M_metadata.csv")
+write.csv(M_metadata, file = "clean_data/M_metadata.csv", row.names = FALSE)
 
 #Cynometera
 CY_metadata <- metadata %>%
   filter(forest_type == "CY")
-write.csv(CY_metadata, file = "clean_data/CY_metadata.csv")
+write.csv(CY_metadata, file = "clean_data/CY_metadata.csv", row.names = FALSE)
 
 head(metadata)
 

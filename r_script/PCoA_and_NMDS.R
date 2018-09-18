@@ -7,7 +7,6 @@ library(ca)
 library(ggplot2)
 library(psych)
 library(dplyr)
-?if_else
 
 metadata <- read.csv("clean_data/metadata.csv")
 
@@ -17,7 +16,6 @@ BiodivData <- biodiv_data[,-c(1,25:29)] #keeping only species data
 
 #look at species data
 describe(BiodivData)
-
 
 #PCoA
 #dissimilarity matrix
