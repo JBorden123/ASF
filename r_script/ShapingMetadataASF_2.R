@@ -14,10 +14,6 @@ biodiv_data <- read.csv("clean_data/biodiv_data.csv", header = TRUE)
 metadata <- merge(biodiv_data,sites, by = "Tree_ID", all = TRUE)
 HabSummary <- read.csv("clean_data/HabSummary.csv", header = TRUE)
   
-#change NA to 0 in biodiv cols
-biodiv_cols <- names(metadata[,2:29]) #selecting Biodiv columns
-metadata[,biodiv_cols][is.na(metadata[,biodiv_cols])] <- 0 #change NA in Biodiv columns to 0
-  
 #adding mean height by tree (probably need to add day vs night in case this 
 #might change height distribution)
 med_hght <- herpdata%>%
