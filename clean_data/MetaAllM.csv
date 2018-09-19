@@ -1,11 +1,14 @@
 "Tree_ID","ARST","CHDI","COTR","DITY","GAPR","HEAN","HEBA","HEMA","HEMI","HEPL","LALO","LYMO","MOAF","MOSU","NAME","NUBO","PSOR","PSPU","RHRO","TRMA","TRPL","TRVA","VAAL","NA.","diversity_shannon","diversity_simpson","abund","rich","extra_ground","category","Tree_species","DBH_cm","MHC_m","HOT_m","forest_type","edge_category_m","edge_dist_m","med_hght","TotalAvgCan","CanMinus10","CanMinus5","Can0","CanPlus5","CanPlus10","AvgHerbCover","AvgLeafLayer","StemLess8cm","StemMore8cm"
 "M1",0,0,0,0,0,0,0,0,0,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0.636514168294813,0.444444444444444,3,2,"N","interior","Manilkara zanzibarensis",40.5,13.3,15.3,"M",500,NA,1,76.912,89.86,85.18,93.5,67.5,48.52,5.6,3.8,22,8
 "M10",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,2,0,0,1,1,"N","interior","Manilkara zanzibarensis",47,16.5,16.5,"M",500,NA,4,82.996,87.26,86.74,76.6,79.46,84.92,3.8,1.8,3,3
+"M10.100",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,"Y","interior",NA,NA,NA,NA,"M",500,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "M11",0,0,0,0,0,0,1,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.562335144618808,0.375,4,2,"N","interior","Manilkara zanzibarensis",25.4,14,16.5,"M",500,NA,NA,86.935,85.7,85.96,91.16,84.92,NA,3.05,1.8,6,7
 "M11.100",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,"Y","interior",NA,NA,NA,NA,"M",500,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "M12",0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,1,1,"N","interior","Hamenia verrucosum",26.9,12.5,13.5,"M",250,NA,7,84.79,75.56,85.18,91.68,86.74,NA,7.8,1,14,11
+"M12.100",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,"Y","interior",NA,NA,NA,NA,"M",250,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "M13",0,0,0,0,0,0,0,0,0,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,1,"N","edge","Hamenia verrucosum",74,17.3,17.3,"M",0,0,6,100,100,100,100,100,100,50,1.4,-2,6
 "M14",0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,3,1,"N","edge",NA,35,12.5,14.25,"M",0,2,NA,100,100,100,100,100,100,31,3.4,42,4
+"M14.100",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,"Y","edge",NA,NA,NA,NA,"M",0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "M15",0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,1,1,"N","edge",NA,52.5,15.65,17.65,"M",30,NA,6.5,100,100,100,100,100,100,7,2.6,26,2
 "M15.100",0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,"Y","edge",NA,NA,NA,NA,"M",30,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "M16",0,0,0,0,0,0,0,2,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0.598269588585257,0.408163265306122,7,2,"N","edge","Hamenia verrucosum",61.4,18,20,"M",30,NA,8,100,100,100,100,100,100,10.5,1.8,6,6
@@ -39,6 +42,3 @@
 "MAT_M25",0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,1,"N","matrix",NA,NA,NA,NA,"M",-10,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "MAT_M31",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,2,1,"N","matrix",NA,NA,NA,NA,"M",-10,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "MAT_M5",0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,1,"N","matrix",NA,NA,NA,NA,"M",-10,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-"M10.100",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Y","interior",NA,NA,NA,NA,"M",500,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-"M12.100",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Y","interior",NA,NA,NA,NA,"M",250,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-"M14.100",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Y","edge",NA,NA,NA,NA,"M",0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
