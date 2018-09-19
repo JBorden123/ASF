@@ -32,35 +32,38 @@ metadata <- merge(metadata, med_hght, by = "Tree_ID", all = TRUE)
 
 
 #summary exploring
-forest_grouped <- metadata %>%
+forest_grouped <- MetaAll %>%
   filter(extra_ground != "Y")%>%
   group_by(forest_type, edge_category_m)%>%
   summarise(count = n())
 
-metadata <- merge(metadata, HabSummary, all = TRUE)
+MetaAll <- merge(metadata, HabSummary, all = TRUE)
 
 #save it
-write.csv(metadata, file = "clean_data/metadata.csv", row.names = FALSE)
+write.csv(MetaAll, file = "clean_data/MetaAll.csv", row.names = FALSE)
 
+MetaClimbs <- MetaAll %>%
+  filter(extra_ground == "N")%>%
+  filter(edge_category_m != -10)
+  
 
 ########################
 #metadata by forest type
 ########################
 #Brachystegia
-BR_metadata <- metadata %>%
+BR_metadata <- MetaAll %>%
   filter(forest_type == "BR")
-write.csv(BR_metadata, file = "clean_data/BR_metadata.csv", row.names = FALSE)
+write.csv(BR_metadata, file = "clean_data/MetaAllBR.csv", row.names = FALSE)
 
 #Mixed
-M_metadata <- metadata %>%
+M_metadata <- MetaAll %>%
   filter(forest_type == "M")
-write.csv(M_metadata, file = "clean_data/M_metadata.csv", row.names = FALSE)
+write.csv(M_metadata, file = "clean_data/MetaAllM.csv", row.names = FALSE)
 
 #Cynometera
-CY_metadata <- metadata %>%
+CY_metadata <- MetaAll %>%
   filter(forest_type == "CY")
-write.csv(CY_metadata, file = "clean_data/CY_metadata.csv", row.names = FALSE)
+write.csv(CY_metadata, file = "clean_data/MetaAllCY.csv", row.names = FALSE)
 
-head(metadata)
 
 
