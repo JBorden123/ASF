@@ -1,5 +1,6 @@
 #Shaping 
-#arabuko metadata
+#arabuko metadata into metadata with all survey details, this divided by forest type,
+
 
 library(dplyr)
 library(ggplot2)
@@ -42,10 +43,6 @@ MetaAll <- merge(metadata, HabSummary, all = TRUE)
 #save it
 write.csv(MetaAll, file = "clean_data/MetaAll.csv", row.names = FALSE)
 
-MetaClimbs <- MetaAll %>%
-  filter(extra_ground == "N")%>%
-  filter(edge_category_m != -10)
-  
 
 ########################
 #metadata by forest type
