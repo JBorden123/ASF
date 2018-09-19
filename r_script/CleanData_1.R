@@ -26,6 +26,10 @@ write.csv(key, "raw_data/key.csv", row.names = FALSE)
 habitat <- read_excel("raw_data/arabuko_sokoke_11.xlsx", sheet = "Habitat")
 write.csv(habitat, "raw_data/habitat.csv", row.names = FALSE)
 
+sites <- read_excel("raw_data/arabuko_sokoke_11.xlsx", sheet = "Sites")
+write.csv(sites, "raw_data/sites.csv", row.names = FALSE)
+
+
 
 ########################
 #Cleaning up data
@@ -71,6 +75,11 @@ herpdata2<-herpdata %>%
   group_by(Tree_ID,species_code) %>%
   tally()
 herpdata2<- cast(herpdata2, Tree_ID ~ species_code, value='n')
+
+herpdata2 <- merge(herpdata2, sites, all = TRUE) #bring in sites that don't have herps
+
+herpdata2 <- herpdata2[,c(1:25)]
+
 herpdata2[is.na(herpdata2)]<-0
 
 spec_names <- names(herpdata2[,2:24]) #check this to be sure this 

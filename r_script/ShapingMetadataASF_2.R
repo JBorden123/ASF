@@ -10,7 +10,7 @@ library(psych)
 #data
 herpdata <- read.csv("raw_data/herpdata.csv", header = TRUE)
 sites <- read.csv("raw_data/sites.csv", header = TRUE)
-sites <- sites[,-13]#remove notes column
+sites <- sites[,-11]#remove notes column
 biodiv_data <- read.csv("clean_data/biodiv_data.csv", header = TRUE)
 metadata <- merge(biodiv_data,sites, by = "Tree_ID", all = TRUE)
 HabSummary <- read.csv("clean_data/HabSummary.csv", header = TRUE)
@@ -38,7 +38,9 @@ forest_grouped <- MetaAll %>%
   group_by(forest_type, edge_category_m)%>%
   summarise(count = n())
 
-MetaAll <- merge(metadata, HabSummary, all = TRUE)
+MetaAll <- merge(metadata, HabSummary, all = TRUE) #merge with habitat data
+
+
 
 #save it
 write.csv(MetaAll, file = "clean_data/MetaAll.csv", row.names = FALSE)
