@@ -89,7 +89,7 @@ summary(lm(Log1MedHght~edge_category_m, data = MetaClimbsCY))
 
 
 ###############
-#ABUNDANCE & RICHNESS
+#ABUNDANCE & RICHNESS & DIVERSITY
 ###############
 
 #Abundance & RICH by edge... all data
@@ -116,6 +116,17 @@ RichByEdgeAll
 summary(glm(rich~
               edge_category_m,
             data = MetaAll, family = poisson))
+#diversity
+DivByEdgeAll <- ggplot(MetaAll, aes(edge_category_m, diversity_shannon)) +
+  geom_point()+
+  geom_jitter()+
+  geom_smooth(method = lm)+
+  labs(x = "Rough Edge Distance (m)", y = "Shannon's Diversity", title = "All Sites ()")
+DivByEdgeAll
+
+summary(glm(diversity_shannon~
+              edge_category_m,
+            data = MetaAll, family = poisson))
 
 #Abundance by edge Brachystegia
 AbunByEdgeBR <- ggplot(MetaAllBR, aes(edge_category_m, abund)) +
@@ -135,6 +146,18 @@ RichByEdgeBR <- ggplot(MetaAllBR, aes(edge_category_m, rich)) +
   labs(x = "Rough Edge Distance", y = "Richness", title = "Brachystegia Sites (.)")
 RichByEdgeBR
 summary(glm(rich~
+              edge_category_m,
+            data = MetaAllBR, family = poisson))
+
+#diversity Brachystegia
+DivByEdgeBR <- ggplot(MetaAllBR, aes(edge_category_m, diversity_shannon)) +
+  geom_point()+
+  geom_jitter()+
+  geom_smooth(method = lm)+
+  labs(x = "Rough Edge Distance (m)", y = "Shannon's Diversity", title = "Brachystegia Sites ()")
+DivByEdgeBR
+
+summary(glm(diversity_shannon~
               edge_category_m,
             data = MetaAllBR, family = poisson))
 
@@ -161,6 +184,19 @@ summary(glm(rich~
               edge_category_m,
             data = MetaAllM, family = poisson))
 
+#diversity Mixed
+DivByEdgeM <- ggplot(MetaAllM, aes(edge_category_m, diversity_shannon)) +
+  geom_point()+
+  geom_jitter()+
+  geom_smooth(method = lm)+
+  labs(x = "Rough Edge Distance (m)", y = "Shannon's Diversity", title = "Mixed Sites ()")
+DivByEdgeM
+
+summary(glm(diversity_shannon~
+              edge_category_m,
+            data = MetaAllM, family = poisson))
+
+
 #abun by edge Cynometera
 AbunByEdgeCY <- ggplot(data = MetaAllCY, aes(edge_category_m, abund)) +
   geom_point()+
@@ -186,10 +222,26 @@ summary(glm(rich~
               edge_category_m,
             data = MetaAllCY, family = poisson))
 
+
+#diversity Cynometera
+DivByEdgeCY <- ggplot(MetaAllCY, aes(edge_category_m, diversity_shannon)) +
+  geom_point()+
+  geom_jitter()+
+  geom_smooth(method = lm)+
+  labs(x = "Rough Edge Distance (m)", y = "Shannon's Diversity", title = "Cynometera Sites ()")
+DivByEdgeCY
+
+summary(glm(diversity_shannon~
+              edge_category_m,
+            data = MetaAllCY, family = poisson))
+
+
+
 #plot together
 ggarrange(HghtByEdgeAll, HghtByEdgeBR, HghtByEdgeM, ncol = 1, nrow = 3)
 
-ggarrange(AbundByEdgeAll, RichByEdgeAll, ncol = 2, nrow = 1)
+ggarrange(AbundByEdgeAll, RichByEdgeAll, DivByEdgeAll, ncol = 3, nrow = 1)
 
-ggarrange(AbunByEdgeBR, RichByEdgeBR, AbundByEdgeM, RichByEdgeM, AbunByEdgeCY, RichByEdgeCY,
-          nrow = 3, ncol = 2)
+ggarrange(AbunByEdgeBR, RichByEdgeBR, DivByEdgeBR, AbundByEdgeM,
+          RichByEdgeM, DivByEdgeM, AbunByEdgeCY, RichByEdgeCY, DivByEdgeCY,
+          nrow = 3, ncol = 3)

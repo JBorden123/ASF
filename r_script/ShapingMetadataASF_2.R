@@ -14,7 +14,8 @@ sites <- sites[,-11]#remove notes column
 biodiv_data <- read.csv("clean_data/biodiv_data.csv", header = TRUE)
 metadata <- merge(biodiv_data,sites, by = "Tree_ID", all = TRUE)
 HabSummary <- read.csv("clean_data/HabSummary.csv", header = TRUE)
-  
+TreeGPS <- read.csv("raw_data/TreeGPS.csv")
+
 #adding mean height by tree (probably need to add day vs night in case this 
 #might change height distribution)
 med_hght <- herpdata%>%
@@ -38,9 +39,9 @@ forest_grouped <- MetaAll %>%
   group_by(forest_type, edge_category_m)%>%
   summarise(count = n())
 
-MetaAll <- merge(metadata, HabSummary, all = TRUE) #merge with habitat data
+MetaAll <- merge(metadata, HabSummary, by = "Tree_ID", all = TRUE) #merge with habitat data
 
-
+MetaAll <- merge(MetaAll, TreeGPS, by = "Tree_ID", all = TRUE)#add GPS 
 
 #save it
 write.csv(MetaAll, file = "clean_data/MetaAll.csv", row.names = FALSE)
