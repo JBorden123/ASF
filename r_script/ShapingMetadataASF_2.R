@@ -16,22 +16,23 @@ metadata <- merge(biodiv_data,sites, by = "Tree_ID", all = TRUE)
 HabSummary <- read.csv("clean_data/HabSummary.csv", header = TRUE)
 TreeGPS <- read.csv("raw_data/TreeGPS.csv")
 
-#adding mean height by tree (probably need to add day vs night in case this 
+#adding median height by tree (probably need to add day vs night in case this 
 #might change height distribution)
 med_hght <- herpdata%>%
   filter(survey_type != "G")%>%
   group_by(Tree_ID)%>%
   summarize(med_hght = median(height_found_m))
 
-med_hght <- herpdata%>%
-  filter(survey_type != "G")%>%
-  group_by(Tree_ID)%>%
-  summarize(med_hght = median(height_found_m))
+MedHghtPerc <- merge(herpdata, sites, by = "Tree_ID", all = TRUE)
 
+MedHghtPerc <- MedHghtPerc %>%
+  filter(survey_type != "G") %>%
+  group_by(Tree_ID) %>%
+  summarize(MedHghtPerc = median((height_found_m/HOT_m)*100))
 
 #merge hght and metadata
 metadata <- merge(metadata, med_hght, by = "Tree_ID", all = TRUE)
-
+metadata <- merge(metadata, MedHghtPerc, by = "Tree_ID", all = TRUE)
 
 #summary exploring
 forest_grouped <- MetaAll %>%
