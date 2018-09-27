@@ -25,6 +25,8 @@ MetaClimbs <- MetaAll %>%
 
 MetaClimbs$Log1MedHght <- log(MetaClimbs$med_hght + 1)
 
+MetaClimbs$AsinSqrtPercHght <- (asin(sqrt(MetaClimbs$MedHghtPerc)))
+
 
 #par(mfrow=c(2,2))
 mod2 <- lm(Log1MedHght ~ edge_category_m, data= MetaClimbs)
@@ -45,7 +47,7 @@ MetaClimbsCY <- MetaClimbs %>%
 #HEIGHT BY EDGE 
 #################
 
-#height by end all data
+#height by edge all data
 HghtByEdgeAll <- ggplot(MetaClimbs, aes(edge_category_m, med_hght)) +
   geom_point()+
   geom_jitter()+
@@ -57,6 +59,17 @@ summary(lm(Log1MedHght~edge_category_m, data = MetaClimbs))
 
 hist(MetaClimbs$edge_category_m)
 
+#Percentage height by HOT by edge all data 
+PercHghtPercByEdgeAll <- ggplot(MetaClimbs, aes(edge_category_m,AsinSqrtPercHght)) +
+  geom_point()+
+  geom_jitter()+
+  geom_smooth(method = lm)+
+  labs(x = "Rough Edge Distance", y = "proportion of height to HOT", title = "All Sites ()")
+PercHghtPercByEdgeAll
+
+summary(lm(AsinSqrtPercHght~edge_category_m, data = MetaClimbs))
+
+
 #height by edge Brachystegia
 HghtByEdgeBR <- ggplot(data = filter(MetaClimbs, forest_type == "BR"), aes(edge_category_m, med_hght)) +
   geom_point()+
@@ -66,6 +79,17 @@ HghtByEdgeBR <- ggplot(data = filter(MetaClimbs, forest_type == "BR"), aes(edge_
 HghtByEdgeBR
 
 summary(lm(Log1MedHght~edge_category_m, data = MetaClimbsBR))
+
+#Perc height by edge
+PercHghtByEdgeBR <- ggplot(data = filter(MetaClimbs, forest_type == "BR"), aes(edge_category_m, AsinSqrtPercHght)) +
+  geom_point()+
+  geom_jitter()+
+  geom_smooth(method = lm)+
+  labs(x = "Rough Edge Distance", y = "proportion of median height to HOT", title = "Brachystegia Sites")
+PercHghtByEdgeBR
+
+summary(lm(AsinSqrtPercHght~edge_category_m, data = MetaClimbsBR))
+
 
 #height by edge Mixed
 HghtByEdgeM <- ggplot(data = filter(MetaClimbs, forest_type == "M"), aes(edge_category_m, med_hght)) +
@@ -77,6 +101,17 @@ HghtByEdgeM
 
 summary(lm(Log1MedHght~edge_category_m, data = MetaClimbsM))
 
+#Perc height by edge Mixed
+PercHghtByEdgeM <- ggplot(data = filter(MetaClimbs, forest_type == "M"), aes(edge_category_m, AsinSqrtPercHght)) +
+  geom_point()+
+  geom_jitter()+
+  geom_smooth(method = lm)+
+  labs(x = "Rough Edge Distance", y = "proportion of median height to HOT", title = "Mixed Sites")
+PercHghtByEdgeM
+
+summary(lm(AsinSqrtPercHght~edge_category_m, data = MetaClimbsM))
+
+
 #height by edge Cynometera
 HghtByEdgeCY <- ggplot(data = filter(MetaClimbs, forest_type == "CY"), aes(edge_category_m, med_hght)) +
   geom_point()+
@@ -86,6 +121,18 @@ HghtByEdgeCY <- ggplot(data = filter(MetaClimbs, forest_type == "CY"), aes(edge_
 HghtByEdgeCY
 
 summary(lm(Log1MedHght~edge_category_m, data = MetaClimbsCY))
+
+
+#Perc height by edge Cynometera
+PercHghtByEdgeCY <- ggplot(data = filter(MetaClimbs, forest_type == "CY"), aes(edge_category_m, AsinSqrtPercHght)) +
+  geom_point()+
+  geom_jitter()+
+  geom_smooth(method = lm)+
+  labs(x = "Rough Edge Distance", y = "proportion of median height to HOT", title = "Cynometera Sites")
+PercHghtByEdgeCY
+
+summary(lm(AsinSqrtPercHght~edge_category_m, data = MetaClimbsCY))
+
 
 
 ###############
@@ -236,9 +283,10 @@ summary(glm(diversity_shannon~
             data = MetaAllCY, family = poisson))
 
 
-
 #plot together
 ggarrange(HghtByEdgeAll, HghtByEdgeBR, HghtByEdgeM, ncol = 1, nrow = 3)
+
+ggarrange(PercHghtByEdgeAll, PercHghtByEdgeBR, PercHghtByEdgeM, ncol = 1, nrow = 3)
 
 ggarrange(AbundByEdgeAll, RichByEdgeAll, DivByEdgeAll, ncol = 3, nrow = 1)
 

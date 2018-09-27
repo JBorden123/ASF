@@ -1,5 +1,3 @@
-#data
-biodiv_data <- read.csv("clean_data/biodiv_data.csv", row.names = "Tree_ID")
 
 #libraries
 library(vegan)
@@ -9,16 +7,23 @@ library(psych)
 library(dplyr)
 library(raster)
 library(cluster)
+library(pvclust)
+select <- dplyr::select
 
-MetaAll <- read.csv("clean_data/MetaAll.csv", row.names = "Tree_ID")
+#data
+biodiv_data <- read.csv("clean_data/biodiv_data.csv", row.names = "Tree_ID")
+MetaAll <- read.csv("clean_data/MetaAll.csv", header = TRUE)
+
 MetaAll <- MetaAll %>%
-  select(ARST:VAAL, diversity_shannon:rich, DBH_cm:StemMore8cm)%>%
+  select(Tree_ID:VAAL, diversity_shannon:rich, DBH_cm:StemMore8cm)%>%
   select(-edge_dist_m)%>%
   select(-forest_type)
 
 #select columns with continuous variables to run NMDS
 #alter the data
-BiodivData <- biodiv_data[,-c(1,25:29)] #keeping only species data
+BiodivData <- biodiv_data %>%
+  select(ARST:VAAL)#keeping only species data
+
 #look at species data
 describe(BiodivData)
 
@@ -50,9 +55,9 @@ ordiplot(scores(cmd)[, c(1, 2)], type = "t", cex = 1, main = "ASF Herp PCoA")
 ################
 #NMDS
 #dissimilarity matrix
-bray_biodiv <- vegdist(biodiv_data, "bray")
+DistBiodiv <- vegdist(biodiv_data, "bray")
 
-nmds_biodiv <- metaMDS(bray_biodiv, k = 2, trace = T)
+nmds_biodiv <- metaMDS(DistBiodiv, k = 2, trace = T)
 
 ordiplot(nmds_biodiv, type = "t", main = "NMDS Arabuko Herps")
 
@@ -102,10 +107,93 @@ for (i in 2:8) sil[i] <- summary(silhouette(kmeans(HabSummaryCluster, centers = 
                                                    nstart = 25)$cluster, dist(HabSummaryCluster)))$avg.width
 plot(2:10, sil[2:10], type = "b", xlab = "Number of groups", ylab = "average silhouette width ")
 
+
+
+
+
+
 ##########
 #Clusters
+###########
 HabSum.kop <- kmeans(HabSummaryCluster, centers = 8, iter.max = 10, nstart = 25)
 
 #Plot a scatter plot showing cluster designations:
 pairs(HabSummaryCluster, panel = function(x, y, z) text(x, y, HabSum.kop$cluster))
+
+
+
+#Calculating the distance/dissimilarity matrix
+#Select the (an) appropriate dissimilarity metric for binary 
+#data and calculate the dissimilarity/distance matrix.
+rowSums(BiodivData) 
+
+BiodivData <- BiodivData[which(rowSums(BiodivData) > 0),]
+
+DistBiodiv <- vegdist(BiodivData, "bray")
+
+#######################################################
+#Polythetic Agglomerative Hierarchical Clustering (PAHC)
+#######################################################
+
+#You will use the hclust function in the stats package to 
+#conduct PAHC. This hclust function contains the six fusion 
+#methods we discussed in lecture. We will use hclust to cluster 
+#the Caribbean bird data and construct dendrograms.
+`?`(hclust)
+
+#Clustering algorithms
+singleTree <- hclust(DistBiodiv, method = "single")
+completeTree <- hclust(DistBiodiv, method = "complete")
+centroidTree <- hclust(DistBiodiv, method = "centroid")
+medianTree <- hclust(DistBiodiv, method = "median")
+averageTree <- hclust(DistBiodiv, method = "average")
+wardTree <- hclust(DistBiodiv, method = "ward.D2")
+
+
+par(mfrow = c(1, 1))
+plot(averageTree)
+
+#Agglomerative coefficient (HOW CLUSTERY IS THE DATA)
+#First, calculate the agglomerative coefficient for each fusion method:
+ag1 <- coef.hclust(singleTree)
+ag2 <- coef.hclust(completeTree)
+ag3 <- NA
+ag4 <- NA
+ag5 <- coef.hclust(averageTree)
+ag6 <- coef.hclust(wardTree)
+
+
+#Cophenetic correlation coefficient (WHICH IS THE BEST FIT / METHOD)
+cc1 <- cor(DistBiodiv, cophenetic(singleTree))
+cc2 <- cor(DistBiodiv, cophenetic(completeTree))
+cc3 <- cor(DistBiodiv, cophenetic(centroidTree))
+cc4 <- cor(DistBiodiv, cophenetic(medianTree))
+cc5 <- cor(DistBiodiv, cophenetic(averageTree))
+cc6 <- cor(DistBiodiv, cophenetic(wardTree))
+cophCor <- round(c(cc1, cc2, cc3, cc4, cc5, cc6), 2)
+
+#Let’s put this all in a table:
+methods <- c("single", "complete", "centroid", "median", "average", "ward")
+dendrogramTable <- data.frame(methods, cophCor, agc)
+
+dendrogramTable #shows that average is the most important
+
+
+##################################################
+#Polythetic Divisive Hierarchical Clustering (PDHC)
+#You will use the diana function in the cluster package to conduct PDHC. 
+#We will use diana to cluster the Caribbean bird data and construct dendrograms.
+`?`(diana)
+
+#Clustering algorithm
+diSpecies <- diana(DistBiodiv)
+
+par(mfrow = c(1,1))
+# Next, plot the dendrogram:
+plot(diSpecies, which.plots = 2)
+
+# calculate the divisive coefficient
+diTree$dc
+# and calculate the cophenetic correlation coefficient:
+d.coph <- cor(distBirds, cophenetic(diTree))
 

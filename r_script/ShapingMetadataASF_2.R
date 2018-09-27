@@ -28,7 +28,7 @@ MedHghtPerc <- merge(herpdata, sites, by = "Tree_ID", all = TRUE)
 MedHghtPerc <- MedHghtPerc %>%
   filter(survey_type != "G") %>%
   group_by(Tree_ID) %>%
-  summarize(MedHghtPerc = median((height_found_m/HOT_m)*100))
+  summarize(MedHghtPerc = median((height_found_m/HOT_m)))
 
 #merge hght and metadata
 metadata <- merge(metadata, med_hght, by = "Tree_ID", all = TRUE)
