@@ -27,7 +27,7 @@ MetaClimbs$Log1MedHght <- log(MetaClimbs$med_hght + 1)
 
 MetaClimbs$AsinSqrtPercHght <- (asin(sqrt(MetaClimbs$MedHghtPerc)))
 
-
+summary(MetaClimbs$forest_type)
 #par(mfrow=c(2,2))
 mod2 <- lm(Log1MedHght ~ edge_category_m, data= MetaClimbs)
 plot(mod2)
