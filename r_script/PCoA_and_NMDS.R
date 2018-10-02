@@ -61,6 +61,16 @@ nmds_biodiv <- metaMDS(DistBiodiv, k = 2, trace = T)
 
 ordiplot(nmds_biodiv, type = "t", main = "NMDS Arabuko Herps")
 
+#habitat, edge and species composition
+NMDSData <- MetaAll %>%
+  filter(edge_category_m != -10) %>%
+  filter(DBH_cm != "NA") %>%
+  select(Tree_ID:rich, edge_category_m, TotalAvgCan, AvgHerbCover:StemMore8cm)
+
+NMDSData2 <- NMDSData[,-1]
+
+dist <- vegdist(NMDSData2, "bray")
+
 
 ######################
 #K Means Clustering
