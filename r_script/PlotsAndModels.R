@@ -28,6 +28,7 @@ MetaClimbs$Log1MedHght <- log(MetaClimbs$med_hght + 1)
 MetaClimbs$AsinSqrtPercHght <- (asin(sqrt(MetaClimbs$MedHghtPerc)))
 
 summary(MetaClimbs$forest_type)
+
 #par(mfrow=c(2,2))
 mod2 <- lm(Log1MedHght ~ edge_category_m, data= MetaClimbs)
 plot(mod2)
@@ -60,12 +61,12 @@ summary(lm(Log1MedHght~edge_category_m, data = MetaClimbs))
 hist(MetaClimbs$edge_category_m)
 
 #Percentage height by HOT by edge all data 
-PercHghtPercByEdgeAll <- ggplot(MetaClimbs, aes(edge_category_m,AsinSqrtPercHght)) +
+PercHghtByEdgeAll <- ggplot(MetaClimbs, aes(edge_category_m,AsinSqrtPercHght)) +
   geom_point()+
   geom_jitter()+
   geom_smooth(method = lm)+
   labs(x = "Rough Edge Distance", y = "proportion of height to HOT", title = "All Sites ()")
-PercHghtPercByEdgeAll
+PercHghtByEdgeAll
 
 summary(lm(AsinSqrtPercHght~edge_category_m, data = MetaClimbs))
 
@@ -284,9 +285,9 @@ summary(glm(diversity_shannon~
 
 
 #plot together
-ggarrange(HghtByEdgeAll, HghtByEdgeBR, HghtByEdgeM, ncol = 1, nrow = 3)
+ggarrange(HghtByEdgeAll, HghtByEdgeBR, HghtByEdgeM, ncol = 3, nrow = 1)
 
-ggarrange(PercHghtByEdgeAll, PercHghtByEdgeBR, PercHghtByEdgeM, ncol = 1, nrow = 3)
+ggarrange(PercHghtByEdgeAll, PercHghtByEdgeBR, PercHghtByEdgeM, ncol = 3, nrow = 1)
 
 ggarrange(AbundByEdgeAll, RichByEdgeAll, DivByEdgeAll, ncol = 3, nrow = 1)
 
