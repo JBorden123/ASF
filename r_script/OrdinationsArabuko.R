@@ -67,3 +67,31 @@ ggplot() +
   #ylim(-.25,.25)+
   #xlim(-.5,.5)+
   theme_classic()
+
+
+#######
+#PCoA
+#######################
+#PCoA
+#dissimilarity matrix
+bray_biodiv <- vegdist(biodiv_data, "bray")
+#PCoA
+cmd <- cmdscale(bray_biodiv, k = 10, eig = TRUE)
+
+cmd$points 
+#this is the scaled eigenvectors, which become the coordinates in PCoA space
+
+#Let’s make a PCoA table to look at the eigenvalues, and the 
+#proportional and cumulative variance:
+eigenvalues <- cmd$eig[1:10]
+propVar <- eigenvalues/sum(eigenvalues)
+cumVar <- cumsum(propVar)
+PCoA_Table <- cbind(eigenvalues, propVar, cumVar)
+PCoA_Table
+
+#Scree plot:
+plot(eigenvalues)
+lines(lowess(eigenvalues))
+
+ordiplot(scores(cmd)[, c(1, 2)], type = "t", cex = 1, main = "ASF Herp PCoA")
+
