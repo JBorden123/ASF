@@ -13,6 +13,7 @@ select <- dplyr::select
 #data
 biodiv_data <- read.csv("clean_data/biodiv_data.csv", row.names = "Tree_ID")
 MetaAll <- read.csv("clean_data/MetaAll.csv", header = TRUE)
+??row.names
 
 MetaAll <- MetaAll %>%
   select(Tree_ID:VAAL, diversity_shannon:rich, DBH_cm:StemMore8cm)%>%
@@ -50,26 +51,6 @@ plot(eigenvalues)
 lines(lowess(eigenvalues))
 
 ordiplot(scores(cmd)[, c(1, 2)], type = "t", cex = 1, main = "ASF Herp PCoA")
-
-
-################
-#NMDS
-#dissimilarity matrix
-DistBiodiv <- vegdist(biodiv_data, "bray")
-
-nmds_biodiv <- metaMDS(DistBiodiv, k = 2, trace = T)
-
-ordiplot(nmds_biodiv, type = "t", main = "NMDS Arabuko Herps")
-
-#habitat, edge and species composition
-NMDSData <- MetaAll %>%
-  filter(edge_category_m != -10) %>%
-  filter(DBH_cm != "NA") %>%
-  select(Tree_ID:rich, edge_category_m, TotalAvgCan, AvgHerbCover:StemMore8cm)
-
-NMDSData2 <- NMDSData[,-1]
-
-dist <- vegdist(NMDSData2, "bray")
 
 
 ######################
