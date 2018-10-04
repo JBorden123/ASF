@@ -6,6 +6,7 @@ library(dplyr)
 library(ggplot2)
 library(vegan)
 library(psych)
+summarize <- dplyr::summarize
 
 #data
 herpdata <- read.csv("raw_data/herpdata.csv", header = TRUE)
@@ -21,7 +22,7 @@ TreeGPS <- read.csv("raw_data/TreeGPS.csv")
 med_hght <- herpdata%>%
   filter(survey_type != "G")%>%
   group_by(Tree_ID)%>%
-  summarize(med_hght = median(height_found_m))
+  dplyr::summarize(med_hght = median(height_found_m))
 
 MedHghtPerc <- merge(herpdata, sites, by = "Tree_ID", all = TRUE)
 
