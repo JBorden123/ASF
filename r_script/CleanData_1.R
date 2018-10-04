@@ -8,7 +8,7 @@ library(ggplot2)
 library(vegan)
 library(reshape)
 library(tidyr)
-
+select <- dplyr::select
 
 #write CSV files from Excel Raw Data
 herpdata <- read_excel("raw_data/arabuko_sokoke_11.xlsx", sheet = "Herps")
@@ -43,7 +43,7 @@ HabSummary <- habitat %>% #select summary columns
   select(Tree_ID, TotalAvgCan = total_avg_can_cov, CanMinus10 = can_minus_10, CanMinus5 = can_minus_5,
          Can0 = can_0, CanPlus5 = can_plus_5, CanPlus10 = can_plus_10,
          AvgHerbCover = avg_herb_cover..., AvgLeafLayer = avg_leaf_layer,
-         StemLess8cm = stem_less_8cm, StemMore8cm = stem_more_8cm)%>%
+         StemLess8cm = stem_less_8cm, StemMore8cm = stem_more_8cm, BasalArea = basal_area)%>%
   mutate(TotalAvgCan = (100 - TotalAvgCan))%>%
   mutate(CanMinus10 = (100 - CanMinus10))%>%
   mutate(CanMinus5 = (100 - CanMinus5))%>%
