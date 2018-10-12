@@ -138,8 +138,7 @@ ASFAnosim$statistic # r statistic. -1 = out of group similarity,
 ASFAnosim$signif #p value
 ASFAnosim$statistic
 
-hist(ASFAnosim$perm, main = "Histogram of R statistics for ASF") 
-     xlim = c(-0.5, 1))
+hist(ASFAnosim$perm, main = "Histogram of R statistics for ASF")
 points(ASFAnosim$statistic, 0, pch = 19, col = "red", bg = "red", cex = 2)
 
 
