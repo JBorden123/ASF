@@ -56,7 +56,7 @@ for(i in 1:NumSpecies){
                    scale(edge_category_m),
                  data=newdata)
   
-  PsuedoRSquared[[i]] <- 1 - (lm_abund$deviance/lm_abund$null.deviance) #mcfaddens pseudo R squared
+  PsuedoRSquared[[i]] = 1 - (lm_abund$deviance/lm_abund$null.deviance) #mcfaddens pseudo R squared
   
   lm_mod <- summary(lm_abund)
   reg_abund[[i]] <- rbind(lm_mod$coefficients)
