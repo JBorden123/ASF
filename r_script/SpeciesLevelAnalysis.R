@@ -35,7 +35,7 @@ ggplot(data = HghtHerpD, aes(x = edge_category_m,
                
 
 #######################
-#GLM for all species heights by distance
+#GLM for all species Abundance by distance
 
 #number of species
 spec_counts <- MetaAll %>%
@@ -48,7 +48,7 @@ variables <- MetaAll%>%
 
 # create an empty dataframe to populate with info from glm
 reg_abund <- list(NA)
-PsuedoRSquared <- tibble()
+RSquared <- list(NA)
 
 for(i in 1:NumSpecies){
   newdata <- cbind(abund = spec_counts[,i], variables)
@@ -56,11 +56,12 @@ for(i in 1:NumSpecies){
                    scale(edge_category_m),
                  data=newdata)
   
-  PsuedoRSquared[[i]] = 1 - (lm_abund$deviance/lm_abund$null.deviance) #mcfaddens pseudo R squared
-  
   lm_mod <- summary(lm_abund)
-  reg_abund[[i]] <- rbind(lm_mod$coefficients)
   
+  reg_abund[[i]] <- rbind(lm_mod$coefficients)
+  RSquared[[i]] <- rbind(lm_mod$r.squared)
 }
 names(reg_abund) <- colnames(spec_counts)
-PsuedoRSquared
+reg_abund
+names(RSquared) <- colnames(spec_counts)
+RSquared
