@@ -34,6 +34,13 @@ ggplot(data = HghtHerpD, aes(x = edge_category_m,
   ylim(0,20)
                
 
+#height found by species:
+ggplot(data = herpd, aes(x = common_name, y = height_found_m))+
+  geom_boxplot(aes(color = common_name))+
+  theme_classic()+
+  theme(axis.text.x = element_text(angle = 50, hjust = 1))
+
+
 #######################
 #GLM for all species Abundance by distance
 
@@ -65,3 +72,7 @@ names(reg_abund) <- colnames(spec_counts)
 reg_abund
 names(RSquared) <- colnames(spec_counts)
 RSquared
+
+
+
+
