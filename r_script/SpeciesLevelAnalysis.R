@@ -73,6 +73,15 @@ reg_abund
 names(RSquared) <- colnames(spec_counts)
 RSquared
 
+summary(glm(LYMO ~ scale(edge_category_m), data = MetaAll))
+summary(lm(HEPL ~ scale(edge_category_m), data = MetaAll))
+summary(lm(HEBA ~ scale(edge_category_m), data = MetaAll))
+summary(lm(HEMA ~ scale(edge_category_m), data = MetaAll))
+summary(lm(HEMA ~ scale(edge_category_m), data = MetaAll))
+summary(lm(HEMI ~ scale(edge_category_m), data = MetaAll))
+summary(lm(TRMA ~ scale(edge_category_m), data = MetaAll))
+summary(lm(NUBO ~ scale(edge_category_m), data = MetaAll))
+summary(lm(CHDI ~ scale(edge_category_m), data = MetaAll))
 
-
+hist(MetaAll$edge_category_m)
 
