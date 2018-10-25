@@ -13,6 +13,8 @@ select <- dplyr::select
 herpd <- read.csv("raw_data/herpdata.csv")
 sites <- read.csv("raw_data/sites.csv")
 MetaAll <- read.csv("clean_data/MetaAll.csv")
+MetaAllBR <- read.csv("clean_data/MetaAllBR.csv")
+MetaAllM <- read.csv("clean_data/MetaAllM.csv")
 
 #merge and clean Herp data
 herpd <- merge(herpd, sites, by = "Tree_ID", all = TRUE)
