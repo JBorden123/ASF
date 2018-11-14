@@ -16,7 +16,7 @@ select <- dplyr::select
 herpdata <- read_excel("raw_data/arabuko_sokoke_11.xlsx", sheet = "Herps")
 write.csv(herpdata, "raw_data/herpdata.csv", row.names = FALSE) 
 
-surveys <- read_excel("raw_data/arabuko_sokoke_11.xlsx", sheet = "Surveys")
+surveys <- read_excel("raw_data/arabuko_sokoke_10.xlsx", sheet = "Surveys")
 write.csv(surveys, "raw_data/surveys.csv", row.names = FALSE) 
 
 loggers <- read_excel("raw_data/arabuko_sokoke_11.xlsx", sheet = "Loggers")
