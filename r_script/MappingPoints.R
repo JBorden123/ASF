@@ -1,6 +1,8 @@
 #Spatial stuff
 library(raster)
+#install.packages("rgdal")
 library(rgdal)
+#install.packages("ggmap")
 library(ggmap)
 library(dplyr)
 
@@ -44,6 +46,7 @@ map <- get_map(location = c(long = avg_long,lat = avg_lat), zoom = 11, maptype =
 ggmap(map)+ #plot this map with points added
   geom_point(data = lat_lon, aes(x = lon, y = lat),color="#BD2D13",pch=4)
 
+?register_google
 ###############
 #raster stacks, stacking rasters on top of eachother
 ##############
