@@ -8,10 +8,28 @@ herpdata <- read.csv("raw_data/herpdata.csv", header = TRUE)
 metadata <- read.csv("clean_data/metadata.csv", header = TRUE)
 sites <- read.csv("raw_data/sites.csv", header = TRUE)
 
+#historgram of heights of all species colored by species
+ggplot(herpdata, aes(height_found_m_rec, fill = species_code))+
+  geom_histogram()
+
+
+summary(herpdata$height_found_m)
+
+ggplot(metadata, aes(StemLess8cm, abund))+
+  geom_point()+
+  geom_smooth(method = lm)
+
+ggplot(metadata, aes(StemLess8cm, rich))+
+  geom_point()+
+  geom_smooth(method = lm)
+
+ggplot(metadata, aes(StemLess8cm, diversity_shannon))+
+  geom_point()+
+  geom_smooth(method = lm)
 
 #abund by coarse edge distance
 ggplot(metadata, aes(edge_category_m, abund))+
-  geom_point()+
+  geom_bar()+
   geom_jitter()
 
 #rich by coarse edge distance
@@ -48,37 +66,104 @@ ggplot(metadata, aes(edge_category_m, CHDI))+
 #selecting species by habitat type
 HerpByHab <- merge(herpdata, sites, by = "Tree_ID", all = TRUE)
 HerpByHabMat <- HerpByHab
+HerpByEdge <- HerpByHab
 
+#make an category column with edge, core and matrix, based on the edge category column
+HerpByEdge$category <- case_when(
+  HerpByEdge$edge_category_m > 50 ~ "Core",
+  HerpByEdge$edge_category_m < 50 & HerpByEdge$edge_category_m > -1 ~ "Edge",
+  HerpByEdge$edge_category_m < 0 ~ "Matrix",
+  TRUE ~ as.character(HerpByEdge$category)
+  )
+
+
+#make habitat type 
 HerpByHab <- HerpByHab %>%
   filter(edge_category_m != -10)%>%
-  filter(binomial != "NA")%>%
-  group_by(forest_type, binomial) %>%
+  filter(species_code != "NA")%>%
+  group_by(forest_type, species_code) %>%
   summarise(SpecAbun = n())
+
 
 HerpByHabMat <- HerpByHabMat %>%
   filter(edge_category_m == -10)%>%
-  filter(binomial != "NA")%>%
-  group_by(forest_type, binomial) %>%
+  filter(species_code != "NA")%>%
+  group_by(forest_type, species_code) %>%
   summarise(SpecAbun = n())
 
+HerpByEdge <- HerpByEdge %>%
+  filter(species_code != "NA" & category != "NA")%>%
+  group_by(category, species_code) %>%
+  summarise(SpecAbun = n())
 
-HerpHabPlot1 <- ggplot(HerpByHab, aes(binomial, SpecAbun, color = forest_type))+
-  geom_col(aes(fill = forest_type))+
-  theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1))+
-  labs(title = "Species by Habitat Type")
+#PLOT SPECIES ABUNDANCES
+#all ASF
+ggplot(HerpByHab, aes(species_code,SpecAbun, width = .75))+
+  geom_bar(position = "dodge",stat = "identity", 
+           aes(fill = forest_type), colour = "#27223C")+
+  coord_flip() +
+  scale_fill_manual(values=c("#DBB165", "#D3DDDC", "#2E604A"))+
+  labs(title = "Species by Habitat Type")+
+  scale_x_discrete(
+    limits=c("NAME","GAPR","TRVA","VAAL","ARST","COTR","DITY",
+             "LALO","MOAF","MOSU","PSOR","HEBA","HEMI",
+             "NUBO","TRMA","CHDI","HEMA","LYMO","HEPL"))
+#all ASF by EDGE
+ggplot(HerpByEdge, aes(species_code,SpecAbun, width = .75))+
+  geom_bar(position = "dodge",stat = "identity", 
+           aes(fill = category), colour = "#27223C")+
+  coord_flip() +
+  scale_fill_manual(values=c("#2E604A", "#DBB165", "#D3DDDC"))+
+  labs(title = "Species by Edge, Core, Matrix")+
+  scale_x_discrete(
+    limits=c("NAME","GAPR","TRVA","VAAL","ARST","COTR","DITY",
+             "LALO","MOAF","MOSU","PSOR","HEBA","HEMI",
+             "NUBO","TRMA","CHDI","HEMA","LYMO","HEPL"))
+#matrix
+ggplot(HerpByHabMat, aes(species_code,SpecAbun, width = .75))+
+  geom_bar(position = "dodge",stat = "identity", 
+           aes(fill = forest_type), colour = "#27223C")+
+  coord_flip() +
+  scale_fill_manual(values=c("#DBB165", "#D3DDDC", "#2E604A"))+
+  labs(title = "Species by Habitat Type Matrix")+
+  scale_x_discrete(
+    limits=c("NAME","GAPR","TRVA","VAAL","ARST","COTR","DITY",
+             "LALO","MOAF","MOSU","PSOR","HEBA","HEMI",
+             "NUBO","TRMA","CHDI","HEMA","LYMO","HEPL"))
+  
 
-HerpHabPlot2 <- ggplot(HerpByHabMat, aes(binomial, SpecAbun, color = forest_type))+
-  geom_col(aes(fill = forest_type))+
-  theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1))+
-  labs(title = "Species by Habitat Type Matrix")
 
 plot_grid(HerpHabPlot1, HerpHabPlot2, labels = c("Forest", "Matrix"), ncol = 2, nrow = 1)
 
 plot_grid(inv_abun_urb2, nat_abun_urb2, inv_rich_urb2, nat_rich_urb2, 
           labels = c("        Invasives", "         Natives"), ncol = 2, nrow = 2)
 
+#merge Herp and Hab data to plot some plots
 HerpHabMat <- merge(herpdata, sites, by = "Tree_ID", all = TRUE)
 
-HerpHabMat <- HerpHabMat %>%
-  group_by()
+HerpHabBR <- HerpHabMat %>%
+  filter(forest_type == "BR")
 
+HerpHabM <- HerpHabMat %>%
+  filter(forest_type == "M")
+
+HerpHabCY <- HerpHabMat %>%
+  filter(forest_type == "CY")
+
+
+#Abundance by edge dist by species
+ggplot(HerpHabMat, aes(edge_category_m, fill = binomial))+
+  geom_histogram()+
+  ggtitle("All ASF")
+
+ggplot(HerpHabBR, aes(edge_category_m, fill = binomial))+
+  geom_histogram()+
+  ggtitle("Brachystegia Forest")
+
+ggplot(HerpHabM, aes(edge_category_m, fill = binomial))+
+  geom_histogram()+
+  ggtitle("Mixed Forest")
+
+ggplot(HerpHabCY, aes(edge_category_m, fill = binomial))+
+  geom_histogram()+
+  ggtitle("Cynometera Forest")

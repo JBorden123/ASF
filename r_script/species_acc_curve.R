@@ -5,10 +5,10 @@ library(reshape)
 library(tidyr)
 
 #data
-metadata <- read.csv("clean_data/metadata.csv")
-BR_metadata <- read.csv("clean_data/BR_metadata.csv")
-M_metadata <- read.csv("clean_data/M_metadata.csv")
-CY_metadata <- read.csv("clean_data/CY_metadata.csv")
+metadata <- read.csv("clean_data/MetaAll.csv")
+BR_metadata <- read.csv("clean_data/MetaAllBR.csv")
+M_metadata <- read.csv("clean_data/MetaAllM.csv")
+CY_metadata <- read.csv("clean_data/MetaAllCY.csv")
 
 ###########
 #species accumulation curves

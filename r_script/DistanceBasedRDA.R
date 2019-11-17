@@ -1,12 +1,16 @@
 #This script cleans my site data and subsets it into all data by habitat type,
 #environmental data by habitat type and species data by habitat type
-#then I will go from there into multivariate analysis
+#then I will go from there into multivariate analysis conducting dbRDA for 
+#all sites, for each forest type on its own. And finally I will run a CART model
+#to try to characterize if there are any significant differences from edge
+#to core.
 
 library(raster)
 library(vegan)
 #install.packages("ca")
-install.packages("ggvegan")
-library()
+library(ca)
+#install.packages("ggvegan")
+#library(ggvegan)
 library(dplyr)
 library(ggplot2)
 select <- dplyr::select
@@ -27,13 +31,14 @@ MetaAll <- read.csv("clean_data/MetaAll.csv")
 #All
 CleanMetaAll <- MetaAll %>%
   filter(extra_ground != "Y") %>%
-  filter(edge_category_m > -5)
+  filter(edge_category_m > -5) #remove matrix and ground surveys without canopy climbs
+#this is to ensure that all the data has the same sampling effort (1 climb and 1 ground)
 
 CleanMetaAll <- CleanMetaAll[!duplicated(CleanMetaAll$Tree_ID),]
 
-row.names(CleanMetaAll) <- CleanMetaAll$Tree_ID
+row.names(CleanMetaAll) <- CleanMetaAll$Tree_ID #create row names from column
 
-CleanMetaAll <- CleanMetaAll %>%
+CleanMetaAll <- CleanMetaAll %>% #remove site column which is now row names
   select(-Tree_ID)
 
 summary(CleanMetaAll$forest_type)
@@ -65,7 +70,8 @@ SpecAll2 <- SpecAll2 %>% #remove column with rowsums again
 #will be used in the CART
 EnvAll2 <- CleanMetaAll %>% #herbaceous cover??
   select(edge_category_m, AvgLeafLayer, 
-         TotalAvgCan, BasalArea, Debris, StemLess8cm, StemMore8cm, forest_type)
+         TotalAvgCan, BasalArea, Debris, StemLess8cm, 
+         StemMore8cm, forest_type, AvgHerbCover)
 
 #remove sites with no species from env data
 EnvAll2$RowSum <- rowSums(SpecAll) 
@@ -76,20 +82,20 @@ EnvAll <- EnvAll2 %>%
 EnvAll2 <- EnvAll2 %>% #this data for CART model
   select(-RowSum) #remove rowsum column
 
-EnvM <- EnvAll %>%
+EnvM <- EnvAll %>% #create environmental data for Mixed forest
   filter(forest_type == "M") %>%
   select(edge_category_m, AvgLeafLayer, 
-         TotalAvgCan, BasalArea, Debris, StemLess8cm, StemMore8cm)
+         TotalAvgCan, BasalArea, Debris, StemLess8cm, StemMore8cm, AvgHerbCover)
 
-EnvBR <- EnvAll %>%
+EnvBR <- EnvAll %>% #create environmental data for Brachy forest
   filter(forest_type == "BR") %>%
   select(edge_category_m, AvgLeafLayer, 
-         TotalAvgCan, BasalArea, Debris, StemLess8cm, StemMore8cm)
+         TotalAvgCan, BasalArea, Debris, StemLess8cm, StemMore8cm, AvgHerbCover)
   
-EnvCY <- EnvAll %>%
+EnvCY <- EnvAll %>% #create environmental data for Cyno forest
   filter(forest_type == "CY") %>%
   select(edge_category_m, AvgLeafLayer, 
-         TotalAvgCan, BasalArea, Debris, StemLess8cm, StemMore8cm)
+         TotalAvgCan, BasalArea, Debris, StemLess8cm, StemMore8cm, AvgHerbCover)
 
 #Set species data for each habitat type
 SpecAll <- SpecAll2 %>%
@@ -106,7 +112,7 @@ SpecBR <- SpecAll2 %>%
 SpecCY <- SpecAll2 %>%
   filter(forest_type == "CY")%>%
   select(ARST:VAAL)
-
+ 
 #this loop replaces NA values with the column average
 #all
 for(i in 1:ncol(EnvAll)){ 
@@ -126,13 +132,15 @@ for(i in 1:ncol(EnvCY)){
 }
 
 
+summary(EnvAll$forest_type)
 
 ##############################
 #Distance based RDA
 ####### db-RDA pages(pages 249-251 in Brocard et al.)
 ##########
-#All data and habitat types
 
+
+#All data and habitat types
 #data
 spe <- SpecAll
 env <- EnvAll
@@ -184,7 +192,9 @@ Basal <- env2$BasalArea
 Debris <- env2$Debris
 StemSmall <- env2$StemLess8cm
 StemLarge <- env2$StemMore8cm
+HerbCover <- env2$AvgHerbCover
 Hab <- env2$forest_type
+
 #for mixed
 EdgeDistM <- EnvM$edge_category_m
 LeafLayerM <- EnvM$AvgLeafLayer
@@ -193,6 +203,7 @@ BasalM <- EnvM$BasalArea
 DebrisM <- EnvM$Debris
 StemSmallM <- EnvM$StemLess8cm
 StemLargeM <- EnvM$StemMore8cm
+HerbCoverM <- EnvM$AvgHerbCover
 
 #fore BR
 EdgeDistBR <- EnvBR$edge_category_m
@@ -202,33 +213,50 @@ BasalBR <- EnvBR$BasalArea
 DebrisBR <- EnvBR$Debris
 StemSmallBR <- EnvBR$StemLess8cm
 StemLargeBR <- EnvBR$StemMore8cm
+HerbCoverBR <- EnvBR$AvgHerbCover
 
 #Use the "capscale" function in Vegan to run db-rda.Note that the "distance" 
 #argument turns the site by species matrix into a distance matrix. You can use 
 #any distance measure in vegan (i.e., vegdist function)
 
+??capscale
+
+#Consider adding an interaction term between habitat
+#do variance partitioning to 
+
 #all
 db.rda <- capscale(spe ~ EdgeDist +
                      Basal +
+                     Canopy +
                      LeafLayer + 
-                     StemSmall + 
+                     StemSmall+ 
                      StemLarge + 
                      Debris +
+                     HerbCover+
                      Hab, distance = "bray", add=TRUE)
 summary(db.rda)
 
 #Mixed
 db.rdaM <- capscale(SpecM ~ EdgeDistM +
                       LeafLayerM + 
+                      CanopyM +
                       BasalM + 
                       StemSmallM + 
-                      StemLargeM, 
+                      StemLargeM+
+                      HerbCoverM+
+                      DebrisM, 
                    distance = "bray", add=TRUE)
 summary(db.rdaM)
 
 #Brachystegia
-db.rdaBR <- capscale(SpecBR ~ EdgeDistBR + LeafLayerBR + BasalBR +
-                       StemSmallBR + StemLargeBR,
+db.rdaBR <- capscale(SpecBR ~ EdgeDistBR +
+                       LeafLayerBR + 
+                       CanopyBR +
+                       BasalBR +
+                       StemSmallBR +
+                       StemLargeBR+
+                       HerbCoverBR+
+                       DebrisBR,
                      distance = "bray", add=TRUE)
 summary(db.rdaBR)
 
@@ -244,43 +272,47 @@ R2BR <- RsquareAdj(db.rdaBR)$r.squared
 R2adjBR <- RsquareAdj(db.rdaBR)$adj.r.squared
 
 #Plot using the F-scores:
-par(mfrow=c(1,2))
+par(mfrow=c(1,1))
 #All 
-plot(db.rda, scaling=1, 
-     main="Triplot ASF db-rda F scores", xlim = c(-5,8))
+plot(db.rda, scaling=2, 
+     main="Triplot ASF db-rda F scores", xlim = c(-8,8))
 spe.sc <- scores(db.rda, choices=1:2, scaling=2, display="sp")
 arrows(0, 0, spe.sc[, 1], spe.sc[, 2], length=0, lty=1, col="red")
 
 #Plot using the Z-scores:
-plot(db.rda, scaling=1, display=c("sp", "lc", "cn"), 
-     main="Triplot ASF db-rda  Z scores")
+plot(db.rda, scaling=2, display=c("sp", "lc", "cn"), 
+     main="Triplot ASF db-rda  Z scores", xlim = c(-8,8))
 arrows(0, 0, spe.sc[, 1], spe.sc[, 2], length=0, lty=1, col="red")
 
 #Mixed
 plot(db.rdaM, scaling=1, 
-     main="Triplot Mixed Forest db-rda F scores")
+     main="Triplot Mixed Forest db-rda F scores", xlim = c(-8,8))
 spe.sc <- scores(db.rdaM, choices=1:2, scaling=2, display="sp")
 arrows(0, 0, spe.sc[, 1], spe.sc[, 2], length=0, lty=1, col="red")
 
 #Plot using the Z-scores:
-plot(db.rdaM, scaling=1, display=c("sp", "lc", "cn"), 
-     main="Triplot Mixed Forest db-rda  Z scores")
+plot(db.rdaM, scaling=2, display=c("sp", "lc", "cn"), 
+     main="Triplot Mixed Forest db-rda  Z scores", xlim = c(-8,8))
 arrows(0, 0, spe.sc[, 1], spe.sc[, 2], length=0, lty=1, col="red")
 
 #Brachystegia
-plot(db.rdaBR, scaling=1, 
-     main="Triplot Brachystegia Forest db-rda F scores")
+plot(db.rdaBR, scaling=2, 
+     main="Triplot Brachystegia Forest db-rda F scores", xlim = c(-8,8))
 spe.sc <- scores(db.rdaBR, choices=1:2, scaling=2, display="sp")
 arrows(0, 0, spe.sc[, 1], spe.sc[, 2], length=0, lty=1, col="red")
 
 #Plot using the Z-scores:
-plot(db.rdaBR, scaling=1, display=c("sp", "lc", "cn"), 
-     main="Triplot Brachystegia Forest db-rda  Z scores")
+plot(db.rdaBR, scaling=2, display=c("sp", "lc", "cn"), 
+     main="Triplot Brachystegia Forest db-rda  Z scores", xlim = c(-8,8))
 arrows(0, 0, spe.sc[, 1], spe.sc[, 2], length=0, lty=1, col="red")
 
 
 
-#Conduct a permutation test using anova function in vegan to test the significance of the model, individual axes, and varaibles:
+#Conduct a permutation test using anova function in vegan to test 
+#the significance of the model, individual axes, and varaibles:
+#ultimately its explaining very little but still something. 
+#Use a global RDA with habitat type and... 
+
 
 #Global test of the RDA result
 anova(db.rda, step=1000)
@@ -300,22 +332,26 @@ anova(db.rdaBR, by = "margin", step = 1000)
 
 #Here we partition the variance for the model we constructed trough forward selection above: 
 #first we have to create our distance matrix as the response matrix
-resp<-vegdist(Stand_spec, method="bray")
+resp<-vegdist(spe, method="bray")
 
 #then we run the varpart function from vegan
-spe.part <- varpart(resp, ~LeafLayer, ~StemSmall, ~Hab, ~Basal, data=env2)
+spe.part <- varpart(resp, ~edge_category_m, ~StemLess8cm, 
+                    ~forest_type, ~BasalArea, data = env2)
 plot(spe.part, digits=2)
 
-
+summary(spe.part)
 
 ##########
 #Questions for Ben
 
 #HOw and if I can use percentage data in the distance RDA?
 
-#do I do the same steps for regular RDA, log transforming and scaling before conducing an distance based RDA?
+#do I do the same steps for regular RDA, log transforming and scaling before conducing 
+#an distance based RDA?
 
 #do i need to remove sites with no species? 
+
+
 
 
 
@@ -408,7 +444,7 @@ summary(ASF_rpartBR)
 `?`(post.rpart)
 post(ASF_rpart, file = "", title = "ASF Habitat Classification Tree")
 post(ASF_rpartM, file = "", title = "ASF Mixed Forest Habitat Classification Tree")
-post(ASF_rpartBR, file = "", title = "ASF Habitat Classification Tree")
+post(ASF_rpartBR, file = "", title = "ASF BR Habitat Classification Tree")
 
 #Now, look at a node by node summary of the tree and the variable importance:
 summary(ASF_rpart)
@@ -453,9 +489,24 @@ ggplot(data = EnvAll2, aes(edge_category_m, AvgLeafLayer))+
   geom_smooth()+
   geom_jitter()
 
-ggplot(data = EnvBR, aes(edge_category_m, AvgLeafLayer))+
+ggplot(data = EnvBR, aes(edge_category_m, AvgLeafLayer ))+
   geom_point()+
   geom_smooth()+
+  geom_jitter()
+
+ggplot(data = EnvM, aes(edge_category_m, TotalAvgCan))+
+  geom_point()+
+  geom_smooth(method = lm)+
+  geom_jitter()
+
+ggplot(data = EnvAll2, aes(edge_category_m, TotalAvgCan))+
+  geom_point()+
+  geom_smooth(method = lm)+
+  geom_jitter()
+
+ggplot(data = EnvBR, aes(edge_category_m, TotalAvgCan))+
+  geom_point()+
+  geom_smooth(method = lm)+
   geom_jitter()
 
 
