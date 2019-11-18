@@ -70,6 +70,8 @@ a <- aggregation_by_tree %>% group_by(binomial) %>% summarise(n_max_species = ma
 a <- a %>% filter(n_max_species > 1)
 # use this selection to get rest of the data by merging
 aggregation_by_tree_restricted <- merge(a, aggregation_by_tree, intersect = c("Tree_ID", "Tree_ID"), all.x = TRUE, all.y = FALSE)
+### reorder columns
+aggregation_by_tree_restricted = aggregation_by_tree_restricted[,c("Tree_ID","n_total","n_total_day","n_total_night", "binomial", "n_species_total", "n_species_day", "n_species_night")]
 
 
 
@@ -82,4 +84,8 @@ aggregation_by_tree_restricted <- merge(a, aggregation_by_tree, intersect = c("T
 # removing unidentified species
 ggplot(data = filter(aggregation_by_tree_restricted, binomial != "NA", binomial != "Lygodactylus_sp.")) + geom_density(mapping = aes(x = n_species_total, color = binomial)) + labs(x = "Number of individuals from same species in same tree area", y = "Density", title = "Distribution of aggregation patterns by species with individuals in same tree area") + guides(color=guide_legend("Species")) + scale_x_continuous(limits=c(0, 8), breaks = c(0, 1, 2, 3, 4, 5, 6, 7, 8)) + theme_bw(base_size = 10)
 ggplot(data = filter(aggregation_by_tree_restricted, binomial != "NA", binomial != "Lygodactylus_sp.")) + geom_histogram(mapping = aes(x = n_species_total, fill = binomial), position = "dodge", binwidth = 1) + labs(x = "Number of individuals from same species in same tree area", y = "Number of tree areas", title = "Distribution of aggregation patterns by species with individuals in same tree area") + guides(color=guide_legend("Species")) + scale_y_continuous(limits=c(0, 10), breaks = c(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12))+ scale_x_continuous(limits=c(0, 8), breaks = c(0, 1, 2, 3, 4, 5, 6, 7, 8)) + theme_bw(base_size = 10)
+
+
+
+
 
