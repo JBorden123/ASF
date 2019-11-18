@@ -1,6 +1,7 @@
 
 #### habitat preferences of abundant species
 
+# !! all with C and G surveys only to have same sampling effort
 
 ###charge_packages###
 library(tidyverse)
