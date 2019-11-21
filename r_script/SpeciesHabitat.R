@@ -91,10 +91,11 @@ ggplot(data = filter(data, extra_ground != "Y", category != "matrix")) + geom_po
 
 
 
+
 ############# species abundance by forest type
 
-ggplot(data = filter(animals, extra_ground != "Y", category != "matrix"))  + geom_histogram(mapping = aes(x = binomial, fill = forest_type), stat = "count", position = "dodge") + theme_bw(base_size = 13) + theme(axis.text.x = element_text(angle = 90, hjust = 1)) 
-
+ggplot(data = filter(animals, extra_ground != "Y", category != "matrix"))  + geom_histogram(mapping = aes(x = binomial, fill = forest_type), stat = "count", position = "dodge", width = 0.5) + theme_bw(base_size = 13) + theme(axis.text.x = element_text(angle = 90, hjust = 1)) + labs(title = "Abundance of each species by forest type (no matrix, no extra ground)", x = "Species", y = "Abundance")
+ggsave(width = 14, height = 8, device = "png", plot = last_plot(), filename = "figures/Spec_Abun_by_Forest_Type.png")
 
 
 ############# abundance of each species by edge category
@@ -103,14 +104,25 @@ ggplot(data = filter(animals, extra_ground != "Y", category != "matrix"))  + geo
 animals$edge_category_rec <- as.character(as.numeric(animals$edge_category_m))
 ## reorder animals$edge_category_rec
 animals$edge_category_rec <- factor(animals$edge_category_rec, levels=c("-10", "0", "30", "100", "250", "500"))
-ggplot(data = filter(animals, survey_type == "C" | survey_type == "G"))  + geom_histogram(mapping = aes(x = binomial, fill = edge_category_rec), stat = "count", position = "dodge") + theme_bw(base_size = 13) + theme(axis.text.x = element_text(angle = 90, hjust = 1))
+ggplot(data = filter(animals, survey_type == "C" | survey_type == "G"))  + geom_histogram(mapping = aes(x = binomial, fill = edge_category_rec), stat = "count", position = "dodge", width = 0.5) + theme_bw(base_size = 13) + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
 # and by forest type
-ggplot(data = filter(animals, extra_ground != "Y", category != "matrix"))  + geom_histogram(mapping = aes(x = binomial, fill = edge_category_rec), stat = "count", position = "dodge") + theme_bw(base_size = 13) + theme(axis.text.x = element_text(angle = 90, hjust = 1)) + facet_grid(forest_type~.)
+a <- animals %>% filter(extra_ground != "Y", category != "matrix") %>% group_by(forest_type, binomial, edge_category_rec) %>% tally
+ggplot(data = a) + geom_col(mapping = aes(x = binomial, y = n, fill = edge_category_rec), position = position_dodge2(width = 0.9, preserve = "single")) + theme_bw(base_size = 13) + theme(axis.text.x = element_text(angle = 90, hjust = 1)) + facet_grid(forest_type~., scales = "free_y") + labs(title = "Abundance of each species by edge category by forest type (no matrix, no extra ground)", x = "Species", y = "Abundance")
+ggsave(width = 14, height = 8, device = "png", plot = last_plot(), filename = "figures/Spec_Abun_by_edge_category_by_Forest_Type.png")
 
 
 
 ############ SVL VS height for a few species
+
+# hemidactylus
+ggplot(data = filter(animals, extra_ground != "Y", category != "matrix", genus == "Hemidactylus")) + geom_point(mapping = aes(x = SVL_cm, y = height_found_m)) + geom_smooth(mapping = aes(x = SVL_cm, y = height_found_m), method = "lm") + labs(title = "Hemidactylus, SVL VS height (C and G surveys, no matrix)", x = "SVL (cm)", y = "Height found (m)") + theme_bw(base_size = 13)
+ggplot(data = filter(animals, survey_type == "C", extra_ground != "Y", category != "matrix", genus == "Hemidactylus")) + geom_point(mapping = aes(x = SVL_cm, y = height_found_m)) + geom_smooth(mapping = aes(x = SVL_cm, y = height_found_m), method = "lm") + labs(title = "Hemidactylus, SVL VS height (C surveys only)", x = "SVL (cm)", y = "Height found (m)") + theme_bw(base_size = 13)
+
+# lygodactylus
+ggplot(data = filter(animals, extra_ground != "Y", category != "matrix", genus == "Lygodactylus")) + geom_point(mapping = aes(x = SVL_cm, y = height_found_m)) + geom_smooth(mapping = aes(x = SVL_cm, y = height_found_m), method = "lm") + labs(title = "Lygodactylus, SVL VS height (C and G surveys, no matrix)", x = "SVL (cm)", y = "Height found (m)") + theme_bw(base_size = 13)
+ggplot(data = filter(animals, survey_type == "C", extra_ground != "Y", category != "matrix", genus == "Lygodactylus")) + geom_point(mapping = aes(x = SVL_cm, y = height_found_m)) + geom_smooth(mapping = aes(x = SVL_cm, y = height_found_m), method = "lm") + labs(title = "Lygodactylus, SVL VS height (C surveys only)", x = "SVL (cm)", y = "Height found (m)") + theme_bw(base_size = 13)
+
 
 #HEPL
 ggplot(data = filter(animals, extra_ground != "Y", category != "matrix", species_code == "HEPL")) + geom_point(mapping = aes(x = SVL_cm, y = height_found_m)) + geom_smooth(mapping = aes(x = SVL_cm, y = height_found_m), method = "lm") + labs(title = "HEPL, SVL VS height (C and G surveys, no matrix)", x = "SVL (cm)", y = "Height found (m)") + theme_bw(base_size = 13)
