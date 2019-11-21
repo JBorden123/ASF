@@ -10,7 +10,7 @@ library(reshape2)
 library(xlsx)
 library(readxl)
 library(readr)
-
+library(gtools)
 
 #### CHARGE DATA
 data <- read.csv("clean_data/MetaAll.csv", header = TRUE)
@@ -211,6 +211,79 @@ sheets <- getSheets(wb)
 # autosize column widths
 autoSizeColumn(sheets[[1]], colIndex=1:ncol(summary_species))
 saveWorkbook(wb,"output/SummarySpecies.xlsx")
+
+
+
+
+
+
+############# number of species able to access the vertical gradient
+a <- animals
+
+
+
+#get mex height by species
+a <- a %>% group_by(binomial) %>% summarise(max_height_m = max(height_found_m, na.rm = TRUE))
+## Recodage de a$height_found_m en a$height_found_m_rec
+a$max_height_m_rec <- cut(a$max_height_m, include.lowest=FALSE,  right=FALSE, left = TRUE,
+                            breaks=c(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17))
+#count number of species for each max depth rank
+a <- a %>% group_by(max_height_m_rec) %>% tally()
+#add row with 0 species for this max height
+b<-data.frame("[2,3)","0")
+names(b)<-c("max_height_m_rec","n")
+c<-data.frame("[5,6)","0")
+names(c)<-c("max_height_m_rec","n")
+d<-data.frame("[9,10)","0")
+names(d)<-c("max_height_m_rec","n")
+e<-data.frame("[10,11)","0")
+names(e)<-c("max_height_m_rec","n")
+f<-data.frame("[4,5)","0")
+names(f)<-c("max_height_m_rec","n")
+g<-data.frame("[13,14)","0")
+names(g)<-c("max_height_m_rec","n")
+#merge
+a <- rbind(a, b, c, d, e, g ,f)
+## RecodE to start at 0
+## Recodage de a$max_height_m_rec en a$max_height_m_rec_rec
+a$max_height_m_rec <- fct_recode(a$max_height_m_rec,
+               "[0,2)" = "[1,2)",
+               "[0,3)" = "[2,3)",
+               "[0,4)" = "[3,4)",
+               "[0,5)" = "[4,5)",
+               "[0,6)" = "[5,6)",
+               "[0,7)" = "[6,7)",
+               "[0,8)" = "[7,8)",
+               "[0,9)" = "[8,9)",
+               "[0,10)" = "[9,10)",
+               "[0,11)" = "[10,11)",
+               "[0,12)" = "[11,12)",
+               "[0,13)" = "[12,13)",
+               "[0,14)" = "[13,14)",
+               "[0,15)" = "[14,15)",
+               "[0,16)" = "[15,16)",
+               "[0,17)" = "[16,17)",
+               "[0,3)" = "[2,3)",
+               "[0,6)" = "[5,6)",
+               "[0,10)" = "[9,10)",
+               "[0,11)" = "[10,11)")
+
+#reorder
+a <- a %>% arrange(desc(max_height_m_rec))
+#cumulative sum
+a <- a %>% mutate(n_species = cumsum(n))
+#plot
+ggplot(data = a) + geom_bar(mapping = aes(x = max_height_m_rec, y = n_species), stat = "identity") + coord_flip() + theme_bw(base_size = 13) + labs(title = "Number of species able to use the vertical gradient", y = "Number of species accessing the vertical strata", x = "Height in the tree (m)")
+ggsave(width = 14, height = 8, device = "png", plot = last_plot(), filename = "figures/NumberSpeciesUsingVerticalGradient.png")
+
+
+
+
+
+
+
+
+
 
 
 
