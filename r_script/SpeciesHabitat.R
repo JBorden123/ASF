@@ -140,4 +140,10 @@ ggplot(data = filter(animals, survey_type == "C", extra_ground != "Y", category 
 ggplot(data = filter(animals, extra_ground != "Y", category != "matrix", species_code == "HEMA")) + geom_point(mapping = aes(x = SVL_cm, y = height_found_m)) + geom_smooth(mapping = aes(x = SVL_cm, y = height_found_m), method = "lm") + labs(title = "HEMA, SVL VS height (C and G surveys, no matrix)", x = "SVL (cm)", y = "Height found (m)") + theme_bw(base_size = 13)
 ggplot(data = filter(animals, survey_type == "C", extra_ground != "Y", category != "matrix", species_code == "HEMA")) + geom_point(mapping = aes(x = SVL_cm, y = height_found_m)) + geom_smooth(mapping = aes(x = SVL_cm, y = height_found_m), method = "lm") + labs(title = "HEMA, SVL VS height (C surveys only)", x = "SVL (cm)", y = "Height found (m)") + theme_bw(base_size = 13)
 
+#species same graph
+ggplot(data = filter(animals, survey_type == "C", extra_ground != "Y", category != "matrix", species_code == "HEMA" | species_code == "HEPL" | species_code == "LYMO" | species_code == "CHDI")) + geom_point(mapping = aes(x = SVL_cm, y = height_found_m, color = species_code)) + geom_smooth(mapping = aes(x = SVL_cm, y = height_found_m, color = species_code), method = "lm") + labs(title = "SVL VS height 4 species (C surveys only)", x = "SVL (cm)", y = "Height found (m)") + theme_bw(base_size = 13)
+
+#4 species all surveys
+ggplot(data = filter(animals, species_code == "HEMA" | species_code == "HEPL" | species_code == "LYMO" | species_code == "CHDI")) + geom_point(mapping = aes(x = SVL_cm, y = height_found_m, color = species_code)) + geom_smooth(mapping = aes(x = SVL_cm, y = height_found_m, color = species_code), method = "lm") + labs(title = "SVL VS height 4 species (all surveys)", x = "SVL (cm)", y = "Height found (m)") + theme_bw(base_size = 13)
+
 
