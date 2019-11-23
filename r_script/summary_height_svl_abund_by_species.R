@@ -218,6 +218,8 @@ saveWorkbook(wb,"output/SummarySpecies.xlsx")
 
 
 ############# number of species able to access the vertical gradient
+# !!!! careful, must be done a bit differently, this is counting on the ground species that havent' been seen on the ground
+
 a <- animals
 
 
