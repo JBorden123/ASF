@@ -54,7 +54,7 @@ climber_temperature_data_summarised <- merge(climber_temperature_data_summarised
 ####### GRAPHS
 
 #temperature from cliber surveys
-ggplot(data = filter(climber_temperature_data_summarised, Strata != "Unclassified")) + geom_boxplot(mapping = aes(x = Strata, y = mean_temperature_c, color = DayNight)) + geom_jitter(mapping = aes(x = Strata, y = mean_temperature_c, color = DayNight), alpha = 0.3, width = 0.1, height = 0.1) + facet_grid(.~forest_type) + scale_fill_manual(labels = c("Day", "Night"), values = c("yellow3", "midnightblue")) + theme_bw(base_size = 13) + labs(title = "Temperatures from loggers on climbers", x = "Strata", y = "Temperature (°C)")
+ggplot(data = filter(climber_temperature_data_summarised, Strata != "Unclassified")) + geom_boxplot(mapping = aes(x = Strata, y = mean_temperature_c, color = DayNight)) + geom_point(mapping = aes(x = Strata, y = mean_temperature_c, color = DayNight), alpha = 0.3, position = position_dodge(width = 0.6))  + facet_grid(.~forest_type) + scale_fill_manual(labels = c("Day", "Night"), values = c("yellow3", "midnightblue")) + theme_bw(base_size = 13) + labs(title = "Temperatures from loggers on climbers", x = "Strata", y = "Temperature (°C)")
 ggsave(width = 14, height = 8, device = "png", plot = last_plot(), filename = "figures/Temperatures_Climber.png")
 
 
