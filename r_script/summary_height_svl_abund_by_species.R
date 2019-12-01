@@ -284,6 +284,41 @@ ggsave(width = 14, height = 8, device = "png", plot = last_plot(), filename = "f
 
 
 
+######### SUMMARY DATA FRAME WITH NUMERIC COLUMNS FOR GRAPHS
+
+#sumarise
+summary_species_numeric <- animals %>% filter(amph_rept == "R", species != "sp.", binomial != "NA") %>% group_by(binomial) %>% summarise(Mean_height_m = mean(height_found_m, na.rm = TRUE), Min_height_m = min(height_found_m, na.rm = TRUE), Max_height_m = max(height_found_m, na.rm = TRUE), Mean_SVL_cm = mean(SVL_cm, na.rm = TRUE),  Max_SVL_cm = max(SVL_cm, na.rm = TRUE), Min_mass_g = min(mass_g, na.rm = TRUE), Max_mass_g = max(mass_g, na.rm = TRUE), sd_height_m=sd(height_found_m, na.rm = TRUE))
+
+#add height range
+summary_species_numeric <- mutate(summary_species_numeric, Height_range_m = Max_height_m - Min_height_m)
+
+#add column number of individuals
+a <- animals %>% filter(amph_rept == "R", species != "sp.", binomial != "NA") %>% group_by(binomial) %>% tally()
+summary_species_numeric <- merge(a, summary_species_numeric, by=c("binomial","binomial"), all = TRUE)
+
+
+
+
+
+############ GRAPHS
+
+
+### standard deviation of height VS height, mean by species
+a <- ggplot(data = filter(summary_species_numeric, n > 1)) + geom_point(mapping = aes(x = Mean_height_m, y = sd_height_m)) + geom_smooth(mapping = aes(x = Mean_height_m, y = sd_height_m), method = "lm") + labs(title = "Height sd VS mean by species (all surveys, n > 1)", x = "Mean height by species (m)", y = "Standard deviation of height by species (m)") + theme_bw(base_size = 13)
+data_frame <- filter(summary_species_numeric, n > 1)
+lm_eqn <- function(data_frame){
+  m <- lm(sd_height_m ~ Mean_height_m, data_frame);
+  eq <- substitute(italic(r)~"="~rvalue*","~italic(p)~"="~pvalue, list(rvalue = sprintf("%.2f",sign(coef(m)[2])*sqrt(summary(m)$r.squared)), pvalue = format(summary(m)$coefficients[2,4], digits = 2)))
+  as.character(as.expression(eq));                 
+}
+a <- a + geom_text(x = 1, y = 3, label = lm_eqn(data_frame), parse = TRUE)
+a  <- a +  geom_text(
+  label=data_frame$binomial, 
+  nudge_x = 100, nudge_y = 100, x = data_frame$Mean_height_m, y = data_frame$sd_height_m, check_overlap = TRUE
+ 
+)
+a
+ggsave(width = 14, height = 8, device = "png", plot = last_plot(), filename = "figures/Sd_height_VS_Mean_height_by_species.png")
 
 
 
