@@ -188,14 +188,15 @@ ggplot(data = filter(HerpHabMat, survey_type == "C" | survey_type == "G", extra_
 
 #vertical height distribution by forest type, same sampling effort
 
-ggplot(data = filter(HerpHabMat, survey_type == "C" | survey_type == "G", extra_ground != "Y", category != "matrix")) + geom_density(mapping = aes(x= height_found_m), alpha = 1, linetype = 1) + facet_grid(.~forest_type, scales = "free_x") +
+ggplot(data = filter(HerpHabMat, survey_type == "C" | survey_type == "G", extra_ground != "Y", category != "matrix", amph_rept == "R")) + geom_density(mapping = aes(x= height_found_m), alpha = 1, linetype = 1) + facet_grid(.~forest_type, scales = "free_x") +
   theme(axis.title.y = element_text(size = rel(1.5),face = "bold", margin = margin(t = 0, r = 20, b = 0, l = 0)),
         axis.title.x = element_text(size = rel(1.5),face = "bold", margin = margin(t = 20, r = 0, b = 0, l = 0)),
         axis.text.x = element_text(color = "black", face = "bold",  size = rel(1.3)),
         axis.text.y = element_text(color = "black", face = "bold",  size = rel(1.3)),
         strip.text.x = element_text(colour = "black", face = "italic"),
         panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
-        panel.background = element_rect(colour = "black", fill = "white"), strip.background = element_rect(colour = "black", fill = "white")) +  coord_flip(xlim = c(0,20))+  guides(fill = guide_legend(override.aes = list(alpha = 1))) + theme(axis.text.x=element_blank(), axis.line=element_blank(), axis.ticks=element_blank()) + labs(title = "Vertical distribution by forest type (G and C surveys, no matrix)", y = "Relative density", x = "Vertical height (m)")
+        panel.background = element_rect(colour = "black", fill = "white"), strip.background = element_rect(colour = "black", fill = "white")) +  coord_flip(xlim = c(0,20))+  guides(fill = guide_legend(override.aes = list(alpha = 1))) + theme(axis.text.x=element_blank(), axis.line=element_blank(), axis.ticks=element_blank()) + labs(title = "Vertical distribution of the reptile community by forest type (G and C surveys, no matrix)", y = "Relative density", x = "Height of individuals (m)")
+ggsave(width = 14, height = 8, device = "png", plot = last_plot(), filename = "figures/Vertical distribution by forest type.png")
 
 
 #vertical height distribution by edge category, same sampling effort
@@ -268,11 +269,23 @@ ggplot(data = filter(HerpHabMat, species_code == "CHDI", survey_type == "C" | su
         panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         panel.background = element_rect(colour = "black", fill = "white"), strip.background = element_rect(colour = "black", fill = "white")) +  coord_flip(xlim = c(0,20))+  guides(fill = guide_legend(override.aes = list(alpha = 1))) + theme(axis.text.x=element_blank(), axis.line=element_blank(), axis.ticks=element_blank()) + labs(title = "CHDI vertical distribution by edge category by forest type (G and C surveys, no matrix)", y = "Relative density", x = "Vertical height (m)")
 
+### Vertical distribution of 4 abundant species
+ggplot(data = filter(HerpHabMat, species_code == "CHDI" | species_code == "HEPL" | species_code == "LYMO" | species_code == "TRMA", survey_type == "C" | survey_type == "G", extra_ground != "Y", category != "matrix")) + geom_density(mapping = aes(x= height_found_m), alpha = 1, linetype = 1) + facet_grid(.~species_code, scales = "free_x") +
+  theme(axis.title.y = element_text(size = rel(1.5),face = "bold", margin = margin(t = 0, r = 20, b = 0, l = 0)),
+        axis.title.x = element_text(size = rel(1.5),face = "bold", margin = margin(t = 20, r = 0, b = 0, l = 0)),
+        axis.text.x = element_text(color = "black", face = "bold",  size = rel(1.3)),
+        axis.text.y = element_text(color = "black", face = "bold",  size = rel(1.3)),
+        strip.text.x = element_text(colour = "black", face = "italic"),
+        panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        panel.background = element_rect(colour = "black", fill = "white"), strip.background = element_rect(colour = "black", fill = "white")) +  coord_flip(xlim = c(0,20))+  guides(fill = guide_legend(override.aes = list(alpha = 1))) + theme(axis.text.x=element_blank(), axis.line=element_blank(), axis.ticks=element_blank()) + labs(title = "Vertical distribution of 4 species (G and C surveys, no matrix)", y = "Relative density", x = "Vertical height (m)")
 
 
 
-
-
-
+############ boxplots height by species, reptiles, no matrix, no extra ground
+data <- filter(HerpHabMat, species_code != "NA", survey_type == "C" | survey_type == "G", extra_ground != "Y", category != "matrix")
+a <- data %>% group_by(species_code) %>% summarise(Median_height = median(height_found_m, na.rm = TRUE))
+data <- merge(data, a, by = "species_code", all = TRUE)
+ggplot(data = data) + geom_boxplot(mapping = aes(x = reorder(species_code, -Median_height), y = height_found_m)) + geom_jitter(mapping = aes(x = reorder(species_code, -Median_height), y = height_found_m), color = "red", alpha = 0.3) + theme_bw(base_size = 13) + labs(title = "Height by species (reptiles, G and C surveys, no matrix)", x = "Species", y = "Height (m)")
+ggsave(width = 14, height = 8, device = "png", plot = last_plot(), filename = "figures/height_by_species_reptiles_no_matrix.png")
 
 

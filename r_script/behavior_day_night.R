@@ -70,8 +70,16 @@ animals$substrate_rec <- fct_recode(animals$substrate,
 ##### height
 
 # graph height during day or night, c and G surveys, by species
-ggplot(data = filter(animals, extra_ground != "Y", category != "matrix", survey_type == "C" | survey_type == "G")) + geom_boxplot(mapping = aes(x = binomial, y = height_found_m, color = day_night)) + geom_jitter(mapping = aes(x = binomial, y = height_found_m, color = day_night), alpha = 0.3, width = 0.1, height = 0.1) + labs(x = "Species", y = "Height found (m)", title = "Height found by species during day or night") + theme_bw(base_size = 13) + theme(axis.text.x = element_text(angle = 90, hjust = 1)) + scale_color_manual(labels = c("Day", "Night"), values = c("yellow3", "midnightblue"))
+data <- filter(animals, binomial != "NA", survey_type == "C" | survey_type == "G", extra_ground != "Y", category != "matrix")
+a <- data %>% group_by(binomial) %>% summarise(Median_height = median(height_found_m, na.rm = TRUE))
+data <- merge(data, a, by = "binomial", all = TRUE)
+ggplot(data = data) + geom_boxplot(mapping = aes(x = reorder(binomial, -Median_height), y = height_found_m, color = day_night)) + geom_jitter(mapping = aes(x = reorder(binomial, -Median_height), y = height_found_m, color = day_night), alpha = 0.3, width = 0.1, height = 0.1) + theme_bw(base_size = 13) + labs(title = "Height by species (reptiles, G and C surveys, no matrix)", x = "Species", y = "Height (m)")  + scale_color_manual(labels = c("Day", "Night"), values = c("yellow3", "midnightblue")) + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggsave(width = 14, height = 8, device = "png", plot = last_plot(), filename = "figures/HeightSpeciesDayNight.png")
+
+
+# boxplot of day / night height by forest type
+ggplot(data = filter(animals, extra_ground != "Y", category != "matrix", survey_type == "C" | survey_type == "G")) + geom_boxplot(mapping = aes(x = forest_type, y = height_found_m, color = day_night)) + geom_jitter(mapping = aes(x = forest_type, y = height_found_m, color = day_night), alpha = 0.3, width = 0.1, height = 0.1) + labs(x = "Forest type", y = "Height found (m)", title = "Height found during day or night by forest type") + theme_bw(base_size = 13) + theme(axis.text.x = element_text(angle = 90, hjust = 1)) + scale_color_manual(labels = c("Day", "Night"), values = c("yellow3", "midnightblue"))
+
 
 ##### abundance
 

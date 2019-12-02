@@ -53,7 +53,7 @@ climber_temperature_data_summarised <- merge(climber_temperature_data_summarised
 
 ####### GRAPHS
 
-#temperature from cliber surveys
+#temperature from climber loggers day_night
 ggplot(data = filter(climber_temperature_data_summarised, Strata != "Unclassified")) + geom_boxplot(mapping = aes(x = Strata, y = mean_temperature_c, color = DayNight)) + geom_point(mapping = aes(x = Strata, y = mean_temperature_c, color = DayNight), alpha = 0.3, position = position_dodge(width = 0.6))  + facet_grid(.~forest_type) + scale_fill_manual(labels = c("Day", "Night"), values = c("yellow3", "midnightblue")) + theme_bw(base_size = 13) + labs(title = "Temperatures from loggers on climbers", x = "Strata", y = "Temperature (°C)")
 ggsave(width = 14, height = 8, device = "png", plot = last_plot(), filename = "figures/Temperatures_Climber.png")
 
@@ -61,7 +61,19 @@ ggsave(width = 14, height = 8, device = "png", plot = last_plot(), filename = "f
 
 
 
+
+
+
 ####################### FIXED LOGGERS 
+
+#aad column date only
+fixed_logger$Date <- strptime(fixed_logger$DateTime, "%m/%d/%y")
+fixed_logger$Date <- as.POSIXct(as.POSIXlt(fixed_logger$Date))
+
+#data frame daily variation of temperature
+a <- fixed_logger %>% group_by(Tree_ID, Date, Strata) %>% summarise(Max_Temperature = max(TempC), Min_Temperature = min(TempC))
+a <- mutate(a, Temp_Variation_by_day = Max_Temperature - Min_Temperature)
+Temp_Variation_Daily <- a
 
 # format day time
 fixed_logger$DateTime <- strptime(fixed_logger$DateTime, "%m/%d/%y %H:%M")
@@ -74,7 +86,9 @@ fixed_logger$DateTime <- as.POSIXct(as.POSIXlt(fixed_logger$DateTime))
 # temperature VS time
 ggplot(data=filter(fixed_logger, Strata != "NA")) + geom_line(mapping = aes(x = DateTime, y = TempC, color = Strata), size = 0.1) + facet_grid(Tree_ID~.) + theme_bw(base_size = 13) + labs(title = "Temperature variations by strata", x = "Time", y = "Temperature (°C)")
 
-
+# max variation of temperature by day
+ggplot(data = Temp_Variation_Daily) + geom_boxplot(mapping = aes(x = Tree_ID,y = Temp_Variation_by_day, color = Strata)) + geom_point(mapping = aes(x = Tree_ID,y = Temp_Variation_by_day, color = Strata), alpha = 0.3, position = position_dodge(width = 0.6)) + labs(title = "Daily variation of temperature by forest strata", x = "Tree", y = "Daily maximal temperature variation (°C)") + theme_bw(base_size = 13)
+ggsave(width = 14, height = 8, device = "png", plot = last_plot(), filename = "figures/Daily_temp_variation.png")
 
 
                                                                                             
