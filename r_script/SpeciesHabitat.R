@@ -147,3 +147,16 @@ ggplot(data = filter(animals, survey_type == "C", extra_ground != "Y", category 
 ggplot(data = filter(animals, species_code == "HEMA" | species_code == "HEPL" | species_code == "LYMO" | species_code == "CHDI")) + geom_point(mapping = aes(x = SVL_cm, y = height_found_m, color = species_code)) + geom_smooth(mapping = aes(x = SVL_cm, y = height_found_m, color = species_code), method = "lm") + labs(title = "SVL VS height 4 species (all surveys)", x = "SVL (cm)", y = "Height found (m)") + theme_bw(base_size = 13)
 
 
+
+
+
+
+####### SEX
+# can take all surveys because same sampling effort for both sexes
+
+# height by sex
+ggplot(data = filter(animals, sex != "3.4",  binomial != "NA")) + geom_boxplot(mapping = aes(x = binomial, y = height_found_m, color = sex)) + theme(axis.text.x = element_text(angle = 90, hjust = 1))
+
+
+
+
