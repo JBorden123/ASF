@@ -1,3 +1,5 @@
+#### EXPLORE TEMPERATURE DATA
+
 ###charge_packages###
 library(tidyverse)
 library(ggplot2)
@@ -41,6 +43,23 @@ climber_temperature_data <- mutate(climber_temperature_data, DayNight = ifelse(h
 
 
 
+# add column time of the day
+a <- climber_temperature_data
+#date time format
+a$DateTime <- strptime(a$DateTime, "%m/%d/%y %H:%M")
+# extract time
+a$time <- strftime(a$DateTime, format="%H:%M")
+# put in time
+a$time  <- as.POSIXct(a$time,format="%H:%M")
+
+#merge
+climber_temperature_data <- merge(x = climber_temperature_data,y = a[, c("Id", "time")], by=c("Id","Id"), all =TRUE)
+
+
+
+
+
+
 ### summarise temperature by tree by undersotry, mid, canopy
 
 climber_temperature_data_summarised <- climber_temperature_data %>% group_by(Tree_ID, DayNight, Strata) %>% summarise(mean_temperature_c = mean(TempC), mean_RH = mean(RH), mean_DewPTC = mean(DewPTC))
@@ -57,7 +76,16 @@ climber_temperature_data_summarised <- merge(climber_temperature_data_summarised
 ggplot(data = filter(climber_temperature_data_summarised, Strata != "Unclassified")) + geom_boxplot(mapping = aes(x = Strata, y = mean_temperature_c, color = DayNight)) + geom_point(mapping = aes(x = Strata, y = mean_temperature_c, color = DayNight), alpha = 0.3, position = position_dodge(width = 0.6))  + facet_grid(.~forest_type) + scale_fill_manual(labels = c("Day", "Night"), values = c("yellow3", "midnightblue")) + theme_bw(base_size = 13) + labs(title = "Temperatures from loggers on climbers", x = "Strata", y = "Temperature (°C)")
 ggsave(width = 14, height = 8, device = "png", plot = last_plot(), filename = "figures/Temperatures_Climber.png")
 
+# temperature acrooss time from climber loggers 
+### link metadata
+climber_temperature_data <- merge(climber_temperature_data, metadata, by=c("Tree_ID","Tree_ID"), all.x = TRUE, all.y = FALSE )
+#plot
+ggplot(data = filter(climber_temperature_data, Strata != "Unclassified", Strata != "NA")) + geom_point(mapping = aes(x = time, y = TempC, color = Strata)) + geom_smooth(mapping = aes(x = time, y = TempC, color = Strata), method = "auto") + facet_grid(.~forest_type) + labs(title="Temperature across day time (climber logger)", x = "Time of the day", y = "Temperature (°C)") + theme_bw(base_size = 13)
+ggsave(width = 14, height = 8, device = "png", plot = last_plot(), filename = "figures/temperature_across_timeClimber.png")
 
+
+#temperature VS humidity
+ggplot(data = filter(climber_temperature_data, Strata != "Unclassified", Strata != "NA")) + geom_point(mapping = aes(x = TempC, y = RH, color = Strata)) + geom_smooth(mapping = aes(x = TempC, y = RH, color = Strata), method = "auto") + facet_grid(.~forest_type) + labs(title = "Temperature VS humidity", x = "Temperature (°C)", y = "Relative humidity (%)") + theme_bw(base_size = 13)
 
 
 
