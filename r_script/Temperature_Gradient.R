@@ -21,6 +21,11 @@ climber_temperature_data <- read.csv("clean_data/clean_logger_data.csv", header 
 fixed_logger <- read.csv("clean_data/FixedLogData.csv", header = TRUE)
 fixed_logger <- merge(fixed_logger, metadata, by=c("Tree_ID","Tree_ID"), all.x = TRUE, all.y = FALSE )
 
+animals <- read.csv("raw_data/herpdata.csv", header = TRUE)
+
+
+
+
 
 #################CLIMBER LOGGERS
 
@@ -69,8 +74,7 @@ climber_temperature_data_summarised <- merge(climber_temperature_data_summarised
 
 
 
-
-####### GRAPHS
+####### GRAPHS climber loggers
 
 #temperature from climber loggers day_night
 ggplot(data = filter(climber_temperature_data_summarised, Strata != "Unclassified")) + geom_boxplot(mapping = aes(x = Strata, y = mean_temperature_c, color = DayNight)) + geom_point(mapping = aes(x = Strata, y = mean_temperature_c, color = DayNight), alpha = 0.3, position = position_dodge(width = 0.6))  + facet_grid(.~forest_type) + scale_fill_manual(labels = c("Day", "Night"), values = c("yellow3", "midnightblue")) + theme_bw(base_size = 13) + labs(title = "Temperatures from loggers on climbers", x = "Strata", y = "Temperature (°C)")
@@ -109,7 +113,7 @@ fixed_logger$DateTime <- as.POSIXct(as.POSIXlt(fixed_logger$DateTime))
 
 
 
-###### GRAPHS
+###### GRAPHS fixed loggers
 
 # temperature VS time
 ggplot(data=filter(fixed_logger, Strata != "NA")) + geom_line(mapping = aes(x = DateTime, y = TempC, color = Strata), size = 0.1) + facet_grid(Tree_ID~.) + theme_bw(base_size = 13) + labs(title = "Temperature variations by strata", x = "Time", y = "Temperature (°C)")
@@ -117,6 +121,59 @@ ggplot(data=filter(fixed_logger, Strata != "NA")) + geom_line(mapping = aes(x = 
 # max variation of temperature by day
 ggplot(data = Temp_Variation_Daily) + geom_boxplot(mapping = aes(x = Tree_ID,y = Temp_Variation_by_day, color = Strata)) + geom_point(mapping = aes(x = Tree_ID,y = Temp_Variation_by_day, color = Strata), alpha = 0.3, position = position_dodge(width = 0.6)) + labs(title = "Daily variation of temperature by forest strata", x = "Tree", y = "Daily maximal temperature variation (°C)") + theme_bw(base_size = 13)
 ggsave(width = 14, height = 8, device = "png", plot = last_plot(), filename = "figures/Daily_temp_variation.png")
+
+
+
+
+
+
+######################## individuals and data from climber logger at the same time
+
+
+######### link climber loggers and herp data to see the temperature and humidity where each animal where found (for understory, mid and canopy only)
+
+# get summarise temperature and humidity for the 3 strata
+Herps_temperature_humidity <- filter(climber_temperature_data_summarised, Strata != "Unclassified")
+
+######## prepare herp data for merging using tree, day/night, strata
+herps <- animals
+## recode strata to select canopy , mid and understory
+herps$survey_strata <- fct_recode(herps$survey_strata,
+                                  "Canopy" = "C",
+                                  "Mid" = "M",
+                                  "Understory" = "U")
+# select these 3 strata
+herps <- herps %>% filter(survey_strata == "Canopy" | survey_strata == "Mid" | survey_strata == "Understory")
+#harmonise day night
+herps$day_night <- fct_recode(herps$day_night,
+                              "Day" = "D",
+                              "Night" = "N")
+
+# harmonise column names
+names(herps)[names(herps) == "day_night"] <- "DayNight"
+names(herps)[names(herps) == "survey_strata"] <- "Strata"
+
+#merge climber logger data and herps
+Herps_temperature_humidity <- merge(herps, Herps_temperature_humidity, by = c("Tree_ID", "DayNight", "Strata"))
+
+
+
+
+### GRAPHS individuals and data from climber loggers
+
+# temperature in strata where individuals found, by species
+data <- Herps_temperature_humidity
+a <- data %>% group_by(binomial) %>% summarise(Median_temp = median(mean_temperature_c, na.rm = TRUE))
+data <- merge(data, a, by = "binomial")
+ggplot(data = filter(data, binomial != "NA")) + geom_boxplot(mapping = aes(x = reorder(binomial, - Median_temp), y = mean_temperature_c)) + geom_jitter(mapping = aes(x = reorder(binomial, - Median_temp), y = mean_temperature_c), color = "red", alpha = 0.3) + labs(title = "Mean temperature of the strata where the animals where found (climber surveys and loggers)", x = "Species", y = "Mean temperature where animals found (°C)")
+
+
+
+
+
+
+
+
 
 
                                                                                             
