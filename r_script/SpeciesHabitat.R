@@ -28,6 +28,51 @@ animals <- merge(animals, data,intersect = c("Tree_ID", "Tree_ID"), all.x = TRUE
 
 
 
+
+
+
+### substrate recoding
+
+animals$substrate_rec <- fct_recode(animals$substrate,
+                                    "Branch" = "branch",
+                                    "Branch 1" = "branch1",
+                                    "Branch 1" = "Branch1 / dead",
+                                    "Branch 1" = "Branch1 / hole with water",
+                                    "Branch 1" = "Branch1 / under bark",
+                                    "Branch 6+" = "branch10",
+                                    "Branch 6+" = "branch10+",
+                                    "Branch 2" = "branch2",
+                                    "Branch 3" = "branch3",
+                                    "Branch 4" = "branch4",
+                                    "Branch 5" = "branch5",
+                                    "Branch 6+" = "branch5+",
+                                    "Branch 6+" = "branch6",
+                                    "Branch 6+" = "branch7",
+                                    "Branch 6+" = "branch8",
+                                    "Dirt" = "dirt",
+                                    "Grass" = "grass",
+                                    "Trunk" = "Hole / trunk",
+                                    "Leaf" = "leaf",
+                                    "Litter" = "litter",
+                                    "Log" = "log",
+                                    "Pole" = "pole",
+                                    "Road" = "road",
+                                    "Sand" = "sand",
+                                    "Sand" = "Sand / bush",
+                                    "Soil" = "Sand / soil",
+                                    "Branch" = "small branch",
+                                    "Soil" = "soil",
+                                    "Stump" = "stump",
+                                    "Trunk" = "trunk",
+                                    "Trunk" = "Trunk / tree hole",
+                                    "Trunk" = "Trunk / under bark",
+                                    "Under debris" = "und_debris",
+                                    "Vine" = "vine")
+
+
+
+
+
 ######################## GRAPHS 
 
 
@@ -151,11 +196,26 @@ ggplot(data = filter(animals, species_code == "HEMA" | species_code == "HEPL" | 
 
 
 
-####### SEX
+############  GRAPHS by SEX
 # can take all surveys because same sampling effort for both sexes
 
-# height by sex
-ggplot(data = filter(animals, sex != "3.4",  binomial != "NA")) + geom_boxplot(mapping = aes(x = binomial, y = height_found_m, color = sex)) + theme(axis.text.x = element_text(angle = 90, hjust = 1))
+
+
+## height by sex for a few species
+
+data = filter(animals, sex != "3.4",  binomial != "NA")
+#data frame to visualize which species have good sample size
+a <- data %>% group_by(binomial, sex) %>% tally()
+#graph
+ggplot(data = filter(data, species_code == "HEPL" | species_code == "HEMA" | species_code == "HEMI")) + geom_boxplot(mapping = aes(x = binomial, y = height_found_m, color = sex)) + geom_point(mapping = aes(x = binomial, y = height_found_m, color = sex), alpha = 0.3, position = position_dodge(width = 0.8)) + theme(axis.text.x = element_text(angle = 90, hjust = 1))
+
+
+
+## habitat by sex
+animals$substrate_rec <- factor(animals$substrate_rec, levels=c("Under debris", "Road", "Soil", "Sand", "Dirt", "Litter", "Grass", "Log", "Stump", "Pole", "Trunk", "Branch", "Branch 1", "Branch 2", "Branch 3", "Branch 4", "Branch 5", "Branch 6+", "Vine", "Leaf", "NA"))
+data = filter(animals, sex != "3.4",  binomial != "NA", species_code == "HEPL" | species_code == "HEMA" | species_code == "HEMI")
+ggplot(data = data) + geom_histogram(mapping = aes(x = substrate_rec, fill = sex), stat = "count", position = "dodge") + theme_bw(base_size = 13)  + scale_fill_manual(labels = c("Female", "Male"), values = c("yellow3", "midnightblue")) + facet_grid(species_code~., scales = "free_y") + labs(title = "Habitat use by sex, a few species, all surveys", x = "Substrate", y = "Number of individuals") + theme_bw(base_size = 13) + theme(axis.text.x = element_text(angle = 90, hjust = 1))
+
 
 
 
