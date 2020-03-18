@@ -1,6 +1,7 @@
 #### EXPLORE humidity DATA
 
 ###charge_packages###
+library(randomcoloR)
 library(tidyverse)
 library(ggplot2)
 library(vegan)
@@ -9,9 +10,25 @@ library(forcats)
 library(questionr)
 library(reshape)
 library(reshape2)
+library(xls)
 library(xlsx)
 library(readxl)
 library(readr)
+library(cowplot)
+library(gridExtra)
+library(chron)
+library(FactoMineR)
+library(factoextra)
+library(missMDA)
+library(corrplot)
+library(data.table)
+library(ggpubr)
+library(tidyr)
+library(rstatix)
+library(coin)
+library(multcomp)
+library(colorspace)
+library(grid)
 library(gtools)
 
 #### CHARGE DATA
@@ -56,7 +73,7 @@ climber_humidity_data <- merge(x = climber_humidity_data,y = a[, c("Id", "time")
 
 ### summarise humidity by tree by undersotry, mid, canopy
 
-climber_humidity_data_summarised <- climber_humidity_data %>% group_by(Tree_ID, DayNight, Strata) %>% summarise(mean_Temperature = mean(TempC), mean_RH = mean(RH), mean_DewPTC = mean(DewPTC))
+climber_humidity_data_summarised <- climber_humidity_data %>% group_by(Tree_ID, DayNight, Strata) %>% summarise(mean_Temperature = mean(TempC), SD_Temperature = sd(TempC), mean_RH = mean(RH), SD_RH = sd(RH), mean_DewPTC = mean(DewPTC))
 
 ### link metadata
 climber_humidity_data_summarised <- merge(climber_humidity_data_summarised, metadata, by=c("Tree_ID","Tree_ID"), all.x = TRUE, all.y = FALSE )
@@ -66,9 +83,136 @@ climber_humidity_data_summarised <- merge(climber_humidity_data_summarised, meta
 
 ####### GRAPHS
 
-#humidity boxplot from climber loggers day_night
-ggplot(data = filter(climber_humidity_data_summarised, Strata != "Unclassified")) + geom_boxplot(mapping = aes(x = Strata, y = mean_RH, color = DayNight)) + geom_point(mapping = aes(x = Strata, y = mean_RH, color = DayNight), alpha = 0.3, position = position_dodge(width = 0.6))  + facet_grid(.~forest_type) + scale_fill_manual(labels = c("Day", "Night"), values = c("yellow3", "midnightblue")) + theme_bw(base_size = 13) + labs(title = "humidity from loggers on climbers", x = "Strata", y = "Relative Humidity (%)")
-ggsave(width = 14, height = 8, device = "png", plot = last_plot(), filename = "figures/humidity_Climber.png")
+###humidity boxplot from climber loggers day_night
+
+
+# BR forest, Day
+
+df <- climber_humidity_data_summarised %>% filter(Strata != "Unclassified", forest_type == "BR", DayNight == "Day")
+
+ggplot(data = df) + geom_density(mapping = aes(x = mean_RH))
+shapiro.test(df$mean_RH)
+
+compare_means(mean_RH ~ Strata,  data = df)
+
+
+my_comparisons <- list(c("Canopy", "Mid"), c("Canopy", "Understory"), c("Mid", "Understory"))
+
+grapha <- ggboxplot(data = df , x = "Strata", y = "mean_RH") + geom_jitter(alpha = 0.2, width = 0.1, height = 0.1) + theme_bw(base_size = 23)+ labs(title = "BR forest, Day", x = "", y = "Relative Humidity (%)") + scale_y_continuous(breaks = c(60, 70, 80, 90, 100), limits = c(60, 120)) +
+  stat_compare_means(comparisons = my_comparisons, size = 6) + # Add pairwise comparisons p-value
+  stat_compare_means(label.y = 120, size = 7)     # Add global p-value
+
+
+
+
+
+# BR forest, Night
+
+df <- climber_humidity_data_summarised %>% filter(Strata != "Unclassified", forest_type == "BR", DayNight == "Night")
+
+ggplot(data = df) + geom_density(mapping = aes(x = mean_RH))
+shapiro.test(df$mean_RH)
+
+compare_means(mean_RH ~ Strata,  data = df)
+
+
+my_comparisons <- list(c("Canopy", "Mid"), c("Canopy", "Understory"), c("Mid", "Understory"))
+
+graphb <- ggboxplot(data = df , x = "Strata", y = "mean_RH") + geom_jitter(alpha = 0.2, width = 0.1, height = 0.1) + theme_bw(base_size = 23)+ labs(title = "BR forest, Night", x = "", y = "")  + scale_y_continuous(breaks = c(60, 70, 80, 90, 100), limits = c(60, 120)) +
+  stat_compare_means(comparisons = my_comparisons, size = 6) + # Add pairwise comparisons p-value
+  stat_compare_means(label.y = 120, size = 7)     # Add global p-value
+
+
+
+# CY forest, Day
+
+df <- climber_humidity_data_summarised %>% filter(Strata != "Unclassified", forest_type == "BR", DayNight == "Day")
+
+ggplot(data = df) + geom_density(mapping = aes(x = mean_RH))
+shapiro.test(df$mean_RH)
+
+compare_means(mean_RH ~ Strata,  data = df)
+
+
+my_comparisons <- list(c("Canopy", "Mid"), c("Canopy", "Understory"), c("Mid", "Understory"))
+
+graphc <- ggboxplot(data = df , x = "Strata", y = "mean_RH") + geom_jitter(alpha = 0.2, width = 0.1, height = 0.1) + theme_bw(base_size = 23)+ labs(title = "CY forest, Day", x = "", y = "Relative Humidity (%)") + scale_y_continuous(breaks = c(60, 70, 80, 90, 100), limits = c(60, 120)) +
+  stat_compare_means(comparisons = my_comparisons, size = 6) + # Add pairwise comparisons p-value
+  stat_compare_means(label.y = 120, size = 7)     # Add global p-value
+
+
+
+# CY forest, Night
+
+df <- climber_humidity_data_summarised %>% filter(Strata != "Unclassified", forest_type == "BR", DayNight == "Night")
+
+ggplot(data = df) + geom_density(mapping = aes(x = mean_RH))
+shapiro.test(df$mean_RH)
+
+compare_means(mean_RH ~ Strata,  data = df)
+
+
+my_comparisons <- list(c("Canopy", "Mid"), c("Canopy", "Understory"), c("Mid", "Understory"))
+
+graphd <- ggboxplot(data = df , x = "Strata", y = "mean_RH") + geom_jitter(alpha = 0.2, width = 0.1, height = 0.1) + theme_bw(base_size = 23)+ labs(title = "CY forest, Night", x = "", y = "") + scale_y_continuous(breaks = c(60, 70, 80, 90, 100), limits = c(60, 120)) +
+  stat_compare_means(comparisons = my_comparisons, size = 6) + # Add pairwise comparisons p-value
+  stat_compare_means(label.y = 120, size = 7)     # Add global p-value
+
+
+
+
+# M forest, Day
+
+df <- climber_humidity_data_summarised %>% filter(Strata != "Unclassified", forest_type == "M", DayNight == "Day")
+
+ggplot(data = df) + geom_density(mapping = aes(x = mean_RH))
+shapiro.test(df$mean_RH)
+
+compare_means(mean_RH ~ Strata,  data = df)
+
+
+my_comparisons <- list(c("Canopy", "Mid"), c("Canopy", "Understory"), c("Mid", "Understory"))
+
+graphe <- ggboxplot(data = df , x = "Strata", y = "mean_RH") + geom_jitter(alpha = 0.2, width = 0.1, height = 0.1) + theme_bw(base_size = 23)+ labs(title = "M forest, Day", x = "Strata", y = "Relative Humidity (%)") + scale_y_continuous(breaks = c(60, 70, 80, 90, 100), limits = c(60, 120)) +
+  stat_compare_means(comparisons = my_comparisons, size = 6) + # Add pairwise comparisons p-value
+  stat_compare_means(label.y = 120, size = 7)     # Add global p-value
+
+
+# M forest, Night
+
+df <- climber_humidity_data_summarised %>% filter(Strata != "Unclassified", forest_type == "M", DayNight == "Night")
+
+ggplot(data = df) + geom_density(mapping = aes(x = mean_RH))
+shapiro.test(df$mean_RH)
+
+compare_means(mean_RH ~ Strata,  data = df)
+
+
+my_comparisons <- list(c("Canopy", "Mid"), c("Canopy", "Understory"), c("Mid", "Understory"))
+
+graphf <- ggboxplot(data = df , x = "Strata", y = "mean_RH") + geom_jitter(alpha = 0.2, width = 0.1, height = 0.1) + theme_bw(base_size = 23)+ labs(title = "M forest, Night", x = "Strata", y = "") + scale_y_continuous(breaks = c(60, 70, 80, 90, 100), limits = c(60, 120)) +
+  stat_compare_means(comparisons = my_comparisons, size = 6) + # Add pairwise comparisons p-value
+  stat_compare_means(label.y = 120, size = 7)     # Add global p-value
+
+
+
+png("figures/humidity_Climber.png", width = 1000, height = 1200)
+plot_grid(grapha, graphb, graphc, graphd, graphe, graphf, ncol=2, labels=c("A", "B", "C", "D", "E", "F"), label_size = 23)
+dev.off()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #by edge category
 ggplot(data = filter(climber_humidity_data_summarised, Strata != "Unclassified", edge_category_m != "-10", edge_category_m != "NA")) + geom_boxplot(mapping = aes(x = Strata, y = mean_RH, color = DayNight)) + geom_point(mapping = aes(x = Strata, y = mean_RH, color = DayNight), alpha = 0.3, position = position_dodge(width = 0.6))  + facet_grid(.~edge_category_m) + scale_fill_manual(labels = c("Day", "Night"), values = c("yellow3", "midnightblue")) + theme_bw(base_size = 13) + labs(title = "humidity from loggers on climbers", x = "Strata", y = "Relative Humidity (%)")
