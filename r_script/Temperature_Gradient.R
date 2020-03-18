@@ -84,10 +84,12 @@ climber_temperature_data <- merge(x = climber_temperature_data,y = a[, c("Id", "
 
 ### summarise temperature by tree by undersotry, mid, canopy
 
-climber_temperature_data_summarised <- climber_temperature_data %>% group_by(Tree_ID, DayNight, Strata) %>% summarise(mean_temperature_c = mean(TempC), SD_temperature_c = sd(TempC), mean_RH = mean(RH), SD_RH = sd(RH), mean_DewPTC = mean(DewPTC))
+climber_temperature_data_summarised <- climber_temperature_data %>% group_by(Tree_ID, DayNight, Strata) %>% summarise(mean_temperature_c = mean(TempC), SD_temperature_c = sd(TempC), Min_temperature_c = min(TempC), Max_temperature_c = max(TempC), mean_RH = mean(RH), SD_RH = sd(RH), Max_RH = max(RH), Min_RH = min(RH), mean_DewPTC = mean(DewPTC))
+climber_temperature_data_summarised <- climber_temperature_data_summarised %>% mutate(Temperature_Range_C = Max_temperature_c - Min_temperature_c, Humidity_Range = Max_RH - Min_RH)
 
 ### link metadata
 climber_temperature_data_summarised <- merge(climber_temperature_data_summarised, metadata, by=c("Tree_ID","Tree_ID"), all.x = TRUE, all.y = FALSE )
+
 
 
 
