@@ -224,58 +224,64 @@ a <- animals
 
 
 
-#get mex height by species
-a <- a %>% group_by(binomial) %>% summarise(max_height_m = max(height_found_m, na.rm = TRUE))
-## Recodage de a$height_found_m en a$height_found_m_rec
-a$max_height_m_rec <- cut(a$max_height_m, include.lowest=FALSE,  right=FALSE, left = TRUE,
-                            breaks=c(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17))
-#count number of species for each max depth rank
-a <- a %>% group_by(max_height_m_rec) %>% tally()
-#add row with 0 species for this max height
-b<-data.frame("[2,3)","0")
-names(b)<-c("max_height_m_rec","n")
-c<-data.frame("[5,6)","0")
-names(c)<-c("max_height_m_rec","n")
-d<-data.frame("[9,10)","0")
-names(d)<-c("max_height_m_rec","n")
-e<-data.frame("[10,11)","0")
-names(e)<-c("max_height_m_rec","n")
-f<-data.frame("[4,5)","0")
-names(f)<-c("max_height_m_rec","n")
-g<-data.frame("[13,14)","0")
-names(g)<-c("max_height_m_rec","n")
-#merge
-a <- rbind(a, b, c, d, e, g ,f)
-## RecodE to start at 0
-## Recodage de a$max_height_m_rec en a$max_height_m_rec_rec
-a$max_height_m_rec <- fct_recode(a$max_height_m_rec,
-               "[0,2)" = "[1,2)",
-               "[0,3)" = "[2,3)",
-               "[0,4)" = "[3,4)",
-               "[0,5)" = "[4,5)",
-               "[0,6)" = "[5,6)",
-               "[0,7)" = "[6,7)",
-               "[0,8)" = "[7,8)",
-               "[0,9)" = "[8,9)",
-               "[0,10)" = "[9,10)",
-               "[0,11)" = "[10,11)",
-               "[0,12)" = "[11,12)",
-               "[0,13)" = "[12,13)",
-               "[0,14)" = "[13,14)",
-               "[0,15)" = "[14,15)",
-               "[0,16)" = "[15,16)",
-               "[0,17)" = "[16,17)",
-               "[0,3)" = "[2,3)",
-               "[0,6)" = "[5,6)",
-               "[0,10)" = "[9,10)",
-               "[0,11)" = "[10,11)")
+#get max height by species
+a <- a %>% group_by(binomial, forest_type) %>% summarise(min_height_m = min(height_found_m, na.rm = TRUE), max_height_m = max(height_found_m, na.rm = TRUE))
+
+a <- a %>% filter(binomial != "NA")
+
+a <- a %>% mutate(zero_to_one = ifelse(min_height_m < 1, 1, 0))
+a <- a %>% mutate(one_to_two = ifelse(min_height_m <2 & max_height_m >= 1, 1, 0))
+a <- a %>% mutate(two_to_three = ifelse(min_height_m < 3 & max_height_m >= 2, 1, 0))
+a <- a %>% mutate(three_to_four = ifelse(min_height_m < 4 & max_height_m >= 3, 1, 0))
+a <- a %>% mutate(four_to_five = ifelse(min_height_m < 5 & max_height_m >= 4, 1, 0))
+a <- a %>% mutate(five_to_six = ifelse(min_height_m < 6 & max_height_m >= 5, 1, 0))
+a <- a %>% mutate(six_to_seven = ifelse(min_height_m < 7 & max_height_m >= 6, 1, 0))
+a <- a %>% mutate(seven_to_height = ifelse(min_height_m < 8 & max_height_m >= 7, 1, 0))
+a <- a %>% mutate(height_to_nine = ifelse(min_height_m < 9 & max_height_m >= 8, 1, 0))
+a <- a %>% mutate(nine_to_ten = ifelse(min_height_m < 10 & max_height_m >= 9, 1, 0))
+a <- a %>% mutate(ten_to_eleven = ifelse(min_height_m < 11 & max_height_m >= 10, 1, 0))
+a <- a %>% mutate(eleven_to_twelve = ifelse(min_height_m < 12 & max_height_m >= 11, 1, 0))
+a <- a %>% mutate(twelve_to_thirteen = ifelse(min_height_m < 13 & max_height_m >= 12, 1, 0))
+a <- a %>% mutate(thirteen_to_fourteen = ifelse(min_height_m < 14 & max_height_m >= 13, 1, 0))
+a <- a %>% mutate(fourteen_to_fifteen = ifelse(min_height_m < 15 & max_height_m >= 14, 1, 0))
+a <- a %>% mutate(fifteen_to_sixteen = ifelse(min_height_m < 16 & max_height_m >= 15, 1, 0))
+a <- a %>% mutate(sixteen_to_seventeen = ifelse(min_height_m < 17 & max_height_m >= 16, 1, 0))
+
+
+a <- a %>% group_by(forest_type) %>% summarise(zero_to_one = sum(zero_to_one), one_to_two = sum(one_to_two), two_to_three = sum(two_to_three), three_to_four = sum(three_to_four), four_to_five = sum(four_to_five), five_to_six = sum(five_to_six), six_to_seven = sum(six_to_seven), seven_to_height = sum(seven_to_height), height_to_nine = sum(height_to_nine), nine_to_ten = sum(nine_to_ten), ten_to_eleven = sum(ten_to_eleven), eleven_to_twelve = sum(eleven_to_twelve), twelve_to_thirteen = sum(twelve_to_thirteen), thirteen_to_fourteen = sum(thirteen_to_fourteen), fourteen_to_fifteen = sum(fourteen_to_fifteen), fifteen_to_sixteen = sum(fifteen_to_sixteen), sixteen_to_seventeen = sum(sixteen_to_seventeen))
+
+
+names(a)[names(a) == "zero_to_one"] <- "[0, 1)"
+names(a)[names(a) == "one_to_two"] <- "[1, 2)"
+names(a)[names(a) == "two_to_three"] <- "[2, 3)"
+names(a)[names(a) == "three_to_four"] <- "[3, 4)"
+names(a)[names(a) == "four_to_five"] <- "[4, 5)"
+names(a)[names(a) == "five_to_six"] <- "[5, 6)"
+names(a)[names(a) == "six_to_seven"] <- "[6, 7)"
+names(a)[names(a) == "seven_to_height"] <- "[7, 8)"
+names(a)[names(a) == "height_to_nine"] <- "[8, 9)"
+names(a)[names(a) == "nine_to_ten"] <- "[9, 10)"
+names(a)[names(a) == "ten_to_eleven"] <- "[10, 11)"
+names(a)[names(a) == "eleven_to_twelve"] <- "[11, 12)"
+names(a)[names(a) == "twelve_to_thirteen"] <- "[12, 13)"
+names(a)[names(a) == "thirteen_to_fourteen"] <- "[13, 14)"
+names(a)[names(a) == "fourteen_to_fifteen"] <- "[14, 15)"
+names(a)[names(a) == "fifteen_to_sixteen"] <- "[15, 16)"
+names(a)[names(a) == "sixteen_to_seventeen"] <- "[16, 17)"
+
+
+
+
+a <- melt(a, id= "forest_type")
+
+names(a)[names(a) == "variable"] <- "height"
+names(a)[names(a) == "value"] <- "species_number"
 
 #reorder
-a <- a %>% arrange(desc(max_height_m_rec))
-#cumulative sum
-a <- a %>% mutate(n_species = cumsum(n))
+a <- a %>% arrange(desc(species_number))
+
 #plot
-ggplot(data = a) + geom_bar(mapping = aes(x = max_height_m_rec, y = n_species), stat = "identity") + coord_flip() + theme_bw(base_size = 13) + labs(title = "Number of species able to use the vertical gradient", y = "Number of species accessing the vertical strata", x = "Height in the tree (m)")
+ggplot(data = a, mapping = aes(x = height, y = species_number)) + geom_bar(stat = "identity") + coord_flip() + theme_bw(base_size = 23) + facet_grid(.~forest_type) + labs(title = "Species richness by height", y = "Number of species accessing the vertical strata", x = "Height (m)")
 ggsave(width = 14, height = 8, device = "png", plot = last_plot(), filename = "figures/NumberSpeciesUsingVerticalGradient.png")
 
 
