@@ -330,3 +330,22 @@ ggsave(width = 14, height = 8, device = "png", plot = last_plot(), filename = "f
 
 
 
+### height range VS mean height, by species
+a <- ggplot(data = filter(summary_species_numeric, n > 1)) + geom_point(mapping = aes(x = Mean_height_m, y = Height_range_m)) + geom_smooth(mapping = aes(x = Mean_height_m, y = Height_range_m), method = "lm") + labs(title = "Height range VS mean by species (all surveys, n > 1)", x = "Mean height by species (m)", y = "Height range by species (m)") + theme_bw(base_size = 23)
+data_frame <- filter(summary_species_numeric, n > 1)
+lm_eqn <- function(data_frame){
+  m <- lm(Height_range_m ~ Mean_height_m, data_frame);
+  eq <- substitute(italic(r)~"="~rvalue*","~italic(p)~"="~pvalue, list(rvalue = sprintf("%.2f",sign(coef(m)[2])*sqrt(summary(m)$r.squared)), pvalue = format(summary(m)$coefficients[2,4], digits = 2)))
+  as.character(as.expression(eq));                 
+}
+a <- a + geom_text(x = 1, y = 17, label = lm_eqn(data_frame), parse = TRUE, size = 7)
+a  <- a +  geom_text(
+  label=data_frame$binomial, 
+  nudge_x = 100, nudge_y = 100, x = data_frame$Mean_height_m, y = data_frame$Height_range_m, check_overlap = TRUE
+  
+)
+a
+ggsave(width = 14, height = 8, device = "png", plot = last_plot(), filename = "figures/height_range_VS_Mean_height_by_species.png")
+
+
+
