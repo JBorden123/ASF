@@ -87,8 +87,11 @@ lizards_Id_good_sample_species <- lizards_Id_good_sample_species %>% filter(spec
 
 
 
-######################## GRAPHS
+################################# GRAPHS
 
+
+
+############# height VS SVL
 
 # CHDI
 a <- ggplot(data = filter(lizards_Id_good_sample_species, species_code == "CHDI")) + geom_point(mapping = aes(x = SVL_cm, y = height_found_m))  + geom_smooth(mapping = aes(x = SVL_cm, y = height_found_m), method = "lm") + labs(title = "Height VS SVL, CHDI", x = "SVL (cm)", y = "Height (m)") + theme_bw(base_size = 23)
@@ -168,6 +171,34 @@ graph0 <- a
 png("figures/height_VS_SLV.png", width = 1000, height = 1200)
 plot_grid(graph0, graph1, graph2, graph3, graph4, graph5, ncol=2, labels=c("A", "B", "C", "D", "E", "F"), label_size = 23)
 dev.off()
+
+
+
+
+####### height VS sexe / by species and for good sample size / non-usable because small sample size, lots of NA (and no pattern observed)
+
+ggplot(data = lizards_Id_good_sample_genus, mapping = aes(x = species_code, fill = sex)) + geom_bar(position = "dodge")
+ggplot(data = filter(lizards_Id_good_sample_genus, species_code == "HEMI" | species_code == "HEPL" | species_code == "HEMA") , mapping = aes(x = species_code, y = height_found_m, color = sex)) + geom_boxplot(position = position_dodge(width=0.9)) + geom_point (position = position_jitterdodge(dodge.width=0.9), alpha = 0.2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
