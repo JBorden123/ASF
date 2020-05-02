@@ -126,7 +126,7 @@ graphb <- ggboxplot(data = df , x = "Strata", y = "mean_RH") + geom_jitter(alpha
 
 # CY forest, Day
 
-df <- climber_humidity_data_summarised %>% filter(Strata != "Unclassified", forest_type == "BR", DayNight == "Day")
+df <- climber_humidity_data_summarised %>% filter(Strata != "Unclassified", forest_type == "CY", DayNight == "Day")
 
 ggplot(data = df) + geom_density(mapping = aes(x = mean_RH))
 shapiro.test(df$mean_RH)
@@ -144,7 +144,7 @@ graphc <- ggboxplot(data = df , x = "Strata", y = "mean_RH") + geom_jitter(alpha
 
 # CY forest, Night
 
-df <- climber_humidity_data_summarised %>% filter(Strata != "Unclassified", forest_type == "BR", DayNight == "Night")
+df <- climber_humidity_data_summarised %>% filter(Strata != "Unclassified", forest_type == "CY", DayNight == "Night")
 
 ggplot(data = df) + geom_density(mapping = aes(x = mean_RH))
 shapiro.test(df$mean_RH)

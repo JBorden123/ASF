@@ -138,7 +138,7 @@ graphb <- ggboxplot(data = df , x = "Strata", y = "mean_temperature_c") + geom_j
 
 # CY forest, Day
 
-df <- climber_temperature_data_summarised %>% filter(Strata != "Unclassified", forest_type == "BR", DayNight == "Day")
+df <- climber_temperature_data_summarised %>% filter(Strata != "Unclassified", forest_type == "CY", DayNight == "Day")
 
 ggplot(data = df) + geom_density(mapping = aes(x = mean_temperature_c))
 shapiro.test(df$mean_temperature_c)
@@ -156,7 +156,7 @@ graphc <- ggboxplot(data = df , x = "Strata", y = "mean_temperature_c") + geom_j
 
 # CY forest, Night
 
-df <- climber_temperature_data_summarised %>% filter(Strata != "Unclassified", forest_type == "BR", DayNight == "Night")
+df <- climber_temperature_data_summarised %>% filter(Strata != "Unclassified", forest_type == "CY", DayNight == "Night")
 
 ggplot(data = df) + geom_density(mapping = aes(x = mean_temperature_c))
 shapiro.test(df$mean_temperature_c)
