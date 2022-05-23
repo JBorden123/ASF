@@ -36,6 +36,8 @@ Plot1
 
 ggplot(metadata, aes(edge_category_m, CHDI)) +
   geom_jitter(alpha = .5, height = .05)
+  
 
+#test the git push pull 
 
 
