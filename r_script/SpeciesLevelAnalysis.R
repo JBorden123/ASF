@@ -30,9 +30,8 @@ HghtHerpD <- herpd %>%
 #height by edge distance by species
 ggplot(data = HghtHerpD, aes(x = edge_category_m, 
                          y = height_found_m_rec, color = binomial))+
-  geom_point()+
-  geom_smooth()+
   geom_jitter()+
+  geom_smooth(method = lm, se = FALSE)+
   ylim(0,20)
                
 
@@ -76,16 +75,16 @@ names(RSquared) <- colnames(spec_counts)
 RSquared
 
 
-#Individual models (LM maybe not best technique for this)
-summary(glm(LYMO ~ scale(edge_category_m), data = MetaAll))
-summary(lm(HEPL ~ scale(edge_category_m), data = MetaAll))
-summary(lm(HEBA ~ scale(edge_category_m), data = MetaAll))
-summary(lm(HEMA ~ scale(edge_category_m), data = MetaAll))
-summary(lm(HEMA ~ scale(edge_category_m), data = MetaAll))
-summary(lm(HEMI ~ scale(edge_category_m), data = MetaAll))
-summary(lm(TRMA ~ scale(edge_category_m), data = MetaAll))
-summary(lm(NUBO ~ scale(edge_category_m), data = MetaAll))
-summary(lm(CHDI ~ scale(edge_category_m), data = MetaAll))
+#Individual models (LM maybe not best technique for this) (as this data is COUNT data, appropriate distribution in Poisson)
+summary(glm(LYMO ~ scale(edge_category_m), data = MetaAll, family = poisson))
+summary(glm(HEPL ~ scale(edge_category_m), data = MetaAll, family = poisson))
+summary(glm(HEBA ~ scale(edge_category_m), data = MetaAll, family = poisson))
+summary(glm(HEMA ~ scale(edge_category_m), data = MetaAll, family = poisson))
+summary(glm(HEMA ~ scale(edge_category_m), data = MetaAll, family = poisson))
+summary(glm(HEMI ~ scale(edge_category_m), data = MetaAll, family = poisson))
+summary(glm(TRMA ~ scale(edge_category_m), data = MetaAll, family = poisson))
+summary(glm(NUBO ~ scale(edge_category_m), data = MetaAll, family = poisson))
+summary(glm(CHDI ~ scale(edge_category_m), data = MetaAll, family = poisson))
 
 hist(MetaAll$edge_category_m)
 

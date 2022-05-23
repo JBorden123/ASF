@@ -1,0 +1,38 @@
+genus,species,binomial,common name,count,MinHght,MeahHght,MaxHght,MedHght,ArbVsTerr,NoctVsDiurn
+Arthroleptis,stenodactylus,Arthroleptis_stenodactylus,common squeaker,1,0,0,0,0,terrestrial,nocternal
+Chamaeleo,dilepis,Chamaeleo_dilepis,flap necked chameleon,15,1.5,5.68,16.5,4.3,arboreal,diurnal
+Cordylus,tropidosternum,Cordylus_tropidosternum,tropical girdeled lizared,1,1,1,1,1,arboreal,diurnal
+Dispholidus,typus,Dispholidus_ typus,boomslang,1,6.5,6.5,6.5,6.5,arboreal,diurnal
+Gastropholis,prasina,Gastropholis_prasina,green keel bellied lizard,2,2,4.55,7.1,4.55,arboreal,diurnal
+Gecko,sp.,NA,,1,5,5,5,5,NA,NA
+Gecko,NA,NA,,1,2.5,2.5,2.5,2.5,NA,NA
+Hemidactylus,angulatus,Hemidactylus_angulatus,,2,0,0,0,0,arboreal,nocternal
+Hemidactylus,barbouri,Hemidactylus_ barbouri,,4,0,0,0,0,terrestrial,nocternal
+Hemidactylus,mabouia,Hemidactylus_mabouia,,23,0,2.938095238,14.3,2,arboreal,nocternal
+Hemidactylus,mrimaensis,Hemidactylus_mrimaensis,,10,0,1.56,8,0.5,arboreal,nocternal
+Hemidactylus,platycephalus,Hemidactylus_platycephalus,,60,0,4.264137931,15,3.5,arboreal,nocternal
+Hemidactylus,sp.,NA,,34,0,3.342424242,12,3,arboreal,NA
+Hemirhagerrhis,sp.,NA,,3,0.25,6.25,15.2,3.3,arboreal,diurnal
+Kinixys,sp.,NA,,1,0,0,0,0,terrestrial,diurnal
+Latastia,longicaudata,Latastia_longicaudata,,5,0,0,0,0,terrestrial,diurnal
+Lizard,sp.,NA,,3,0,0,0,0,NA,NA
+Lygodactylus,mombasicus,Lygodactylus_mombasicus,,41,0,4.280487805,12,3,arboreal,diurnal
+Lygodactylus,sp.,Lygodactylus_sp.,,7,3,5.457142857,11,5,arboreal,diurnal
+Lygodactylus,sp.,NA,,14,0.5,5.495833333,12.75,6.05,arboreal,diurnal
+Mochlus,afer,Mochlus_afer,,1,0,0,0,0,terrestrial,cerpuscular
+Mochlus,sundevalli,Mochlus_sundevalli,,1,0,0,0,0,terrestrial,cerpuscular
+Naja,melanoleuca,Naja_melanoleuca,,1,0,0,0,0,terrestrial,nocternal_diurnal
+Nucras,boulengeri,Nucras_boulengeri,,50,0,0,0,0,terrestrial,diurnal
+Psammophis,orientalis,Psammophi_ orientalis,,1,0,0,0,0,terrestrial,diurnal
+Psammophis,punctulatus,Psammophi_ punctulatus,,1,0,0,0,0,terrestrial,diurnal
+Psammophis,sp.,NA,,1,0,0,0,0,terrestrial,diurnal
+Rhamphiophis,rostratus,Rhamphiophis_rostratus,,1,0,0,0,0,terrestrial,diurnal
+skink,sp.,NA,,1,1,1,1,1,NA,diurnal
+skink,NA,NA,,1,3,3,3,3,NA,diurnal
+skink sp.,NA,NA,,1,0.25,0.25,0.25,0.25,NA,diurnal
+Trachylepis,maculilabris,Trachylepi_ maculilabris,,4,0,0.875,1.5,1,arboreal,diurnal
+Trachylepis,planifrons,Trachylepis_planifrons,,9,0,2.416666667,7,2,arboreal,diurnal
+Trachylepis,sp.,NA,,3,1,1.833333333,3,1.5,arboreal,diurnal
+Trachylepis,varia,Trachylepis_varia,,2,1.2,1.2,1.2,1.2,arboreal,diurnal
+Varanus,albigularis,Varanus_albigularis,,2,0,1.5,3,1.5,arboreal,diurnal
+NA,NA,NA,,1,0.5,0.5,0.5,0.5,NA,NA

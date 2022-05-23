@@ -1,0 +1,38 @@
+genus,species,binomial,count,MinHght,MeahHght,MaxHght,MedHght
+Arthroleptis,stenodactylus,Arthroleptis_stenodactylus,1,0,0,0,0
+Chamaeleo,dilepis,Chamaeleo_dilepis,15,1.5,5.68,16.5,4.3
+Cordylus,tropidosternum,Cordylus_tropidosternum,1,1,1,1,1
+Dispholidus,typus,Dispholidus_ typus,1,6.5,6.5,6.5,6.5
+Gastropholis,prasina,Gastropholis_prasina,2,2,4.55,7.1,4.55
+Gecko,sp.,NA,1,5,5,5,5
+Gecko,NA,NA,1,2.5,2.5,2.5,2.5
+Hemidactylus,angulatus,Hemidactylus_angulatus,2,0,0,0,0
+Hemidactylus,barbouri,Hemidactylus_ barbouri,4,0,0,0,0
+Hemidactylus,mabouia,Hemidactylus_mabouia,23,0,2.9380952380952383,14.3,2
+Hemidactylus,mrimaensis,Hemidactylus_mrimaensis,10,0,1.56,8,0.5
+Hemidactylus,platycephalus,Hemidactylus_platycephalus,60,0,4.264137931034483,15,3.5
+Hemidactylus,sp.,NA,34,0,3.3424242424242423,12,3
+Hemirhagerrhis,sp.,NA,3,0.25,6.25,15.2,3.3
+Kinixys,sp.,NA,1,0,0,0,0
+Latastia,longicaudata,Latastia_longicaudata,5,0,0,0,0
+Lizard,sp.,NA,3,0,0,0,0
+Lygodactylus,mombasicus,Lygodactylus_mombasicus,41,0,4.280487804878049,12,3
+Lygodactylus,sp.,Lygodactylus_sp.,7,3,5.457142857142857,11,5
+Lygodactylus,sp.,NA,14,0.5,5.495833333333334,12.75,6.05
+Mochlus,afer,Mochlus_afer,1,0,0,0,0
+Mochlus,sundevalli,Mochlus_sundevalli,1,0,0,0,0
+Naja,melanoleuca,Naja_melanoleuca,1,0,0,0,0
+Nucras,boulengeri,Nucras_boulengeri,50,0,0,0,0
+Psammophis,orientalis,Psammophi_ orientalis,1,0,0,0,0
+Psammophis,punctulatus,Psammophi_ punctulatus,1,0,0,0,0
+Psammophis,sp.,NA,1,0,0,0,0
+Rhamphiophis,rostratus,Rhamphiophis_rostratus,1,0,0,0,0
+skink,sp.,NA,1,1,1,1,1
+skink,NA,NA,1,3,3,3,3
+skink sp.,NA,NA,1,0.25,0.25,0.25,0.25
+Trachylepis,maculilabris,Trachylepi_ maculilabris,4,0,0.875,1.5,1
+Trachylepis,planifrons,Trachylepis_planifrons,9,0,2.4166666666666665,7,2
+Trachylepis,sp.,NA,3,1,1.8333333333333333,3,1.5
+Trachylepis,varia,Trachylepis_varia,2,1.2,1.2,1.2,1.2
+Varanus,albigularis,Varanus_albigularis,2,0,1.5,3,1.5
+NA,NA,NA,1,0.5,0.5,0.5,0.5
