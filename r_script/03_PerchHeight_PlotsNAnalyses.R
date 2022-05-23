@@ -90,7 +90,8 @@ backtransform01 <- function(x) {
   (x * length(x) - 0.5) / (length(x) - 1)
 }  
 
-#transform the fraction of tree metric to have NO 0s or 1s to use in beta distributed model
+#transform the fraction of tree metric to have NO 0s or 1s 
+#to be able use in beta distributed model (which is appropriate for proportional data)
 ArbSpec$HeightFracTree <- transform01((ArbSpec$height_found_m/ArbSpec$HOT_m))
 
 
