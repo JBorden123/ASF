@@ -17,6 +17,17 @@ metadata <- merge(biodiv_data,sites, by = "Tree_ID", all = TRUE)
 HabSummary <- read.csv("clean_data/HabSummary.csv", header = TRUE)
 TreeGPS <- read.csv("raw_data/TreeGPS.csv")
 
+Surveys <- read_csv("raw_data/surveys.csv")
+  
+Surveys2 <- Surveys %>% 
+  filter(!grepl("MAT", Tree_ID)) %>% 
+  filter(!grepl(".100", Tree_ID))
+
+Surveys2 <- left_join(Surveys2, sites, by = "Tree_ID")
+
+NumberSurvsPerForest <- Surveys2 %>% 
+  group_by(forest_type) %>% 
+  summarize(count = n())
 
 #adding median height by tree FOR ONLY arboreal species (probably need to add day vs night in case this 
 #might change height distribution)
