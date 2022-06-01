@@ -107,32 +107,36 @@ head(ClimbLoggerData)
 
 hist(ClimbLoggerData$TempC)
 hist(ClimbLoggerData$RH)
-
+ 
+ClimbLoggerData2 <- ClimbLoggerData %>% 
+  group_by(Tree_ID, DayNight, HourOfDay,forest_type, Strata, EdgeCategory) %>% 
+  summarise(AvgTempC = mean(TempC), AvgRH = mean(RH))
+  
 
 #day
-LoggerData<- ClimbLoggerData %>% 
+Day<- ClimbLoggerData2 %>% 
   filter(DayNight == "Day")
 #night
-LoggerData <- ClimbLoggerData %>% 
+Night<- ClimbLoggerData2 %>% 
   filter(DayNight == "Night")
 
 
 
 #MODELS!
-TempMod<-(lmer(TempC~
+TempMod<-(lmer(AvgTempC~
        Strata +
           Strata : scale(EdgeCategory) +
           (1 | HourOfDay) +
-      (1|forest_type), data = LoggerData))
+      (1|forest_type), data = Day))
       
 summary(TempMod)
 
 
-RHMod<- (lmer(RH ~
-                    #Strata +
-                    Strata * scale(EdgeCategory) +
+RHMod<- (lmer(AvgRH ~
+                    Strata +
+                    Strata : scale(EdgeCategory) +
                     (1 | HourOfDay) +
-                        (1|forest_type), data = ClimbLoggerData))
+                        (1|forest_type), data = Day))
 
 
 summary(RHMod)
@@ -142,11 +146,11 @@ TempPlot <- plot_model(TempMod, type = "est", show.values = TRUE)
   
 TempPlot <- TempPlot + 
   theme_bw() +
-  lims(y = c(-.5, .5))+
+  lims(y = c(-1, 1))+
   geom_hline(yintercept = 0, linetype = "dashed", color = "black", alpha = .7)+
   scale_x_discrete(labels = c("Und. x edge", "Mid. x edge", 
                               "Can. x edge", "Understory", "Midstory"))+
-  labs(y = "")
+  labs(y = "", title = "Daytime temperatures (C)")
 
 TempPlot 
 
@@ -154,9 +158,10 @@ TempPlot
 
 RHplot <- RHplot+ 
   theme_bw() +
-  lims(y = c(-.5, 7))+
+  lims(y = c(-1, 11))+
   geom_hline(yintercept = 0, linetype = "dashed", color = "black", alpha = .7)+
-  scale_x_discrete(labels = c("Und. x edge", "Mid. x edge", "Can. x edge", "Understory", "Midstory"))
+  scale_x_discrete(labels = c("Und. x edge", "Mid. x edge", "Can. x edge", "Understory", "Midstory"))+
+  labs(title = "Daytime humidity (RH)")
 
 RHplot
 
@@ -166,16 +171,16 @@ RHplot
 ###################################################################
 ##############      ANOVA          #####################################################
 ###################################################################
-AovData <- ClimbLoggerData %>% 
+AovData <- ClimbLoggerData2 %>% 
   filter(EdgeCategory == "0" | EdgeCategory == 500) %>% 
   mutate(EdgeStrata = paste(EdgeCategory, Strata, sep = "_"))
 
-Mod1 <- (aov(RH ~ EdgeStrata, data = AovData))
+Mod1 <- (aov(AvgRH ~ EdgeStrata, data = AovData))
 base::summary(Mod1)
 TukeyHSD(Mod1)
 
 
-ggplot(AovData, aes(EdgeStrata, RH, fill = Strata, color = EdgeCategory))+
+ggplot(AovData, aes(EdgeStrata,AvgRH, fill = Strata, color = EdgeCategory))+
   geom_jitter(width = .1, alpha = .4)+
   geom_boxplot(alpha = .5)
 
@@ -235,7 +240,7 @@ CanToUndRH <- ggplot(TreeSumRHWide, aes((EdgeCategory), CanDifUndRH, color = Day
 
 
 #plot raw temps
-RawTemps <- ggplot(ClimbLoggerData, aes((EdgeCategory), TempC, color = Strata))+
+RawTemps <- ggplot(ClimbLoggerData2, aes((EdgeCategory), AvgTempC, color = Strata))+
   geom_smooth(method = lm, se = FALSE, alpha = .2)+
   geom_jitter(height = 0, width = 5, alpha = .5)+
   #facet_grid(cols = vars(DayNight), rows = vars(forest_type))+
@@ -248,7 +253,7 @@ RawTemps <- ggplot(ClimbLoggerData, aes((EdgeCategory), TempC, color = Strata))+
   theme(legend.position = "none")
 RawTemps
 
-RawRH <- ggplot(ClimbLoggerData, aes((EdgeCategory), RH, color = Strata))+
+RawRH <- ggplot(ClimbLoggerData2, aes((EdgeCategory), AvgRH, color = Strata))+
   geom_smooth(method = lm, se = FALSE, alpha = .1)+
   geom_jitter(height = 0, width = 5, alpha = .5)+
   #geom_hline(yintercept = 0, color = "blue", alpha = .4)+
