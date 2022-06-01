@@ -132,14 +132,14 @@ ggplot(data = ArbSpec2, aes(abund, height_found_m, color = binomial)) +
 #height GLMM for Individual animals using fraction of tree height.
 HghtGLMM<- glmmTMB(HeightFracTree ~
                     scale(edge_category_m) +
-                     scale(TotalAvgCan) + #not really related to vertical structureing
+                   #  scale(TotalAvgCan) + #not really related to vertical structureing
                    scale(StemMore8cm) + #not any different than basal area 
                     scale(StemLess8cm) + #understory veg structure
                    scale(HOT_m)+
                     scale(AvgLeafLayer) + #vertical structure
-                  scale(BasalArea) + #vertical structure
+                 # scale(BasalArea) + #vertical structure
                     scale(Debris) +#low microhabitat
-                    #scale(abund) +
+                    scale(abund) +
                     #scale(EffectSpecNumShan) +
                     # (1 | Tree_ID)+ #so few individuals for tree that it seems justified to leave this random effect out
                      (1 | binomial)+
@@ -182,6 +182,30 @@ Fig4 <- cowplot::plot_grid(HghgtPlot2, HghtModPlot2, ncol = 2, nrow = 1,
 
 ggsave("figures/finalFigures/4HhgtbyEdge&HghtGLMER.pdf", width = 250, height = 120, units = "mm")
   
+################################################
+
+#                  looping for each species heights
+
+#################################################
+SpeciesLevelGLMS <- lapply(split(ArbSpec, ArbSpec$binomial), function(x) (summary(
+  glmmTMB(HeightFracTree ~
+            scale(edge_category_m) +
+            #  scale(TotalAvgCan) + #not really related to vertical structureing
+            scale(StemMore8cm) + #not any different than basal area 
+            scale(StemLess8cm) + #understory veg structure
+            scale(HOT_m)+
+            scale(AvgLeafLayer) + #vertical structure
+            # scale(BasalArea) + #vertical structure
+            scale(Debris) +#low microhabitat
+            scale(abund) +
+            #scale(EffectSpecNumShan) +
+            # (1 | Tree_ID)+ #so few individuals for tree that it seems justified to leave this random effect out
+            #(1 | binomial)+
+            (1 | forest_type), 
+          data = ArbSpec, family = "beta_family",
+          na.action = na.omit))))
+
+SpeciesLevelGLMS$Hemidactylus_mabouia
 
 ################################################
 
@@ -203,7 +227,13 @@ NicheBreadth <- ArbSpec %>%
   
   #filter(edge_category_m != 100)
 
-  
+hist((NicheBreadth$HghtRange))  
+
+summary(glmer((HghtRange +.001) ~
+        scale(edge_category_m)+
+        (1|binomial), data = NicheBreadth,
+      family = Gamma(link = "identity")))
+
 EdgeCoreHghts <- ggplot(ArbSpec3, aes(category, HeightFracTree*100, fill = binomial, color = binomial,
                     na.action(na.omit)))+
   geom_jitter(alpha = .8, width = .1, height = 0)+
@@ -323,6 +353,7 @@ ModelList <- psem(glmer(abund ~ scale(edge_category_m) +
 
 
 summary(ModelList)
+
 
 
 
