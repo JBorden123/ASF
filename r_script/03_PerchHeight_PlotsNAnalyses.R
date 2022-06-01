@@ -133,19 +133,25 @@ ggplot(data = ArbSpec2, aes(abund, height_found_m, color = binomial)) +
 HghtGLMM<- glmmTMB(HeightFracTree ~
                     scale(edge_category_m) +
                      scale(TotalAvgCan) + #not really related to vertical structureing
-                    scale(StemMore8cm) + #not any different than basal area 
+                   scale(StemMore8cm) + #not any different than basal area 
                     scale(StemLess8cm) + #understory veg structure
+                   scale(HOT_m)+
                     scale(AvgLeafLayer) + #vertical structure
-                    scale(BasalArea) + #vertical structure
+                  scale(BasalArea) + #vertical structure
                     scale(Debris) +#low microhabitat
                     #scale(abund) +
-                    # scale(EffectSpecNumShan) +
+                    #scale(EffectSpecNumShan) +
                     # (1 | Tree_ID)+ #so few individuals for tree that it seems justified to leave this random effect out
                      (1 | binomial)+
                    (1 | forest_type), 
-                   data = ArbSpec, family = "beta_family")
+                   data = ArbSpec, family = "beta_family",
+                  na.action = na.omit)
 summary(HghtGLMM)
 check_collinearity(HghtGLMM)
+
+#Dredge and model averaging
+DredgeArbRichGLMM <- dredge(HghtGLMM)
+summary(model.avg(DredgeArbRichGLMM, subset = delta <= 2)) # This compurtes model average coefficients for the
 
 #model diagnostics using DHARMa
 
@@ -163,8 +169,8 @@ HghtModPlot2 <- HghtModPlot+
         title = element_text(size = 15),
         axis.text.y = element_text(angle = 45))+
   lims(y = c(0.5,1.5))+
-  scale_x_discrete(labels = c("debris", "basal area", "canopy leaf layer", "small woody stems", 
-                              "large woody stems", "% canopy cover", "dist. to edge"))+
+ # scale_x_discrete(labels = c("debris", "basal area", "canopy leaf layer", "small woody stems", 
+  #                            "large woody stems", "% canopy cover", "dist. to edge"))+
   geom_hline(yintercept = 1, linetype = "dashed", alpha = .5)+
   labs(title = "", y = "")
                                     

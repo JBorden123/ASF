@@ -92,6 +92,7 @@ plot_model(AbundGLMM, type = "est", show.values = TRUE)+
 #Dredge and model averaging
 DredgeAbundGLMM <- dredge(AbundGLMM)
 Mod1<- summary(model.avg(DredgeAbundGLMM, subset = delta <= 2)) # This compurtes model average coefficients for the
+Mod1
 #top models using Delta AIC <=2! 
 
 ##############################################################
@@ -302,16 +303,16 @@ summary(model.avg(DredgeDiurAbundGLMM, subset = delta <= 2)) # This compurtes mo
 
 #all richness
 RichGLMM<- glmer(rich ~
-                    scale(edge_category_m) +
-                    scale(TotalAvgCan) +
-                    scale(StemMore8cm)+
-                    scale(StemLess8cm)+
-                    scale(AvgLeafLayer)+
-                    scale(BasalArea)+
-                    scale(HOT_m)+
+                   scale(edge_category_m) +
+                   scale(TotalAvgCan) +
+                   scale(StemMore8cm)+
+                   scale(StemLess8cm)+
+                   scale(AvgLeafLayer)+
+                   scale(BasalArea)+
+                   scale(HOT_m)+
                    scale(Debris)+
-                    (1 | forest_type), 
-                  data = BioDivData, family = poisson, 
+                   (1 | Tree_ID), 
+                 data = BioDivData, family = poisson, 
                  na.action = na.roughfix) # this na.action uses the median value to fill NAs.From the randomForest Package)
 
 summary(RichGLMM)
@@ -426,7 +427,7 @@ summary(model.avg(DredgeDiurRichGLMM, subset = delta <= 2)) # This compurtes mod
 #all ESN ([E]ffective [S]pecies [N]umber)
 ESN_GLMM<- glmer(EffectSpecNumShan ~
                    scale(edge_category_m) +
-                   #scale(TotalAvgCan) +
+                   scale(TotalAvgCan) +
                    scale(StemMore8cm)+
                    scale(StemLess8cm)+
                    scale(AvgLeafLayer)+
