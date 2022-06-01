@@ -108,6 +108,7 @@ head(ClimbLoggerData)
 hist(ClimbLoggerData$TempC)
 hist(ClimbLoggerData$RH)
 
+
 #day
 LoggerData<- ClimbLoggerData %>% 
   filter(DayNight == "Day")
@@ -115,12 +116,14 @@ LoggerData<- ClimbLoggerData %>%
 LoggerData <- ClimbLoggerData %>% 
   filter(DayNight == "Night")
 
+
+
 #MODELS!
 TempMod<-(lmer(TempC~
        Strata +
           Strata : scale(EdgeCategory) +
           (1 | HourOfDay) +
-      (1|forest_type), data = ClimbLoggerData))
+      (1|forest_type), data = LoggerData))
       
 summary(TempMod)
 
